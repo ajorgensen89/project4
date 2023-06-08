@@ -1,5 +1,5 @@
 ---
-name: Custom issue template
+name: Project 4 - Cocktail Bar
 about: 'USER STORY: '
 title: ''
 labels: ''
