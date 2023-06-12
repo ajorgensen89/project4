@@ -40,10 +40,15 @@ def edit_booking(request, booking_id):
         if form.is_valid():
             form.save()
             return redirect('get_bookings_sheet')
-            
+
     # Prefill form with information from database.
     form = BookingForm(instance=item)
     sheet = {
         'form': form
     }
     return render(request, 'bookings/edit_bookings.html', sheet)    
+
+def cancel_booking(request, booking_id):
+    item = get_object_or_404(Item, id=booking_id)
+    item.delete()
+    return redirect('get_bookings_sheet')
