@@ -22,5 +22,5 @@ urlpatterns = [
     path('', get_bookings_sheet, name='get_bookings_sheet'),
     path('book', create_a_booking, name='create_a_booking'),
     # item id links from forms/templates as a parameter
-    path('edit/<item_id>', edit_booking ,name='edit_booking')
+    path('edit/<booking_id>', edit_booking ,name='edit_booking')
 ]
