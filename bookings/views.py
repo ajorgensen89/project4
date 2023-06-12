@@ -14,21 +14,16 @@ def get_bookings_sheet(request):
 
 def create_a_booking(request):
     if request.method == 'POST':
-        name = request.POST.get('booked_name')
-        email = request.POST.get('booked_email')
-        date = request.POST.get('booked_date')
-        time = request.POST.get('booked_time')
-        people = request.POST.get('booked_num_of_people')
-        tableSize = request.POST.get('booked_table_allocation')
-        booked = 'booked_check' in request.POST
-        cancel = 'booked_cancel' in request.POST
-        Item.objects.create(name=name, email=email, date=date, time=time, people=people, 
-                            tableSize=tableSize, booked=booked, cancel=cancel)
-
-        return redirect('get_bookings_sheet')
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_bookings_sheet')
     form = ItemForm()
     sheet = {
-        'form' = form
+        'form': form
     }
 
-    return render(request, 'bookings/book_table.html')    
+    return render(request, 'bookings/book_table.html', sheet)
+
+def edit_booking(request, item_id):
+    return render(request, 'bookings/edit_bookings.html')    

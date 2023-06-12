@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <h1>Create a Booking</h1>
-    <form method="POST", action="book">
+    <h1>Edit Your Booking</h1>
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
             <p>
-                <button type="submit">Click to Continue</button>
+                <button type="submit">Change Booking.</button>
             </p>
         </div>
     </form>

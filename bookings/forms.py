@@ -1,5 +1,5 @@
 from django import forms
-from .model import Item, Comment
+from .models import Item
 
 
 class ItemForm(forms.ModelForm):
@@ -7,4 +7,3 @@ class ItemForm(forms.ModelForm):
         model = Item
         fields = ['name', 'email', 'date', 'time', 'people', 'tableSize', 'booked', 'cancel']
 
-        

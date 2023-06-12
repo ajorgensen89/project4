@@ -27,6 +27,7 @@
             <td><strike>{{ item.created_on }}</strike></td>
 
             {% else %}
+
             <td>{{ item.name }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.date }}</td>
@@ -38,9 +39,16 @@
             <td>{{ item.created_on }}</td>
 
             {% endif %}
+            <td>
+                <a href="/edit/{{ item.id }}">
+                    <button>Edit</button></a>
+            </td>
         </tr>
         {% empty %}
-        <tr><td>You have No Bookings...</td></tr>
+
+        <tr>
+            <td>You have No Bookings...</td>
+        </tr>
         {% endfor %}
     </table>
     <a href="/book">Create a Booking</a>
