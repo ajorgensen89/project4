@@ -1,3 +1,5 @@
+https://www.iditect.com/guide/django/django-form-builtin-fields.html#:~:text=Django%20Form%20Built-in%20Fields%201%201.%20CharField%20CharField,URLField%20...%208%208.%20FileField%20...%20More%20items
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,

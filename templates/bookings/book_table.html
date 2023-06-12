@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Create a Booking</h1>
+    <form method="POST", action="book">
+        {% csrf_token %}
+        <div>
+            <p> <label for="booked_name">Name:</label>
+                <input type="text" id="booked_name" name="booked_name" required>
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_email">Email:</label>
+                <input type="email" id="booked_email" name="booked_email" required>
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_date">Date:</label>
+                <input type="date" id="booked_date" name="booked_date" required>
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_time">Time:</label>
+                <input type="time" id="booked_time" name="booked_time" required>
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_num_of_people">Number of People:</label>
+                <input type="number" id="booked_num_of_people" name="booked_num_of_people" required>
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_table_allocation">Table (allocate):</label>
+                <input type="number" id="booked_table_allocation" name="booked_table_allocation">
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_check">Book Now!</label>
+                <input type="checkbox" id="booked_check" name="booked_check">
+            </p>
+        </div>
+        <div>
+            <p> <label for="booked_cancel">Cancel Reservation!</label>
+                <input type="checkbox" id="booked_cancel" name="booked_cancel">
+            </p>
+        </div>
+
+
+        <div>
+            <p>
+                <button type="submit">Click to Continue</button>
+            </p>
+        </div>
+    </form>
+
+</body>
+
+</html>

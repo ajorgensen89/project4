@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Book your table</h1>
+    {{ items }}
+    <table>
+        {% for item in items %}
+        <tr>
+            {% if item.cancel %}
+
+            <td><strike>{{ item.name }}</strike></td>
+            <td><strike>{{ item.email }}</strike></td>
+            <td><strike>{{ item.date }}</strike></td>
+            <td><strike>{{ item.time }}</strike></td>
+            <td><strike>{{ item.people }}</strike></td>
+            <td><strike>{{ item.tableSize }}</strike></td>
+            <td><strike>{{ item.booked }}</strike></td>
+            <td>{{ item.cancel }}</td>
+            <td><strike>{{ item.created_on }}</strike></td>
+
+            {% else %}
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.time }}</td>
+            <td>{{ item.people }}</td>
+            <td>{{ item.tableSize }}</td>
+            <td>{{ item.booked }}</td>
+            <td>{{ item.cancel }}</td>
+            <td>{{ item.created_on }}</td>
+
+            {% endif %}
+        </tr>
+        {% empty %}
+        <tr><td>You have No Bookings...</td></tr>
+        {% endfor %}
+    </table>
+    <a href="/book">Create a Booking</a>
 </body>
+
 </html>
