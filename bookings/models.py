@@ -4,7 +4,7 @@ import random
 from django.db.models.fields import DateTimeField
 
 # To create a random . Needed??
-randomNum = random.randint(1, 10)
+#    randomNum = random.randint(1, 10)
 # Create your models here.
 # table class
 
@@ -19,7 +19,7 @@ class Item(models.Model):
     date = models.DateField()
     time = models.TimeField()
     people = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(10)])
-    tableSize = models.PositiveIntegerField(default=randomNum, validators=[MinValueValidator(1), MaxValueValidator(10)])
+    tableSize = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     booked = models.BooleanField(null=False, blank=False, default=False)
     cancel = models.BooleanField(null=False, blank=False, default=False)
     created_on = models.DateField(auto_now_add=True)
