@@ -9,6 +9,7 @@ from django.db.models.fields import DateTimeField
 # table class
 
 created_on = False
+STATUSS = ((0, "Draft"), (1, "Published"))
 
 class Item(models.Model):
     """ Class created to make a form for the user to submit details 
@@ -22,7 +23,9 @@ class Item(models.Model):
     tableSize = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     booked = models.BooleanField(null=False, blank=False, default=False)
     cancel = models.BooleanField(null=False, blank=False, default=False)
-    created_on = models.DateField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUSS, default=0)
+    approved = models.BooleanField(default=False)
 
 # To rename the default option from django.
     def __str__(self):
@@ -30,11 +33,4 @@ class Item(models.Model):
 
 # To create an order.
     class Meta:
-        ordering = ['-created_on']    
-
-# To create an extra comment class.
-class Comment(models.Model):
-    comment = models.CharField(max_length=200)
-
-
-
+        ordering = ['-created_on']

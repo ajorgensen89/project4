@@ -21,8 +21,8 @@ class forumPostAdmin(SummernoteModelAdmin):
 @admin.register(forumComment)
 class forumCommentAdmin(admin.ModelAdmin):
     
-    list_display = ('name', 'body', 'post', 'create_on', 'approved')
-    list_filter = ('approved', 'create_on')
+    list_display = ('name', 'body', 'post', 'create_on', 'approve')
+    list_filter = ('approve', 'create_on')
     search_fields = ('name', 'email', 'body')
 
     #action to approve comments. (more than one if needed)
@@ -30,4 +30,4 @@ class forumCommentAdmin(admin.ModelAdmin):
 
     # boolean result. set to true.
     def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
+        queryset.update(approve=True)

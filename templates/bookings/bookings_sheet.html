@@ -24,6 +24,8 @@
             <td><strike>{{ item.booked }}</strike></td>
             <td>{{ item.cancel }}</td>
             <td><strike>{{ item.created_on }}</strike></td>
+            <td><strike>{{ item.status }}</strike></td>
+            <td><strike>{{ item.approved }}</strike></td>
 
             {% else %}
 
@@ -36,6 +38,8 @@
             <td>{{ item.booked }}</td>
             <td>{{ item.cancel }}</td>
             <td>{{ item.created_on }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.approved }}</td>
 
             {% endif %}
             <td>

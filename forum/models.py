@@ -35,7 +35,7 @@ class forumComment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     create_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approve = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['create_on']
