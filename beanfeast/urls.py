@@ -25,4 +25,5 @@ urlpatterns = [
     path('edit/<booking_id>', views.edit_booking ,name='edit_booking'),
     path('cancel/<booking_id>', views.cancel_booking ,name='cancel_booking'),
     path('summernote/', include('django_summernote.urls')),
+    path('forum/', include('forum.urls'), name=('forum_urls')),
 ]
