@@ -23,11 +23,12 @@ from bookings import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.get_bookings_sheet, name='get_bookings_sheet'),
-    path('book', views.create_a_booking, name='create_a_booking'),
+    path('book/', views.create_a_booking, name='create_a_booking'),
     # item id links from forms/templates as a parameter
     path('edit/<booking_id>', views.edit_booking ,name='edit_booking'),
     path('cancel/<booking_id>', views.cancel_booking ,name='cancel_booking'),
     path('summernote/', include('django_summernote.urls')),
-    path('forum/', include('forum.urls'), name=('forum_urls')),
+    path('', include('forum.urls'), name=('forum_urls')),
+    path('accounts/', include('allauth.urls')),
     # path('forum/', views.check, name='check'),
 ]

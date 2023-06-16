@@ -1,33 +1,26 @@
 from django.contrib import admin
-from .models import forumPost, forumComment
+from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(forumPost)
-class forumPostAdmin(SummernoteModelAdmin):
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'slug', 'status', 'create_on')
+    list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
-    prepopulated_fields = {'slug': ('title',)}
-    list_filter = ('status', 'create_on')
-    summernote_field = ('content')
+    prepopulated_fileds = {'slug': ('title',)}
+    list_filter = ('status', 'created_on')
+    summernote_fields = ('content')
 
 
-# Register your models here.
-
-# admin.site.register(forumPost)
-# admin.site.register(forumComment)
-
-@admin.register(forumComment)
-class forumCommentAdmin(admin.ModelAdmin):
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
     
-    list_display = ('name', 'body', 'post', 'create_on', 'approve')
-    list_filter = ('approve', 'create_on')
+    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
-
     #action to approve comments. (more than one if needed)
     actions = ['approve_comments']
-
     # boolean result. set to true.
     def approve_comments(self, request, queryset):
-        queryset.update(approve=True)
+        queryset.update(approved=True)

@@ -13,12 +13,13 @@
         integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/f26ba66020.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
     <h1 class="text-secondary">Create a Booking</h1>
-    <form method="POST" , action="book">
+    <form method="POST" , action="">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
