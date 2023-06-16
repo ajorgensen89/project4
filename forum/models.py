@@ -9,6 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Model being input into forumList view.
 class forumPost(models.Model):
+    
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='forum_posts')
@@ -42,4 +43,4 @@ class forumComment(models.Model):
         ordering = ['create_on']
 
     def __str__(self):
-        return f"Comment {self.body} by {self.name}" 
+        return f"Comment {self.body} by {self.name}"
