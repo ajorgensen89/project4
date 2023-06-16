@@ -1,7 +1,12 @@
+/*General body CSS*/
 body {
-    background-color: #f8f2e5;
+    background-color: #0b2be0;
+}
+
+p, div {
     font-family: 'Oswald', sans-serif;
 }
+
 
 .beanfeast {
     font-family: 'Bebas Neue', sans-serif;
@@ -36,7 +41,7 @@ body {
 }
 
 .author-text {
-    color: white;
+    color: whitesmoke;
     margin: 4px;
     text-transform: uppercase;
 }
@@ -77,13 +82,13 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.hover-orange-class {
     text-decoration: none;
-    color: #445261;
+    color: #0c0c0c;
 }
 
-.post-link:hover,
-.page-link {
+/*Hover class to turn text orange.*/
+.hover-orange-class:hover {
     color: #eaa205;
 }
 
@@ -94,7 +99,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #0c0c0c;
 }
 
 .btn-like {
