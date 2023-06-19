@@ -22,7 +22,7 @@ from bookings import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_bookings_sheet, name='get_bookings_sheet'),
+    path('templates/bookings/bookings_sheet.html/', views.get_bookings_sheet, name='get_bookings_sheet'),
     path('book/', views.create_a_booking, name='create_a_booking'),
     # item id links from forms/templates as a parameter
     path('edit/<booking_id>', views.edit_booking ,name='edit_booking'),

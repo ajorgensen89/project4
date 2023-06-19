@@ -7,7 +7,7 @@ p, div {
     font-family: 'Oswald', sans-serif;
 }
 
-
+/*Head Logo*/
 .beanfeast {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
@@ -15,23 +15,14 @@ p, div {
     color: #4A4A4F;
 }
 
-.orange-bg {
-    background-color: #eaa205;
-}
+
 
 .main-bg {
     background-color: #f5f6cf;
 }
 
-.card {
-    border: none;
-    background-color: transparent;
-}
 
-.image-container {
-    position: relative;
-}
-
+/*Print Author name*/
 .author-bg {
     position: absolute;
     bottom: 5%;
@@ -46,46 +37,13 @@ p, div {
     text-transform: uppercase;
 }
 
-/*CSS for image placement is from the Coursework created via the CodeInstitute walkthrough for 'I think therefore I blog'.*/
 
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
+/*Print Title of forum comment from admin*/
 .hover-orange-class {
     text-decoration: none;
     color: #0c0c0c;
 }
+
 
 /*Hover class to turn text orange.*/
 .hover-orange-class:hover {
@@ -100,6 +58,12 @@ p, div {
 .post-subtitle {
     margin-left: 5%;
     color: #0c0c0c;
+}
+
+
+/*Footer CSS*/
+.orange-footer {
+    background-color: #eaa205;
 }
 
 .btn-like {

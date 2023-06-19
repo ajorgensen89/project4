@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['beanfeast-project-4.herokuapp.com', '8000-ajorgensen89-project4-jws4861blw0.ws-eu100.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['beanfeast-project-4.herokuapp.com', '8000-ajorgensen89-project4-no2shn6ss99.ws-eu100.gitpod.io', 'localhost']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 

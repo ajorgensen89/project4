@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -32,6 +30,8 @@
         integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
     <link rel="static" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f26ba66020.js" crossorigin="anonymous"></script>
 
 
@@ -50,21 +50,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="me-auto mb-2 mb-lg-0">
-                    <li class="nav-link">
-                        <a class="nav-item hover-orange-class active" aria-current="page"
+                <ul class="me-auto mb-2 mb-lg-0 list-inline">
+                    <li class="list-inline-item ">
+                        <a class="hover-orange-class active" aria-current="page"
                             href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-link">
-                        <a class="nav-item hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
-                    <li class="nav-link">
-                        <a class="nav-item hover-orange-class" href="{% url 'account_signup' %}">Register</a>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="{% url 'account_signup' %}">Register</a>
                     </li>
-                    <li class="nav-link">
-                        <a class="nav-item hover-orange-class" href="{% url 'account_login' %}">Login</a>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="/templates/bookings/bookings_sheet.html">BOOK NOW!</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -96,19 +99,20 @@
             </div>
         </div>
     </div>
-<div>
-    {% block content %}
-    <!--here ------------------------------------------------------------------------------------------------------------------------------------------->
-    {% endblock content %}
-</div>
+    <div>
+        {% block content %}
+        <!--here ------------------------------------------------------------------------------------------------------------------------------------------->
+        {% endblock content %}
+    </div>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 orange-bg">
-        <p class="m-0 text-center text-black">Ran by BeanFeast</p>
-        <p class="m-0 text-center text-black">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+    <footer class="footer mt-auto py-3 orange-footer">
+        <p><span class="text-left text-black">Visit BeanFeast</span><span class="text-warning">|</span>
+            <span class="text-right text-black">Follow us: <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-youtube-square"></i>
+            </span>
         </p>
     </footer>
     <script>
