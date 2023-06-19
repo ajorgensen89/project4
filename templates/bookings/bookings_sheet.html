@@ -8,7 +8,7 @@
     {% for item in items %}
     <tr>
         {% if item.cancel %}
-
+<p>{{ item.id }}</p>
         <td><strike>{{ item.name }}</strike></td>
         <td><strike>{{ item.email }}</strike></td>
         <td><strike>{{ item.date }}</strike></td>
@@ -22,7 +22,7 @@
         <td><strike>{{ item.approved }}</strike></td>
 
         {% else %}
-
+        <p>{{ item.id }}</p>
         <td>{{ item.name }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.date }}</td>
@@ -38,13 +38,13 @@
         {% endif %}
         <td>
             <a href="/edit/{{ item.id }}">
-                <button>Edit</button></a>
+                <button class="btn btn-lg btn-outline-dark">Edit</button></a>
         </td>
         <td>
         </td>
         <td>
             <a href="/cancel/{{ item.id }}">
-                <button type="button" onclick="ConfirmCancellation()">Cancel Reservation</button></a>
+                <button type="button" onclick="ConfirmCancellation()" class="btn btn-lg btn-outline-dark">Cancel Reservation</button></a>
         </td>
     </tr>
     {% empty %}
@@ -54,14 +54,4 @@
     </tr>
     {% endfor %}
 </table>
-<div>
-    <ul class="list_inline">
-        <li class="list_inline_item">
-            <a class="hover-orange-class" href="/book">Create a Booking</a>
-        </li>
-        <li class="list_inline_item">
-            <a class="hover-orange-class" href="/forum">Forum</a>
-        </li>
-    </ul>
-</div>
 {%endblock%}

@@ -61,7 +61,10 @@
                         <a class="hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="/templates/bookings/bookings_sheet.html">BOOK NOW!</a>
+                        <a class="hover-orange-class" href="/book/">BOOK NOW!</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="/templates/bookings/bookings_sheet.html">View Bookings</a>
                     </li>
                     {% else %}
                     <li class="list-inline-item">
@@ -78,13 +81,13 @@
             </div>
         </div>
     </nav>
-    <h1 class="text-secondary">Create a Booking</h1>
+    <h1 class="text-black">Create a Booking</h1>
     <form method="POST" , action="">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
             <p>
-                <button type="submit">Click to Continue</button>
+                <button type="submit" class="btn btn-lg btn-outline-dark">Click to Continue</button>
             </p>
         </div>
     </form>
