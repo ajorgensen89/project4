@@ -1,11 +1,25 @@
 /*General body CSS*/
 body {
-    background-color: #0b2be0;
+    position: relative;
+    margin: 0;
 }
 
 p, div {
     font-family: 'Oswald', sans-serif;
 }
+
+/*No decoration on lists*/
+ul {
+    list-style-type: none;
+}
+
+
+/*Button*/
+.btn {
+    padding-top: 10px;
+
+}
+
 
 /*Head Logo*/
 .beanfeast {
@@ -15,28 +29,14 @@ p, div {
     color: #4A4A4F;
 }
 
-
-
 .main-bg {
     background-color: #f5f6cf;
 }
 
-
-/*Print Author name*/
-.author-bg {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #f28305;
+/*Card*/
+.card-body {
+    height: fit-content;
 }
-
-.author-text {
-    color: whitesmoke;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
 
 /*Print Title of forum comment from admin*/
 .hover-orange-class {
@@ -50,16 +50,6 @@ p, div {
     color: #eaa205;
 }
 
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: #0c0c0c;
-}
-
 
 /*Footer CSS*/
 .orange-footer {
@@ -70,6 +60,7 @@ p, div {
     color: #E84610;
     border: none;
     background: transparent;
+
 }
 
 .btn-like:hover,
@@ -77,4 +68,10 @@ p, div {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+footer {
+    bottom: 0;
+    height: 50px;
+    width: 100%;
 }

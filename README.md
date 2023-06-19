@@ -204,11 +204,20 @@ Imported for use in this website was __randomint__ from the random module <br>
 ## Font Awesome
 [Font Awesome](https://fontawesome.com)
 
-### Bootstrap
+## Bootstrap
 [Bootstrap]() was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning. Here are a few links to different areas of the Bootstrap wesbite that was used within this website.
+Here's some examples of Bootstrap that were used.
+
+## Crispy Forms
+[Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.
+
+
 
 [CSS colouring](https://www.bitdegree.org/learn/bootstrap-colors)
 [Bootstrap Icons](https://www.bootstrapcdn.com/bootstrapicons/)
+[Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/)
+[Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons)
+[Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/)
 
 ## Python Tutor.
 [Python Tutor](https://pythontutor.com/visualize.html). Helps to test, run and visualize parts of code.

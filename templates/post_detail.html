@@ -6,10 +6,10 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}
+                <h1>{{ post.title }}
                 </h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p>{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
@@ -38,11 +38,11 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                <p><button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
                                 {% else %}
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                        class="far fa-heart"></i></button></p>
                                 {% endif %}
                             </form>
                             {% else %}
@@ -90,7 +90,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="">
             <div class="card-body">
                 <!-- For later -->
                 {% if commented %}
@@ -104,7 +104,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-outline-dark">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}

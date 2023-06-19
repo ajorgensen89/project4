@@ -59,6 +59,9 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="/templates/bookings/bookings_sheet.html">BOOK NOW!</a>
+                    </li>
                     {% else %}
                     <li class="list-inline-item">
                         <a class="hover-orange-class" href="{% url 'account_signup' %}">Register</a>
@@ -66,9 +69,7 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class" href="{% url 'account_login' %}">Login</a>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="hover-orange-class" href="/templates/bookings/bookings_sheet.html">BOOK NOW!</a>
-                    </li>
+                    
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-secondary">
