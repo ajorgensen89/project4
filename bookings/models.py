@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 import random 
 from django import forms
+from django.forms.widgets import SelectDateWidget
 
 # To create a random . Needed??
 #    randomNum = random.randint(1, 10)
@@ -13,7 +14,7 @@ STATUSS = ((0, "Draft"), (1, "Published"))
 
 class Item(models.Model):
     """ Class created to make a form for the user to submit details 
-        to make a booking. Checking for all the information within the class.
+        to make a booking.
     """
     name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField()
@@ -34,3 +35,12 @@ class Item(models.Model):
 # To create an order.
     class Meta:
         ordering = ['-created_on']
+    
+    
+class DateCheck(forms.SelectDateWidget):
+    datecheck = forms.DateField(widget=SelectDateWidget)
+
+    def __str__(self):
+        return self.name 
+
+    

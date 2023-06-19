@@ -3,6 +3,7 @@ from .models import Item
 from .forms import BookingForm
 
 
+
 # Acting homepage with all information view.
 
 def get_bookings_sheet(request):
@@ -52,3 +53,10 @@ def cancel_booking(request, booking_id):
     item = get_object_or_404(Item, id=booking_id)
     item.delete()
     return redirect('get_bookings_sheet')
+
+def show_date(request):
+    dates = DateCheck.objects.all()
+    content = {
+        'dates' : dates
+    }
+    return render(request, 'bookings/bookings_sheet.html', sheet)
