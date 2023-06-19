@@ -52,8 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="me-auto mb-2 mb-lg-0 list-inline">
                     <li class="list-inline-item ">
-                        <a class="hover-orange-class active" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
+                        <a class="hover-orange-class active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="list-inline-item">
@@ -72,7 +71,7 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class" href="{% url 'account_login' %}">Login</a>
                     </li>
-                    
+
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-secondary">
@@ -104,10 +103,11 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 orange-footer">
         <p><span class="text-left text-black">Visit BeanFeast</span><span class="text-warning">|</span>
-            <span class="text-right text-black">Follow us: <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram-square"></i>
-                <i class="fab fa-youtube-square"></i>
+            <span class="text-right text-black">Follow us: <a href="https://en-gb.facebook.com/" target="_blank"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.youtube.com/?gl=GB&hl=en-GB" target="_blank"><i class="fab fa-youtube-square"></i></a>
             </span>
         </p>
     </footer>
