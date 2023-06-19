@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Item
 from .forms import BookingForm
 
@@ -20,7 +20,7 @@ def create_a_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('get_bookings_sheet')
+            return redirect(reverse('get_bookings_sheet'))
     form = BookingForm()
     sheet = {
         'form': form

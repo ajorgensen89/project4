@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 import random 
-from django.db.models.fields import DateTimeField
+from django import forms
 
 # To create a random . Needed??
 #    randomNum = random.randint(1, 10)

@@ -60,7 +60,10 @@
                         <a class="hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="/book/">BOOK NOW!</a>
+                        <a class="hover-orange-class" href="{% url 'create_a_booking' %}">BOOK NOW!</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class" href="{% url 'get_bookings_sheet' %}">View!</a>
                     </li>
                     {% else %}
                     <li class="list-inline-item">

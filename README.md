@@ -1,12 +1,12 @@
-# Battleship Game Created for Python Project.
+# Cocktail Bar
 <br>
 <hr>
 
-[Deployable Link to Project site.](https://avaj-battleship-python.herokuapp.com/)<br>
+[Deployable Link to Project site.]()<br>
 <hr>
 <br>
 
-![Responsive Desgin](images/readme-images/AiIResp.png)<br>
+![Responsive Desgin]()<br>
 <br>
 
 
