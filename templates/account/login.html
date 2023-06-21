@@ -12,9 +12,9 @@
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the BEAN|FEAST. Please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+            <p>{% blocktrans %}Welcome back to the BEAN|FEAST. <br>
+                Please log in. <br>
+                If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
                 first.{% endblocktrans %}</p>
         </div>
     </div>
@@ -23,9 +23,12 @@
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
+                
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
+                <p><label for="email">Add email.</label>
+                <input type="email" name="email" id="email" autocomplete="email" required></p>
                 <button  class="btn right btn-outline-dark" type="submit">{% trans "Sign In" %}</button>
             </form>
         </div>

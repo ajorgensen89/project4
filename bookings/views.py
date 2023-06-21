@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from .models import Item
+from .models import Item, Reservation
 from .forms import BookingForm
 
 
@@ -8,8 +8,11 @@ from .forms import BookingForm
 
 def get_bookings_sheet(request):
     items = Item.objects.all()
+    reservation = Reservation.objects.all()
+    appointment = reservation.filter(approve=False).order_by("made_on")
     sheet = {
-        'items': items
+        'items': items,
+        'appointment': appointment
     }
     return render(request, 'bookings/bookings_sheet.html', sheet)
 

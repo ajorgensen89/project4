@@ -26,7 +26,7 @@ class Item(models.Model):
     cancel = models.BooleanField(null=False, blank=False, default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUSS, default=0)
-    approved = models.BooleanField(default=False)
+    approve = models.BooleanField(default=False)
 
 # To rename the default option from django.
     def __str__(self):
@@ -37,10 +37,16 @@ class Item(models.Model):
         ordering = ['-created_on']
     
     
-# class DateCheck(forms.SelectDateWidget):
-#     datecheck = forms.DateField(widget=SelectDateWidget)
+class Reservation(models.Model):
 
-#     def __str__(self):
-#         return self.name 
+    reservation = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="appointment")
+    made_on = models.DateTimeField(auto_now_add=True)
+    approve = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['made_on']
+
+    def __str__(self):
+        return f"Reservation: {self.name}"    
 
     

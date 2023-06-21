@@ -4,22 +4,13 @@ from .models import Item
 # Register your models here.
 @admin.register(Item)
 class simple(admin.ModelAdmin):
-    list_filter = ('status', 'created_on', 'approved')
+    list_filter = ('status', 'created_on', 'approve')
 
-    actions = ['approved_bookings']
+    actions = ['approve_bookings']
 
-    def approved_bookings(self, request, queryset):
-        queryset.update(approved=True)
+    def approve_bookings(self, request, queryset):
+        queryset.update(approve=True)
 
 
 
 # admin.site.register(DateCheck)
-
-
-
-
-
-# admin.site.register(Item)
-
-
-# admin.site.register(Comment)

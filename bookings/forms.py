@@ -1,5 +1,5 @@
 from django import forms
-from .models import Item
+from .models import Item, Reservation
 
 
 class BookingForm(forms.ModelForm):
@@ -9,5 +9,12 @@ class BookingForm(forms.ModelForm):
 
     # class Meta:
     #     model = DateCheck
-    #     fields = ['date']    
+    #     fields = ['date']
+
+
+class ReservationForm(forms.ModelForm):
+    class Meta:
+        model = Reservation
+        fields = ('reservation',)
+
 

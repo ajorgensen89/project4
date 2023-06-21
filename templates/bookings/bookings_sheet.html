@@ -7,8 +7,7 @@
   
     {% for item in items %}
     <tr>
-        {% if item.cancel %}
-<p>{{ item.id }}</p>
+        {% if item.approve %}
         <td><strike>{{ item.name }}</strike></td>
         <td><strike>{{ item.email }}</strike></td>
         <td><strike>{{ item.date }}</strike></td>
@@ -19,10 +18,12 @@
         <td>{{ item.cancel }}</td>
         <td><strike>{{ item.created_on }}</strike></td>
         <td><strike>{{ item.status }}</strike></td>
-        <td><strike>{{ item.approved }}</strike></td>
+        <td><strike>{{ item.approve }}</strike></td>
+        <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
+            for {{ item.people }}
+        </p>
 
         {% else %}
-        <p>{{ item.id }}</p>
         <td>{{ item.name }}</td>
         <td>{{ item.email }}</td>
         <td>{{ item.date }}</td>
@@ -33,7 +34,7 @@
         <td>{{ item.cancel }}</td>
         <td>{{ item.created_on }}</td>
         <td>{{ item.status }}</td>
-        <td>{{ item.approved }}</td>
+        <td>{{ item.approve }}</td>
 
         {% endif %}
         <td>
