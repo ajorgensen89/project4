@@ -47,6 +47,16 @@ class Reservation(models.Model):
         ordering = ['made_on']
 
     def __str__(self):
-        return f"Reservation: {self.name}"    
+        return f"Reservation: {self.name}"  
+
+
+# class ResetApprove(models.Model):
+
+#     approve = models.BooleanField(default=False)
+#     edit_approve = approve
+
+#     def __str__(self):
+#         return f"Reset: {self.name}"
+
 
     

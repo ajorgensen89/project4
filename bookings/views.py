@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Item, Reservation
 from .forms import BookingForm
+from .admin import simple
 
 
 
@@ -37,11 +38,15 @@ def create_a_booking(request):
 
 def edit_booking(request, booking_id):
     item = get_object_or_404(Item, id=booking_id)
+    #reset = ResetApprove.objects.all()
     if request.method == 'POST':
 
         # Update instance.
         form = BookingForm(request.POST, instance=item)
         if form.is_valid():
+            item.approve = False            
+            #edit_approve_booking
+            #reset.update()
             form.save()
             return redirect('get_bookings_sheet')
 

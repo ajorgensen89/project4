@@ -18,3 +18,9 @@ class ReservationForm(forms.ModelForm):
         fields = ('reservation',)
 
 
+# class ResetForm(forms.ModelForm):
+#     class Meta:
+#         model = ResetApprove
+#         fields = ('approve',)
+
+
