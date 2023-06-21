@@ -4,7 +4,7 @@
 
 <h1 class="text-danger">Book your table</h1>
 <table>
-  
+
     {% for item in items %}
     <tr>
         {% if item.approve %}
@@ -20,7 +20,7 @@
         <td><strike>{{ item.status }}</strike></td>
         <td><strike>{{ item.approve }}</strike></td>
         <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
-            for {{ item.people }}
+            for {{ item.people }} booked by {{ item.email }}
         </p>
 
         {% else %}
@@ -35,6 +35,18 @@
         <td>{{ item.created_on }}</td>
         <td>{{ item.status }}</td>
         <td>{{ item.approve }}</td>
+
+        {% endif %}
+
+        {% if user.username == item.name %}
+        <p>{{ item }} REQUEST SENT</p>
+        {% else %}
+        <p>NOT SENT</p>
+        <li class="list-inline-item">
+            <p>Click below</p>
+            <a class="hover-orange-class" href="{% url 'create_a_booking' %}"><strong>Try Again!</strong></a>
+            <p>The 'username' you registered with, did not match the 'Name' field!</p>
+        </li>
 
         {% endif %}
         <td>

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Item, Reservation
 from .forms import BookingForm
 from .admin import simple
+from django.contrib.auth.models import User
 
 
 
@@ -28,7 +29,7 @@ def create_a_booking(request):
             return redirect(reverse('get_bookings_sheet'))
     form = BookingForm()
     sheet = {
-        'form': form
+            'form': form
     }
 
     return render(request, 'bookings/book_table.html', sheet)
@@ -59,6 +60,7 @@ def edit_booking(request, booking_id):
 
 def cancel_booking(request, booking_id):
     item = get_object_or_404(Item, id=booking_id)
+    item.cancel
     item.delete()
     return redirect('get_bookings_sheet')
 

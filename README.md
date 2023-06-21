@@ -255,7 +255,7 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 4. [Stack Overflow]() restart game tips. Adapted to suit this website.
 
-5. []().<br>
+5. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using Django methods.<br>
 
 [Back to the top](#battleship-game-created-for-python-project)
 

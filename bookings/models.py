@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 import random 
 from django import forms
-from django.forms.widgets import SelectDateWidget
+from django.contrib.auth.models import User
 
 # To create a random . Needed??
 #    randomNum = random.randint(1, 10)
@@ -13,8 +13,9 @@ created_on = False
 STATUSS = ((0, "Draft"), (1, "Published"))
 
 class Item(models.Model):
-    """ Class created to make a form for the user to submit details 
-        to make a booking.
+    """
+    Class created to make a form for the user to submit details 
+    to make a booking.
     """
     name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField()
@@ -38,7 +39,9 @@ class Item(models.Model):
     
     
 class Reservation(models.Model):
-
+    """
+    class to ensure the booking request has be be approved before it is confirmed to the user
+    """
     reservation = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="appointment")
     made_on = models.DateTimeField(auto_now_add=True)
     approve = models.BooleanField(default=False)
