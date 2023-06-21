@@ -7,40 +7,8 @@
 
     {% for item in items %}
     <tr>
-        {% if item.approve %}
-        <td><strike>{{ item.name }}</strike></td>
-        <td><strike>{{ item.email }}</strike></td>
-        <td><strike>{{ item.date }}</strike></td>
-        <td><strike>{{ item.time }}</strike></td>
-        <td><strike>{{ item.people }}</strike></td>
-        <td><strike>{{ item.tableSize }}</strike></td>
-        <td><strike>{{ item.booked }}</strike></td>
-        <td>{{ item.cancel }}</td>
-        <td><strike>{{ item.created_on }}</strike></td>
-        <td><strike>{{ item.status }}</strike></td>
-        <td><strike>{{ item.approve }}</strike></td>
-        <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
-            for {{ item.people }} booked by {{ item.email }}
-        </p>
+        {% if user.username != item.name %}
 
-        {% else %}
-        <td>{{ item.name }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.date }}</td>
-        <td>{{ item.time }}</td>
-        <td>{{ item.people }}</td>
-        <td>{{ item.tableSize }}</td>
-        <td>{{ item.booked }}</td>
-        <td>{{ item.cancel }}</td>
-        <td>{{ item.created_on }}</td>
-        <td>{{ item.status }}</td>
-        <td>{{ item.approve }}</td>
-
-        {% endif %}
-
-        {% if user.username == item.name %}
-        <p>{{ item }} REQUEST SENT</p>
-        {% else %}
         <p>NOT SENT</p>
         <li class="list-inline-item">
             <p>Click below</p>
@@ -48,7 +16,13 @@
             <p>The 'username' you registered with, did not match the 'Name' field!</p>
         </li>
 
-        {% endif %}
+        {% else %}
+        <p>{{ item }} SENT A REQUEST</p>
+
+        {% if item.approve %}
+        <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
+            for {{ item.people }} booked by {{ item.email }}
+        </p>
         <td>
             <a href="/edit/{{ item.id }}">
                 <button class="btn btn-lg btn-outline-dark">Edit</button></a>
@@ -59,6 +33,10 @@
             <a href="/cancel/{{ item.id }}">
                 <button type="button" class="btn btn-lg btn-outline-dark">Cancel Reservation</button></a>
         </td>
+        {% else %}
+
+        {% endif %}
+        {% endif %}
     </tr>
     {% empty %}
 
