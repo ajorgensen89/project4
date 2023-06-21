@@ -11,7 +11,9 @@ class simple(admin.ModelAdmin):
     def approved_bookings(self, request, queryset):
         queryset.update(approved=True)
 
-admin.site.register(DateCheck)
+
+
+# admin.site.register(DateCheck)
 
 
 

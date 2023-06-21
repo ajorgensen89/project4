@@ -54,9 +54,9 @@ def cancel_booking(request, booking_id):
     item.delete()
     return redirect('get_bookings_sheet')
 
-def show_date(request):
-    dates = DateCheck.objects.all()
-    content = {
-        'dates' : dates
-    }
-    return render(request, 'bookings/bookings_sheet.html', sheet)
+# def show_date(request):
+#     dates = DateCheck.objects.all()
+#     sheet = {
+#         'dates' : dates
+#     }
+#     return render(request, 'bookings/bookings_sheet.html', sheet)

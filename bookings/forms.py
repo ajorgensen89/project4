@@ -7,3 +7,7 @@ class BookingForm(forms.ModelForm):
         model = Item
         fields = ['name', 'email', 'date', 'time', 'people', 'tableSize', 'booked', 'cancel']
 
+    # class Meta:
+    #     model = DateCheck
+    #     fields = ['date']    
+

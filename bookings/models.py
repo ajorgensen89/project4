@@ -37,10 +37,10 @@ class Item(models.Model):
         ordering = ['-created_on']
     
     
-class DateCheck(forms.SelectDateWidget):
-    datecheck = forms.DateField(widget=SelectDateWidget)
+# class DateCheck(forms.SelectDateWidget):
+#     datecheck = forms.DateField(widget=SelectDateWidget)
 
-    def __str__(self):
-        return self.name 
+#     def __str__(self):
+#         return self.name 
 
     
