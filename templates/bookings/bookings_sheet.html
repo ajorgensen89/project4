@@ -8,17 +8,24 @@
     {% for item in items %}
     <tr>
         {% if user.username != item.name %}
-        <div class="alert alert-warning alert-dismissible">
+        <!-- <div class="alert alert-warning alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>Not sent!</strong>
         </div>
+        <div class="alert alert-warning fade in"> -->
+        <button class="alert alert-success" role="alert">
+            Not sent
+        </button>
 
         {% else %}
-        <p></p>
-        <div class="alert alert-success alert-dismissible">
+        <button class="alert alert-info" role="alert">
+            Yes
+        </button>
+        <!-- <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>Success!</strong> {{ item }} SENT A REQUEST
         </div>
+        <div class="alert alert-success fade in"></div> -->
         {% if item.approve %}
         <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
             for {{ item.people }} booked by {{ item.email }}

@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -92,7 +92,7 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> -->
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
@@ -116,6 +116,12 @@
             let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
             alert.close();
+        }, 3000);
+
+        setTimeout(function () {
+            let m = document.getElementById("mm");
+            let a = new bootstrap.Alert(m);
+            a.close();
         }, 3000);
 
     </script>
