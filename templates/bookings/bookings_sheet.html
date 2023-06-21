@@ -8,17 +8,17 @@
     {% for item in items %}
     <tr>
         {% if user.username != item.name %}
-
-        <p>NOT SENT</p>
-        <li class="list-inline-item">
-            <p>Click below</p>
-            <a class="hover-orange-class" href="{% url 'create_a_booking' %}"><strong>Try Again!</strong></a>
-            <p>The 'username' you registered with, did not match the 'Name' field!</p>
-        </li>
+        <div class="alert alert-warning alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Not sent!</strong>
+        </div>
 
         {% else %}
-        <p>{{ item }} SENT A REQUEST</p>
-
+        <p></p>
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> {{ item }} SENT A REQUEST
+        </div>
         {% if item.approve %}
         <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
             for {{ item.people }} booked by {{ item.email }}
