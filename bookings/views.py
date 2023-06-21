@@ -9,7 +9,7 @@ from .forms import BookingForm
 def get_bookings_sheet(request):
     items = Item.objects.all()
     reservation = Reservation.objects.all()
-    appointment = reservation.filter(approve=False).order_by("made_on")
+    appointment = reservation.filter(approve=True).order_by("made_on")
     sheet = {
         'items': items,
         'appointment': appointment
