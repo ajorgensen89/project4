@@ -117,7 +117,7 @@ Here's some examples of Bootstrap that were used:
 [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/)
 
 ## Python Tutor.
-[Python Tutor](https://pythontutor.com/visualize.html). Helps to test, run and visualize parts of code.
+[Python PEP8 checker](https://www.pythonchecker.com/). Helps to test, run and visualize parts of code to pass PEP8 requirements.
 
 ## Heroku.
 [Heroku](https://dashboard.heroku.com/) is a cloud based platform used to deploy the application on.
