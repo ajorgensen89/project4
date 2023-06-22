@@ -26,10 +26,11 @@ def create_a_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            messages.success(request, "Request Sent...")
-            messages.warning(request, "Not sent...")
+            messages.success(request, "success")
             form.save()
-            return redirect(reverse('get_bookings_sheet'))
+            print("success")
+            return redirect(reverse('get_bookings_sheet'))    
+
     form = BookingForm()
     sheet = {
             'form': form
@@ -48,7 +49,8 @@ def edit_booking(request, booking_id):
         # Update instance.
         form = BookingForm(request.POST, instance=item)
         if form.is_valid():
-            item.approve = False            
+            item.approve = False
+            messages.info(request, "Your change is being processed, wait for approval.")          
             #edit_approve_booking
             #reset.update()
             form.save()
@@ -65,6 +67,7 @@ def cancel_booking(request, booking_id):
     item = get_object_or_404(Item, id=booking_id)
     item.cancel
     item.delete()
+    messages.error(request, "Your booking has been cancelled!")
     return redirect('get_bookings_sheet')
 
 # def show_date(request):

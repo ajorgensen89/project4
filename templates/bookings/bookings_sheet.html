@@ -2,13 +2,14 @@
 
 {% block content %}
 
-<h1 class="text-danger">Book your table</h1>
+<h1 class="text-black">View Bookings.</h1>
 <table>
-
+<div>
     {% for item in items %}
+    {% if user.username != item.name %}
     <tr>
-        {% if user.username != item.name %}
-        {% include '_messages.html' %}
+        
+        <!-- {% include '_messages.html' %} -->
 
         {% else %}
         {% if item.approve %}
@@ -38,4 +39,5 @@
     </tr>
     {% endfor %}
 </table>
+</div>
 {%endblock%}
