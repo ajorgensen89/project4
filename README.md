@@ -144,11 +144,7 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 # Credits.
 
-1. [Codecadmey](). I ran through and completed this example of building the battleship game code on this website provided. It had useful prompts and helped improve my understanding to create the code for the website.<br>
-
 2. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
-
-3. [RtoDto.net.](). Better handling.
 
 4. [Youtuber](https://www.youtube.com/watch?v=2CXY_AKNdfk) for tips while using messages from [Django](https://www.djangoproject.com/).
 
