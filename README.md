@@ -15,13 +15,10 @@
 * [User Experience](#user-experience)
 * [Flow Chart](#flow-chart)
 	- [Lucid Chart](#lucid-chart)
-* [Game Features](#game-features)
-* [Trial and Errors](#trial-and-errors)
+* [Features](#features)
 * [Testing](testing.md)
 * [Clone Website](#clone-website)
-* [Credits](#credits)
 * [Technologies](#technologies)
-     - [Module](#module)
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [Awknowledgements](#awknowledgements)
@@ -30,10 +27,6 @@
 # User Experience
 
 <br>
-
-### Steps
-Some steps and ideas to take when building this project.<br>
-![Ideas](images/readme-images/Basictemplate.png)<br>
 
 <hr>
 
@@ -48,113 +41,11 @@ Some steps and ideas to take when building this project.<br>
 
 <hr>
 
-# Flow Chart.
-## Lucid Chart.
-I used [Lucid Chart](https://www.lucidchart.com/pages/) to create a flow chart of how to create a battleship game.
-1. Start - welcome message
-2. User name input - raises an error if no input is submitted and loops untill there is input.
-3. Select Battleship position (Not on chart - added later.)
-4. Select Row:Column for grid - Select the numbers between 0-4 for both row and column. The input should be validated if guessed before or invalid. You would have to try again.
-5. Check if used before. Re-select.
-6. Loop untill AI or user wins.
-7. Option to restart game or exit.
-<br>
-![Lucid Chart](images/readme-images/LucidChart.png)<br>
-
 [Back to the top](#battleship-game-created-for-python-project)
 
 <hr>
 
-# Game Features.
-
-## Hit.<br>
-
-
-![HIT image](images/readme-images/HITexample.png)<br>
-
-## Missed and battleship location.<br>
-
-
-![MISSED image](images/readme-images/MISSEDexample.png)<br>
-
-## Location already tried.<br>
-
-![ALREADY MISSED](images/readme-images/AiandPreg.png)<br>
-<br>
-<br>
-![FIRST TRY](images/readme-images/IFalready.png)<br>
-<br>
-![SECOND TRY](images/readme-images/Xalready.png)<br>
-<br>
-<br>
-<br>
-![FINAL CODE USED](images/readme-images/XalreadyFix.png)<br>
-
-
-## End of game.<br>
-
-
-
-![GAME OVER](images/readme-images/WinandStopgame.png)<br>
-
-## Name<br>
-
-
-
-The AI's board is also distinguished with a title.<br>
-![NAME](images/readme-images/NAMEfeature.png)<br>
-
-## Guess row and column. <br>
-
-
-![RC prompt](images/readme-images/RCprompt.png)<br>
-
-## Placing Battleships<br>
-
-<br>
-![SHIP Placement](images/readme-images/Battle.png)<br>
-
-## Turn counter<br>
-
-
-![Tally](images/readme-images/TurnCount.png)<br>
-
-
-## Validating input.<br>
-
-
-To see how this was tested click to view the [Testing](testing.md) file here.<br>
-
-## Restart game.<br>
-
-
-
-<hr>
-
-## Future Features.<br>
-
-
-
-
-[Back to the top](#battleship-game-created-for-python-project)
-
-<hr>
-
-# Trial and errors. <br>
-
-### APPENDING LISTS<br>
-
-
-### WRONG RANDOM NUMBER GENERATED.<br>
-
-![Range error](images/readme-images/ERRORrun.png)<br>
-
-
-
-<hr>
-
-## Known Error.<br>
-
+# Features.
 
 
 [Back to the top](#)<br>
@@ -195,29 +86,35 @@ Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ 
 
 # Technologies
 
-## [Python](https://www.python.org/)
-This project has been coded in [Python](https://www.python.org/) language.
+## [Django](https://www.djangoproject.com/)
+This project has implemented [Django](https://www.djangoproject.com/), a [Python](https://www.python.org/) web framework. [Django](https://www.djangoproject.com/) has been used it different ways to help build this site.
 
-## Module.
-Imported for use in this website was __randomint__ from the random module <br>
+[Django](https://www.djangoproject.com/) frameworks and API's used are as followed:
+[Messages Tags.](https://django.readthedocs.io/en/stable/ref/contrib/messages.html)<br> to create Alert banners for particular user actions.<br>
+[Administration](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/) for Admin Interface Model.<br>
+[Testing](https://docs.djangoproject.com/en/4.2/topics/testing/) built in while building website when creating a [Django](https://www.djangoproject.com/) Project.<br>
+[Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as aDjango application to created authentication, account management and registration.<br>
 
 ## Font Awesome
-[Font Awesome](https://fontawesome.com)
+[Font Awesome](https://fontawesome.com) Used for font text. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.
 
 ## Bootstrap
-[Bootstrap]() was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning. Here are a few links to different areas of the Bootstrap wesbite that was used within this website.
-Here's some examples of Bootstrap that were used.
+[Bootstrap](https://getbootstrap.com/) was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning. Here are a few links to different areas of the Bootstrap wesbite that was used within this website.
+Here's some examples of Bootstrap that were used:
+[CSS grid](https://getbootstrap.com/docs/4.0/layout/grid/) with [Bootstrap](https://getbootstrap.com/)<br>
+[CSS colours](https://getbootstrap.com/docs/4.0/utilities/colors/) with [Bootstrap](https://getbootstrap.com/)<br>
 
 ## Crispy Forms
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.
 
-
+## Summernote
+[Summernote](https://summernote.org/getting-started/) has been imbedded into [Django](https://www.djangoproject.com/) to improve the layout for administraion input.
 
 [CSS colouring](https://www.bitdegree.org/learn/bootstrap-colors)
 [Bootstrap Icons](https://www.bootstrapcdn.com/bootstrapicons/)
 [Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/)
 [Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons)
-[Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/)
+[Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/)
 
 ## Python Tutor.
 [Python Tutor](https://pythontutor.com/visualize.html). Helps to test, run and visualize parts of code.
@@ -249,13 +146,13 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 1. [Codecadmey](). I ran through and completed this example of building the battleship game code on this website provided. It had useful prompts and helped improve my understanding to create the code for the website.<br>
 
-2. []() for validating input and providing an example python project through [Code Institute](https://codeinstitute.net/).<br>
+2. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
 
 3. [RtoDto.net.](). Better handling.
 
-4. [Stack Overflow]() restart game tips. Adapted to suit this website.
+4. [Youtuber](https://www.youtube.com/watch?v=2CXY_AKNdfk) for tips while using messages from [Django](https://www.djangoproject.com/).
 
-5. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using Django methods.<br>
+5. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
 
 [Back to the top](#battleship-game-created-for-python-project)
 

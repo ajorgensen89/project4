@@ -9,35 +9,19 @@
     <tr>
         {% if user.username != item.name %}
         {% include '_messages.html' %}
-        <!-- <div class="alert alert-warning alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Not sent!</strong>
-        </div>
-        <div class="alert alert-warning fade in"> -->
-        <button class="alert alert-success" role="alert">
-            Not sent
-        </button>
 
         {% else %}
-        <button class="alert alert-info" role="alert">
-            Yes
-        </button>
-        <!-- <div class="alert alert-success alert-dismissible">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Success!</strong> {{ item }} SENT A REQUEST
-        </div>
-        <div class="alert alert-success fade in"></div> -->
         {% if item.approve %}
-        {% include '_messages.html' %}
-        <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
-            for {{ item.people }} booked by {{ item.email }}
-        </p>
+        <td>
+            <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
+                for {{ item.people }} booked by {{ item.email }}
+            </p>
+        </td>
         <td>
             <a href="/edit/{{ item.id }}">
                 <button class="btn btn-lg btn-outline-dark">Edit</button></a>
         </td>
-        <td>
-        </td>
+
         <td>
             <a href="/cancel/{{ item.id }}">
                 <button type="button" class="btn btn-lg btn-outline-dark">Cancel Reservation</button></a>
