@@ -8,6 +8,7 @@
     {% for item in items %}
     <tr>
         {% if user.username != item.name %}
+        {% include '_messages.html' %}
         <!-- <div class="alert alert-warning alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>Not sent!</strong>
@@ -27,6 +28,7 @@
         </div>
         <div class="alert alert-success fade in"></div> -->
         {% if item.approve %}
+        {% include '_messages.html' %}
         <p>{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
             for {{ item.people }} booked by {{ item.email }}
         </p>

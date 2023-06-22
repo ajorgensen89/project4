@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -92,7 +92,16 @@
                 {% endfor %}
             </div>
         </div>
-    </div> -->
+    </div>
+    <!-- {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %} -->
 
     <main class="flex-shrink-0 main-bg">
         {% block content %}
@@ -107,7 +116,8 @@
                         class="fab fa-facebook-square"></i></a>
                 <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a>
-                <a href="https://www.youtube.com/?gl=GB&hl=en-GB" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.youtube.com/?gl=GB&hl=en-GB" target="_blank"><i
+                        class="fab fa-youtube-square"></i></a>
             </span>
         </p>
     </footer>

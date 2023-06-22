@@ -3,6 +3,7 @@ from .models import Item, Reservation
 from .forms import BookingForm
 from .admin import simple
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 
@@ -25,6 +26,8 @@ def create_a_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            messages.success(request, "Request Sent...")
+            messages.warning(request, "Not sent...")
             form.save()
             return redirect(reverse('get_bookings_sheet'))
     form = BookingForm()
