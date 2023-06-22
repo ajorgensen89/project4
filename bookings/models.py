@@ -17,7 +17,7 @@ class Item(models.Model):
     Class created to make a form for the user to submit details 
     to make a booking.
     """
-    name = models.CharField(max_length=50, null=False, blank=False)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField()
     date = models.DateField()
     time = models.TimeField()
