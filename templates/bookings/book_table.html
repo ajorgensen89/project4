@@ -3,16 +3,39 @@
 {% block content %}
 
 <body class="d-flex flex-column h-100 main-bg">
+    <div class="container-fluid">
+        <div class="row">
 
-    <h1 class="text-black">Create a Booking</h1>
-    <form class="form-large" method="POST" , action="">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div>
-            <p>
-                <button style="width: 200px; margin: 0 0 0 60px;" type="submit"
-                    class="btn btn-lg btn-outline-dark">Click to Continue</button>
-            </p>
+            <div class="col-md-4 my-5">
+                <div>
+                    <h3 class="text-black text-center text-funky"><strong>Book a table with us now!</strong></h3>
+                    <hr>
+                </div>
+                <p class="text-center text-funky">Check out our menu of delicous cocktails.<br>
+                    Come and enjoy a few at our bar.<br>
+                    Don't miss out...
+                    <br>
+                    <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s; --fa-beat-scale: 2.0;"></i>
+                    <br>Reserve your table now.
+                </p>
+            </div>
+            <div class="col-md-8 my-5">
+                <form class="form-large" method="POST" , action="">
+                    <!--Token for protection on form submission-->
+                    {% csrf_token %}
+                    <!--Booking form.-->
+                    {{ form.as_p }}
+                    <div>
+                        <p>
+                            <button style="width: 200px; margin: 0 0 0 80px;" type="submit"
+                                class="btn btn-lg btn-outline-dark">Click to Continue</button>
+                        </p>
+                    </div>
+
+
+                </form>
+            </div>
         </div>
-    </form>
+
+    </div>
     {%endblock%}

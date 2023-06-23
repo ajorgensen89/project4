@@ -31,7 +31,7 @@ def create_a_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.instance.name = request.name
+            form.instance.name = request.user
             messages.success(request, "success")
             form.save()
             print("success")

@@ -8,11 +8,12 @@
         <div class="col-12 align-items-center">
             <!-- Forum posts -->
             <div>
+                <!--Iterates through 'Forum Posts' like about Events/general comments created by Administraion.-->
                 {% for post in post_list %}
                 <!--Padding away from top of page and button below.-->
                 <div class="py-5">
-                    <!--Card created to hold information for the Forum postings.-->
-                    <div class="card card-image">
+                    <!--Card created to hold information from the 'Forum Posts' postings in 'Administraion'.-->
+                    <div class="card">
                         <div class="card-body">
                             <p class="author-text">Author: {{ post.author }}</p>
                             <a href="{% url 'post_detail' post.slug %}" class="hover-orange-class">
@@ -25,19 +26,22 @@
                                 {{ post.number_of_likes }}</p>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
+                    <!-- {% if forloop.counter|divisibleby:3 %} -->
                 </div>
                 <div>
-                    {% endif %}
-                    {% endfor %}
+                    <!-- {% endif %}
+                    {% endfor %} -->
                 </div>
             </div>
         </div>
     </div>
+    <!--Pagination set to one per page. Set up within If statement.-->
     {% if is_paginated %}
+    <!--Each 'Event' created within the 'Forum Posts' on Admin, can be viewed on separate pages. One Forum Post per page.-->
     <nav aria-label="page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
+            <!--To toggle between events if more than one.-->
             <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-dark">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}

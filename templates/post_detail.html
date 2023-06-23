@@ -19,15 +19,16 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- Use the | safe filter inside template -->
+                <!-- Use of the '|' safe filter inside template when posting content-->
                 <p class="card-text">{{ post.content | safe }}</p>
                 <div class="row">
 
-                    <div class="col-1">
-                        <strong>
-                            <!-- Ability to post likes on comments if user is authenticated-->
+                    <div class="col">
+                        <strong class="col">
+                            <!-- Ability to post likes on comments if user is authenticated. Meaning, registered or logged in.-->
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                <!--On all forms for user protection-->
                                 {% csrf_token %}
                                 {% if liked %}
                                 <!--Nice Red heart if liked-->
@@ -41,19 +42,20 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary col-1"><i class="far fa-heart"></i></span>
                             {% endif %}
-                            <!--Total count of likes-->
-                            <span class="text-secondary">{{ post.number_of_likes }}</span>
+                            <!--Total number of likes.-->
+                            <span class="text-secondary col-1">{{ post.number_of_likes }}</span>
                         </strong>
                     </div>
-                    <div class="col-1">
+                    <span class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <!-- Total Comment. -->
                             {{ total_comments }}
                         </strong>
                         {% endwith %}
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>

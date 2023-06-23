@@ -15,8 +15,9 @@
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <!--Sign out form/button-->
+            <!--Sign out form-->
             <form class="form-smaller" method="post" action="{% url 'account_logout' %}">
+                <!--Token for protection on form submission-->
                 {% csrf_token %}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
-
+            <!--Welcome message to register page-->
             <p>{% blocktrans %}Welcome to the BEAN|FEAST. Please Register with us if
                 you have not created an account yet.
                 {% endblocktrans %}</p>
@@ -18,12 +18,15 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                <!--Token for protection on form submission-->
                 {% csrf_token %}
+                <!--Form to signup and register with the site.-->
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button style="width: 200px; margin: 60px 0 0 60px;" class="btn right btn-outline-dark" type="submit">{% trans "Sign Up" %}&raquo;</button>
+                <button style="width: 200px; margin: 60px 0 0 60px;" class="btn right btn-outline-dark" type="submit">{%
+                    trans "Sign Up" %}&raquo;</button>
             </form>
         </div>
     </div>
