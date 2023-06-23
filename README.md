@@ -57,7 +57,7 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 **Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.
 
 **Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.
-**Likes** - 'Likes' can be clicked and are represented as a 'Heart Icon' for people, again, who are registered can 'like' a comment or Event posting.
+**Likes** - 'Likes' can be clicked and are represented as a 'heart icon' for people, again, who are registered can 'like' a comment or Event posting. A user can choose to 'unlike' a post too by re-clicking the 'heart icon'.
 
 [Back to the top](#cocktail-bar)<br>
 
