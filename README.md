@@ -41,19 +41,30 @@
 
 <hr>
 
-[Back to the top](#battleship-game-created-for-python-project)
+[Back to the top](#cocktail-bar)
 
 <hr>
 
 # Features.
+This projects **Features**, for a potentail cocktail bar called **Beanfeast** includes:
+**Date** - Select a date in the format YYYY-MM-DD.<br>
+**Time** - Select a time in the format HH-MM-SS.<br>
+**Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
+**View bookings.** - once approved. The user will be able to view their booking<br>
+**Edit current bookings.** - The user can edit their bookings and again, have to wait for approval for the booking to be viewed and accepted by 'admin' side.<br>
+**Cancel or Delete a booking.** - Bookings can be fully removed. It a user cancels a booking, the booking will be removed from the 'admin' side also.<br>
+**Register** - The user need to register to the site before being able make a booking.
+**Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.
 
+**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.
+**Likes** - 'Likes' can be clicked and are represented as a 'Heart Icon' for people, again, who are registered can 'like' a comment or Event posting.
 
-[Back to the top](#)<br>
+[Back to the top](#cocktail-bar)<br>
 
 <hr>
 
 # Deployment
-To deploy for a [Python](https://www.python.org/) language coded website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
+To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
 Follow the steps for deployment method.<br>
 1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
 ![Pic 1](images/readme-images/Heroku.png)<br>
@@ -80,7 +91,7 @@ Here, on the image below,  the locations are highlighted in **pink**.<br>
 Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ **git clone** followed by your copied **URL link**. Hit enter.
 ![git clone for git bash](images/readme-images/clone2.png)<br>
 
-[Back to the top](#)<br>
+[Back to the top](#cocktail-bar)<br>
 
 <hr>
 
@@ -138,19 +149,19 @@ Ran the website with no significant issues.<br>
 
 See [Testing](testing.md) file for full use of technologies used to test this wesbite.<br>
 
-[Back to the top](#)
+[Back to the top](#cocktail-bar)
 
 <hr>
 
 # Credits.
 
-2. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
+1. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
 
-4. [Youtuber](https://www.youtube.com/watch?v=2CXY_AKNdfk) for tips while using messages from [Django](https://www.djangoproject.com/).
+2. [Youtuber](https://www.youtube.com/watch?v=2CXY_AKNdfk) for tips while using messages from [Django](https://www.djangoproject.com/).
 
-5. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
+3. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
 
-[Back to the top](#battleship-game-created-for-python-project)
+[Back to the top](#cocktail-bar)
 
 <hr>
 
@@ -161,6 +172,6 @@ To the Love Sandwiches 'Example project' for Python code supplied by Anna Greave
 
 <hr>
 
-[Back to the top](#)
+[Back to the top](#cocktail-bar)
 
 <hr>
