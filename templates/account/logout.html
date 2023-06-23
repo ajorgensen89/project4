@@ -9,19 +9,20 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3 class="hover-orange-class">{% trans "Sign Out" %}</h3>
-
+            <!--Confirmation to sign out.-->
             <p>{% trans 'Are you sure you want to sign out?' %}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-
-            <form method="post" action="{% url 'account_logout' %}">
+            <!--Sign out form/button-->
+            <form class="form-smaller" method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn right btn-outline-dark" type="submit">{% trans 'Sign Out' %}</button>
+                <!--Center the button with 'form' image-->
+                <button style="width: 150px; margin: 30px 0 0 50px;" class="btn right btn-outline-dark" type="submit">{% trans 'Sign Out' %}</button>
             </form>
         </div>
     </div>

@@ -1,23 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="masthead">
+<div class="">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-6">
                 <!-- Post title -->
                 <h1>{{ post.title }}
                 </h1>
                 <!-- Post author before | post's created date after -->
                 <p>{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="/sour2.jpg" width="100%">
-                {% else %}
-                <img src="{{ post.featured_image.url }}" width="100%">
-                {% endif %}
             </div>
         </div>
     </div>
@@ -28,7 +20,7 @@
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- Use the | safe filter inside template -->
-                <p class="card-text ">{{ post.content | safe }}</p>
+                <p class="card-text">{{ post.content | safe }}</p>
                 <div class="row">
 
                     <div class="col-1">
@@ -72,27 +64,34 @@
         </div>
     </div>
     <div class="row">
-        <div class="col card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+        <div class="col-md-6 card text-white bg-black">
+            <h3>Discussion Board:</h3>
             <div class="card-body">
                 <!-- Loop inside the tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
+                <div style="padding: 10px;">
+                    <div class="font-weight-bold">
                         <!-- Name goes here. -->
                         {{ comment.name }}
+                        <span class="text-muted font-weight-normal">
+                            <!-- Created date for comment-->
+                            <!--{{ comment.created_on }}-->
+                        </span>
                         <span class=" text-muted font-weight-normal">
                             <!-- Created date for comment-->
                             {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <!-- Comment body goes before the | -->
-                    {{ comment.body | linebreaks }}
+                        </span>
+                        <h6>wrote:</h6>
+                        <span>
+                            <!-- Comment body goes before the | -->
+                            {{ comment.body | linebreaks }}
+                        </span>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="">
+        <div class="col-md-6 card text-black bg-white">
             <div class="card-body">
                 <!-- If user has been authenticated, the comment with have a message 'awaiting approval' until approved by admin -->
                 {% if commented %}
@@ -106,7 +105,9 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-lg btn-outline-dark">Submit</button>
+                    <!--Center buttons on form area-->
+                    <button style="width: 200px; margin: 30px 0 0 60px;" type="submit"
+                        class="btn btn-lg btn-outline-dark">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}

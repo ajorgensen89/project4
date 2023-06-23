@@ -4,7 +4,8 @@ body {
     margin: 0;
 }
 
-p, div {
+p,
+div {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -33,9 +34,46 @@ ul {
     background-color: #f5f6cf;
 }
 
-/*Card*/
+
+/*Card.*/
 .card-body {
+    width: fit-content;
     height: fit-content;
+}
+
+
+/*Forms.*/
+form {
+    border-radius: 10px;
+    width: 320px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("https://res.cloudinary.com/dtsaa4qbs/image/upload/v1687515744/sour2_uzil8n.jpg");
+
+}
+
+
+/*Form - adjusted 'form' above.*/
+.form-smaller {
+    width: 250px;
+    height: 100px;
+
+}
+
+.form-large {
+    height: 550px;
+}
+
+input,
+label {
+    padding: 10px 0 0 20px;
+    margin-top: 10px;
+}
+
+input {
+    background: transparent;
 }
 
 /*Print Title of forum comment from admin*/
@@ -51,11 +89,7 @@ ul {
 }
 
 
-/*Footer CSS*/
-.orange-footer {
-    background-color: #eaa205;
-}
-
+/*Heart icon for like.*/
 .btn-like {
     color: #E84610;
     border: none;
@@ -68,6 +102,12 @@ ul {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+
+/*Footer CSS.*/
+.orange-footer {
+    background-color: #eaa205;
 }
 
 footer {

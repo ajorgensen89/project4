@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
-    <title>BeanFeast Forum</title>
+    <title>BeanFeast</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,24 +52,25 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="me-auto mb-2 mb-lg-0 list-inline">
                     <li class="list-inline-item ">
-                        <a class="hover-orange-class active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="hover-orange-class active beanfeast" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="{% url 'create_a_booking' %}">BOOK NOW!</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'create_a_booking' %}">BOOK NOW!</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="{% url 'get_bookings_sheet' %}">View!</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'get_bookings_sheet' %}">View!</a>
                     </li>
                     {% else %}
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="{% url 'account_signup' %}">Register</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="hover-orange-class" href="{% url 'account_login' %}">Login</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Login</a>
                     </li>
 
                     {% endif %}

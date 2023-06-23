@@ -18,18 +18,18 @@
                 first.{% endblocktrans %}</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button  class="btn right btn-outline-dark" type="submit">{% trans "Sign In" %}</button>
-            </form>
-        </div>
+
+    <div class="col-md-8 mt-3 offset-md-2">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button style="width: 200px; margin: 60px 0 0 60px;" class="btn right btn-outline-dark" type="submit">{% trans "Sign In" %}</button>
+        </form>
+
     </div>
 </div>
 {% endblock %}

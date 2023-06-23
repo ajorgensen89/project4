@@ -5,12 +5,13 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <h1 class="text-black">Create a Booking</h1>
-    <form method="POST" , action="">
+    <form class="form-large" method="POST" , action="">
         {% csrf_token %}
         {{ form.as_p }}
         <div>
             <p>
-                <button type="submit" class="btn btn-lg btn-outline-dark">Click to Continue</button>
+                <button style="width: 200px; margin: 0 0 0 60px;" type="submit"
+                    class="btn btn-lg btn-outline-dark">Click to Continue</button>
             </p>
         </div>
     </form>
