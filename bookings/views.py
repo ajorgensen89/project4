@@ -32,7 +32,6 @@ def create_a_booking(request):
             form.instance.name = request.user
             messages.success(request, "success")
             form.save()
-            print("success")
             return redirect(reverse('get_bookings_sheet'))    
 
     form = BookingForm()

@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ['beanfeast-project-4.herokuapp.com', '8000-ajorgensen89-project
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+DATE_INPUT_FORMATS = ['%d %b, %Y']
+
 # Application definition
 
 INSTALLED_APPS = [

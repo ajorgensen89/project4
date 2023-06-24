@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 
 created_on = False
 STATUSS = ((0, "Draft"), (1, "Published"))
-TIME_SLOTS = (
+TIME_SLOTS = [
     ('3PM', '3PM'),
     ('4PM', '4PM'),
     ('5PM', '5PM'),
@@ -19,7 +19,12 @@ TIME_SLOTS = (
     ('7PM', '7PM'),
     ('8PM', '8PM'),
     ('9PM', '9PM'),
-)
+]
+TABLES = [
+    ('A', 'A'),
+    ('B', 'B'),
+    ('C', 'C'),
+]
 
 class Item(models.Model):
     """
@@ -32,7 +37,7 @@ class Item(models.Model):
     time = models.CharField(max_length=8, choices=TIME_SLOTS, default='3PM')
     people = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(10)])
     tableSize = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
-    booked = models.BooleanField(null=False, blank=False, default=False)
+    booked = models.BooleanField('HAPPY TO SEND FOR APPROVAL? TICK BOX.', null=False, blank=False, default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUSS, default=0)
     approve = models.BooleanField(default=False)
@@ -43,7 +48,7 @@ class Item(models.Model):
 
 # To create an order.
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-created_on']  
     
     
 class Reservation(models.Model):
@@ -58,16 +63,13 @@ class Reservation(models.Model):
         ordering = ['made_on']
 
     def __str__(self):
-        return f"Reservation: {self.name}"  
+        return f"Reservation: {self.name}"    
 
 
-# class ResetApprove(models.Model):
+class Table(models.Model):
+    table = models.CharField(max_length=8, choices=TABLES, default='A')
+    name = Item.name
+    time = Item.time
 
-#     approve = models.BooleanField(default=False)
-#     edit_approve = approve
-
-#     def __str__(self):
-#         return f"Reset: {self.name}"
-
-
-    
+    def __str__(self):
+        return str(self.name)

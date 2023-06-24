@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Item
+from .models import Item, Table
 
 # Register your models here.
 @admin.register(Item)
@@ -11,9 +11,8 @@ class simple(admin.ModelAdmin):
     def approve_bookings(self, request, queryset):
         queryset.update(approve=True)
 
-    #def edit_approve_booking(self, request, queryset):
-        #queryset.update(approve=False)    
+@admin.register(Table)
+class Check(admin.ModelAdmin):
+    list_display = ('time', 'name','table')
 
 
-
-# admin.site.register(DateCheck)
