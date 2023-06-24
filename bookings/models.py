@@ -31,7 +31,7 @@ class Item(models.Model):
 
 # To rename the default option from django.
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 # To create an order.
     class Meta:

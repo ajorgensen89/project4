@@ -19,8 +19,6 @@ def get_bookings_sheet(request):
         'appointment': appointment
     }    
 
-
-
     return render(request, 'bookings/bookings_sheet.html', sheet)
 
 
@@ -41,8 +39,6 @@ def create_a_booking(request):
     sheet = {
             'form': form
     }    
-
-
 
     return render(request, 'bookings/book_table.html', sheet)
 
@@ -71,8 +67,6 @@ def edit_booking(request, booking_id):
     sheet = {
         'form': form
     }    
-
-
 
     return render(request, 'bookings/edit_bookings.html', sheet)    
 

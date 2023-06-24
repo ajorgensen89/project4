@@ -1,46 +1,50 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <h1 class="text-black text-funky text-center text-decoration-underline">View Bookings.</h1>
-    <p>Haven't got any booking yet, or waiting for one to be approved?<br>
-        Come back here and check.<br>
-        Most bookings are approved within 24hours!</p>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <h1 class="display-4"><span class="beanfeast">Bean</span><span class="text-warning">|</span><span><strong
+                    class="beanfeast">Feast</span></strong></h1>
+        <p class="lead beanfeast">Awaiting a booking, or check if they have been confirmed?</p>
+        <p>Request can take upto 48 Hours to process. Even when your change your booking.</p>
+        <p>Once a booking is confirmed, you can make changes. Or cancel if you can't make it.</p>
+        <p>Let us know!</p>
+    </div>
 </div>
-<table>
-    <div>
-        {% for item in items %}
-        {% if user.username != item.name %}
-        <tr>
-            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
-            <!-- {% include '_messages.html' %} -->
-            {% else %}
-            {% if item.approve %}
-            <td>
-                <p class="text-funky-smaller">{{ item.name }} Your booking is Approved. {{ item.date}} at {{item.time}}
-                    for {{ item.people }} booked by {{ item.email }}
-                </p>
-            </td>
-            <td>
-                <a href="/edit/{{ item.id }}">
-                    <button class="btn btn-lg btn-outline-dark">Edit</button></a>
-            </td>
+<div class="text-center container-fluid">
 
-            <td>
-                <a href="/cancel/{{ item.id }}">
-                    <button type="button" class="btn btn-lg btn-outline-dark">Cancel Reservation</button></a>
-            </td>
-            {% else %}
+    {% for item in items %}
 
-            {% endif %}
-            {% endif %}
-        </tr>
-        {% empty %}
+    {% if item.approve %}
 
-        <tr class="text-funky-lg">
-            <td>You have No Bookings...</td>
-        </tr>
-        {% endfor %}
-</table>
+    <p class="approve">
+        Your booking is Approved. For <span class="text-warning">|</span><strong>{{ item.date }}
+            at {{ item.time }}</strong>
+        for <strong>{{ item.people }}<span class="text-warning">|</span></strong> booked by {{ item.name }}.
+    </p>
+
+
+    <p>
+
+        <a href="/edit/{{ item.id }}">
+            <button class="btn btn-lg btn-outline-dark">Edit</button></a>
+
+
+
+        <a href="/cancel/{{ item.id }}">
+            <button type="button" class="btn btn-lg btn-outline-dark">Cancel Reservation</button></a>
+
+    </p>
+    {% else %}
+
+    {% endif %}
+
+    {% empty %}
+
+
+    <p>You have No Bookings...</p>
+
+    {% endfor %}
 </div>
 {%endblock%}
