@@ -66,9 +66,9 @@ ul {
 
 
 /*Card image.*/
-.card-img, .card-img-bottom, .card-img-top {
+.card-img-top {
     width: 60%;
-    height: 270px;
+    height: 370px;
 }
 
 

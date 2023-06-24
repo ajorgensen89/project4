@@ -8,7 +8,7 @@ class BookingForm(forms.ModelForm):
     """
     class Meta:
         model = Item
-        fields = ['name', 'email', 'date', 'time', 'people', 'tableSize', 'booked']
+        fields = ['name', 'email', 'date', 'time', 'people', 'booked']
 
 
 class ReservationForm(forms.ModelForm):

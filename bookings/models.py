@@ -36,7 +36,6 @@ class Item(models.Model):
     date = models.DateField()
     time = models.CharField(max_length=8, choices=TIME_SLOTS, default='3PM')
     people = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(10)])
-    tableSize = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     booked = models.BooleanField('HAPPY TO SEND FOR APPROVAL? TICK BOX.', null=False, blank=False, default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUSS, default=0)

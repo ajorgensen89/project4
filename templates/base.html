@@ -139,6 +139,12 @@
             alert.close();
         }, 3000);
 
+        function cancelConfirm() {
+            if (!confirm("Delete?")) {
+                return 'get_bookings_sheet';
+            }
+        };
+
     </script>
 </body>
 

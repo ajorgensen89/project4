@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Item, Reservation
 from .forms import BookingForm
-from .admin import simple
+from .admin import Simple
 from django.contrib.auth.models import User
 from django.contrib import messages
 
