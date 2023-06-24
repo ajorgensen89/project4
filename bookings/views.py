@@ -17,7 +17,7 @@ def get_bookings_sheet(request):
     sheet = {
         'items': items,
         'appointment': appointment
-    }    
+    }
 
     return render(request, 'bookings/bookings_sheet.html', sheet)
 
@@ -37,7 +37,7 @@ def create_a_booking(request):
     form = BookingForm()
     sheet = {
             'form': form
-    }    
+    }
 
     return render(request, 'bookings/book_table.html', sheet)
 
@@ -65,7 +65,7 @@ def edit_booking(request, booking_id):
     form = BookingForm(instance = item)
     sheet = {
         'form': form
-    }    
+    }
 
     return render(request, 'bookings/edit_bookings.html', sheet)    
 
@@ -75,5 +75,3 @@ def cancel_booking(request, booking_id):
     item.delete()
     messages.error(request, "Your booking has been cancelled!")
     return redirect('get_bookings_sheet')
-
-
