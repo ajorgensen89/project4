@@ -66,10 +66,10 @@ class Reservation(models.Model):
         return f"Reservation: {self.name}"    
 
 
-class Table(models.Model):
-    table = models.CharField(max_length=8, choices=TABLES, default='A')
-    name = Item.name
-    time = Item.time
+# class Table(models.Model):
+#     table = models.CharField(max_length=8, choices=TABLES, default='A')
+#     name = Item.name
+#     time = Item.time
 
-    def __str__(self):
-        return str(self.name)
+#     def __str__(self):
+#         return str(self.name)

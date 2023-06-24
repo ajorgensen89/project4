@@ -76,9 +76,4 @@ def cancel_booking(request, booking_id):
     messages.error(request, "Your booking has been cancelled!")
     return redirect('get_bookings_sheet')
 
-# def show_date(request):
-#     dates = DateCheck.objects.all()
-#     sheet = {
-#         'dates' : dates
-#     }
-#     return render(request, 'bookings/bookings_sheet.html', sheet)
+
