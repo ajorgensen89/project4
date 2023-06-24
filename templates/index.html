@@ -3,13 +3,13 @@
 {% block content %}
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
-      <h1 class="display-4"><span class="beanfeast">Bean</span><span
-        class="text-warning">|</span><span><strong class="beanfeast">Feast</span></strong></h1>
-      <p class="lead beanfeast">Specalist Cocktail Bar - It's always happy hour!</p>
-      <p>Register with us and book a table now!</p>
-      <p>Click on the Event below to see more and to leave comments.</p>
+        <h1 class="display-4"><span class="beanfeast">Bean</span><span class="text-warning">|</span><span><strong
+                    class="beanfeast">Feast</span></strong></h1>
+        <p class="lead beanfeast">Specalist Cocktail Bar - It's always happy hour!</p>
+        <p>Register with us and book a table now!</p>
+        <p>Click on the Event below to see more and to leave comments.</p>
     </div>
-  </div>
+</div>
 <!--Responsive container-->
 <div class="container-fluid">
     <div class="row   text-center">
@@ -20,27 +20,61 @@
                 <!--Iterates through 'Forum Posts' like about Events/general comments created by Administraion.-->
                 {% for post in post_list %}
                 <!--Padding away from top of page and button below.-->
-                <div class="py-5">
+                <div class="py-2">
                     <!--Card created to hold information from the 'Forum Posts' postings in 'Administraion'.-->
-                    <div class="card">
+
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <!--If statement - when an 'Image' is attached from the 'admin' panel to a Forum Post. 
+                                    Post different pictures for different occasions-->
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dtsaa4qbs/image/upload/v1684934786/cld-sample-2.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                {% endif %}
+
+                            </div>
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="card-body">
+                                    <h5 class="card-title author-text">Author: {{ post.author }}</h5>
+                                    <p class="card-text"><a href="{% url 'post_detail' post.slug %}"
+                                            class="hover-orange-class">
+                                            <h2 class="card-title card-header">{{ post.title }}</h2>
+                                            <p class="card-text">{{ post.excerpt }}</p>
+                                        </a>
+                                        <hr>
+                                    <p class="card-text"><small class="text-muted">
+                                            <p class="card-text text-muted h6">{{ post.created_on}} <i
+                                                    class="btn-like far fa-heart"></i>
+                                                {{ post.number_of_likes }}</p>
+                                        </small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="card">
                         <div class="card-body">
-                            <p class="author-text">Author: {{ post.author }}</p>
+                            <p class="author-text"></p>
                             <a href="{% url 'post_detail' post.slug %}" class="hover-orange-class">
                                 <h2 class="card-title card-header">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i
-                                    class="btn-like far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                            <hr>
+
                         </div>
-                    </div>
+                    </div> -->
                     <!-- {% if forloop.counter|divisibleby:3 %} -->
                 </div>
-                <div>
-                    <!-- {% endif %}
+
+                <!-- {% endif %}
                     {% endfor %} -->
-                </div>
+
             </div>
         </div>
     </div>

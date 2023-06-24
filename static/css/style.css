@@ -26,7 +26,7 @@ ul {
 /*Head Logo*/
 .beanfeast {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     color: #4A4A4F;
     padding: 0 5px 0 5px;
@@ -64,6 +64,14 @@ ul {
     margin: 0 50px 0 50px;
 }
 
+
+/*Card image.*/
+.card-img, .card-img-bottom, .card-img-top {
+    width: 60%;
+    height: 270px;
+}
+
+
 /*Forms.*/
 form {
     border-radius: 10px;
@@ -99,6 +107,7 @@ input {
     background: transparent;
 }
 
+
 /*Print Title of forum comment from admin*/
 .hover-orange-class {
     text-decoration: none;
@@ -129,10 +138,6 @@ input {
 
 
 /*Aprrove Hover*/
-/* .approve:before {
-    background: rgba(0, 0, 0, 0.2);
-    height: 200px;
-} */
 .approve {
     font-size: 20px;
     color: #E84610;
@@ -160,4 +165,20 @@ footer {
         width: 320px;
         height: 550px;
     }
+}
+
+@media screen and (max-width: 368px) {
+    .card {
+        margin: 0 10px 0 10px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .card-img, .card-img-bottom {
+        width: 260px;
+        height: 270px;
+
+    }
+
 }

@@ -73,7 +73,6 @@ def edit_booking(request, booking_id):
 
 def cancel_booking(request, booking_id):
     item = get_object_or_404(Item, id = booking_id)
-    item.cancel
     item.delete()
     messages.error(request, "Your booking has been cancelled!")
     return redirect('get_bookings_sheet')

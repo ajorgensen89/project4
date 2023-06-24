@@ -11,6 +11,15 @@ from django.contrib.auth.models import User
 
 created_on = False
 STATUSS = ((0, "Draft"), (1, "Published"))
+TIME_SLOTS = (
+    ('3PM', '3PM'),
+    ('4PM', '4PM'),
+    ('5PM', '5PM'),
+    ('6PM', '6PM'),
+    ('7PM', '7PM'),
+    ('8PM', '8PM'),
+    ('9PM', '9PM'),
+)
 
 class Item(models.Model):
     """
@@ -20,11 +29,10 @@ class Item(models.Model):
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField()
     date = models.DateField()
-    time = models.TimeField()
+    time = models.CharField(max_length=8, choices=TIME_SLOTS, default='3PM')
     people = models.PositiveIntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(10)])
     tableSize = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     booked = models.BooleanField(null=False, blank=False, default=False)
-    cancel = models.BooleanField(null=False, blank=False, default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUSS, default=0)
     approve = models.BooleanField(default=False)
