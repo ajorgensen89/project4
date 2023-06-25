@@ -26,8 +26,18 @@
 
 # User Experience
 
+## User Stories
+User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website. User Stories were created on [Github](https://github.com) as 'Issues' to work on. They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.
+Creation and progress of User Stories in Issues on [Github](https://github.com) example. <br>
+![Issues US](media/readme-images/IssuesUS.png)<br>
 <br>
 
+## Migrations
+As models are created they have to be migrated to the Database. New models or even edited or changed models.
+![Migration example](media/readme-images/migrate.png)
+
+## Jinja
+[Jinja](https://jinja.palletsprojects.com) Python template engine was used within this project in input blocks of code. IF/ELSE statements can also be created depending on what template or [HTML](https://en.wikipedia.org/wiki/HTML) needs rendering to the view.
 <hr>
 
 ### Business logic.
@@ -51,13 +61,21 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 **Time** - Select a time in the format HH-MM-SS.<br>
 **Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
 **View bookings.** - once approved. The user will be able to view their booking<br>
+**No Bookings** - Message created when user has no bookings![No bookings](media/readme-images/NoBookings.png)<br>
 **Edit current bookings.** - The user can edit their bookings and again, have to wait for approval for the booking to be viewed and accepted by 'admin' side.<br>
 **Cancel or Delete a booking.** - Bookings can be fully removed. It a user cancels a booking, the booking will be removed from the 'admin' side also.<br>
-**Register** - The user need to register to the site before being able make a booking.
-**Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.
+**Register** - The user need to register to the site before being able make a booking.<br>
 
-**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.
-**Likes** - 'Likes' can be clicked and are represented as a 'heart icon' for people, again, who are registered can 'like' a comment or Event posting. A user can choose to 'unlike' a post too by re-clicking the 'heart icon'.
+**Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
+**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
+**Likes** - 'Likes' can be clicked and are represented as a 'heart icon' for people, again, who are registered can 'like' a comment or Event posting. A user can choose to 'unlike' a post too by re-clicking the 'heart icon'.<br>
+
+
+**Alert Banners** - As the user interacts with the webpage, such as registering, creating a booking, editing a booking or cancelling one, 'Alert Banners' through 'Message Tags in Django' are created as prompts.<br>
+**Csrf Token** - Included in forms for protection of user information in form submissions.<br>
+![CSRF](media/readme-images/csrf.png)<br>
+
+<hr>
 
 [Back to the top](#cocktail-bar)<br>
 
