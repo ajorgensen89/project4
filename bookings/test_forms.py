@@ -12,9 +12,33 @@ class TestBookingForm(TestCase):
         self.assertIn('name', form.errors.keys())
         self.assertEqual(form.errors['name'][0], 'This field is required.')
 
-    def test_field_aret_in_form_metaclass(self):
+    def test_item_email_is_required(self):
+        form = BookingForm({'email': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('email', form.errors.keys())
+        self.assertEqual(form.errors['email'][0], 'This field is required.')
+
+    def test_item_date_is_required(self):
+        form = BookingForm({'date': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('date', form.errors.keys())
+        self.assertEqual(form.errors['date'][0], 'This field is required.')
+
+    def test_item_time_is_required(self):
+        form = BookingForm({'time': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('time', form.errors.keys())
+        self.assertEqual(form.errors['time'][0], 'This field is required.')
+
+    def test_item_people_is_required(self):
+        form = BookingForm({'people': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('people', form.errors.keys())
+        self.assertEqual(form.errors['people'][0], 'This field is required.')    
+
+    def test_field_in_form_metaclass(self):
         form = BookingForm()
-        self.assertEqual(form.Meta.fields, ['name', 'email', 'date', 'time', 'people', 'booked'])
+        self.assertEqual(form.Meta.fields, ['name', 'email', 'date', 'time', 'people', 'booked'])  
 
 
 class TestReservationForm(TestCase):
