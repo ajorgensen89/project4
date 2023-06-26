@@ -7,7 +7,7 @@ from .forms import CommentForm
 
 class PostList(generic.ListView):
     """
-    Create a view for Model - Post. Show if status=1 (published).
+    Create a view for Model - Post. Show if status = 1 (published).
     """
     model = Post
     queryset = Post.objects.filter(status = 1).order_by('-created_on')
@@ -20,6 +20,8 @@ class PostDetail(View):
     Checking approval status.
     Renders post, comments, likes on form.
     """
+
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status = 1)
         post = get_object_or_404(queryset, slug = slug)
@@ -80,6 +82,8 @@ class PostLike(View):
     Post likes from users. Remove likes from users.
     Also for Administraion users when logged in.
     """
+
+
     def post(self, request, slug):
         post = get_object_or_404(Post, slug = slug)
 

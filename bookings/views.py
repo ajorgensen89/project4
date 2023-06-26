@@ -7,7 +7,7 @@ from django.contrib import messages
 
 
 
-# View to get and show your booking/reservation details.
+# View to get and show your booking / reservation details.
 
 
 def get_bookings_sheet(request):
@@ -34,7 +34,8 @@ def create_a_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            # Get username on registation(.user) and prefill field on 'name' in form.
+            # Get username on registation(.user) 
+            # and prefill field on 'name' in form.
             form.instance.name = request.user
             # Success Message Tags.
             messages.success(request, "success")
@@ -84,6 +85,7 @@ def edit_booking(request, booking_id):
     return render(request, 'bookings/edit_bookings.html', sheet)    
 
 #Cancel your booking and it removed from 'Administraion' page.
+
 
 def cancel_booking(request, booking_id):
     # Create Instance

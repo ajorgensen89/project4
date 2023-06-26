@@ -17,7 +17,7 @@ Line of code too long for [PEP8](https://pep8.org) standards.<br>
 
 This error below said that the '/' needed whitespace around the code, but it made the code incorrect so has been left.<br>
 ![Error left alone](media/readme-images/Pylinterror.png)<br>
-Image of the template error with the spacing as suggested by Pylint [Python Checker](https://www.pythonchecker.com/).
+Image of the template error with the spacing as suggested by Pylint [Python Checker](https://www.pythonchecker.com/).<br>
 ![Template error](media/readme-images/TemplateError.png)
 
 
@@ -27,9 +27,46 @@ Image of the template error with the spacing as suggested by Pylint [Python Chec
 PEP8 Packages can be installed in the coding environment. This image below shows the Linter not working as it should on the coding environemtn during this project.<br>
 'Problems' tag remains with - no issues. Which definately was not the case. Other linter options are avaliable.<br>
 ![PEP8 error](media/readme-images/PEP8%26FLAKE8Check.png)
+<br>
+
+### Bookings App pylint checks.
+
+[Python Checker](https://www.pythonchecker.com/) for Bookings / forms.py<br>
+![Forms](/media/readme-images/PYBookingForms.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Bookings / admin.py<br>
+![Admin](/media/readme-images/PYBookingAdmin.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Bookings / models.py<br>
+![Models](/media/readme-images/PYBookingModels.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Bookings / views.py<br>
+![Views](/media/readme-images/PYBookingViews.png)<br>
+<hr>
 
 
+### Forum App pylint checks.
 
+[Python Checker](https://www.pythonchecker.com/) for Forum / forms.py<br>
+![Forms](/media/readme-images/PYForumForms.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Forum / admin.py<br>
+![Admin](/media/readme-images/PYForumAdmin.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Forum / models.py<br>
+![Models](/media/readme-images/PYForumModels.png)<br>
+<hr>
+
+[Python Checker](https://www.pythonchecker.com/) for Forum / views.py<br>
+![Views](/media/readme-images/PYForumViews.png)<br>
+<hr>
+
+### Test pylint for Bookings and Forum App.
 
 ## Tests
 [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) can be used for tests to validate if code is working as expected.<br>

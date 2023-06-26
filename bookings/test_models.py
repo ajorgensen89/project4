@@ -6,9 +6,11 @@ from datetime import datetime
 
 class TestBookingModel(TestCase):
     """
-    Test for bookings/models.py.
+    Test for bookings / models.py.
     Test model = class Item().
     """
+
+
     def test_item_model(self):
         self.user = User.objects.create_user(
                 username = 'john',
@@ -59,13 +61,13 @@ class TestBookingModelReservation(TestCase):
             time = '5PM',
             people = '2',
             booked = True,
-            # created_on=str('2023, 6, 26, 20, 50, 33, 204371, tzinfo=Z'),
+            # created_on = str('2023, 6, 26, 20, 50, 33, 204371, tzinfo=Z'),
             status = 1,
             approve = True,
         )
         reservations = Reservation.objects.create(
             reservation = self.test,
-            # made_on='2023-01-01',
+            # made_on = '2023-01-01',
             approve = True,
         )
 

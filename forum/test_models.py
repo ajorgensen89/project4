@@ -10,6 +10,8 @@ class TestPostModel(TestCase):
     Test forum/models.py.
     Test model = class Post().
     """
+
+
     def test_post_model(self):
         self.user = User.objects.create_user(
                 username = 'john',
@@ -19,10 +21,10 @@ class TestPostModel(TestCase):
             slug = 'Fruity-cocktail',
             author = self.user,
             # updated_on = 
-            content = 'I do believe that the fruitest cocktail on earth is served with a shot of prosecco on the side. Do you know its name?',
+            content = 'Some cocktails come with a shot',
             featured_image = 'image',
-            excerpt ='Excerptionally fruity cocktails made here.',
-            # created_on=str('2023, 6, 26, 20, 50, 33, 204371, tzinfo=Z'),
+            excerpt = 'Excerptionally fruity cocktails made here.',
+            # created_on = str('2023, 6, 26, 20, 50, 33, 204371, tzinfo=Z'),
             status = 1,
             # likes = True,
         )
@@ -31,7 +33,7 @@ class TestPostModel(TestCase):
         self.assertEquals(post.slug, 'Fruity-cocktail')
         self.assertEquals(post.author, self.user)
          # self.assertEquals(post.updated_on, )
-        self.assertEquals(post.content, 'I do believe that the fruitest cocktail on earth is served with a shot of prosecco on the side. Do you know its name?',)
+        self.assertEquals(post.content, 'Some cocktails come with a shot',)
         self.assertEquals(post.featured_image, 'image')
         self.assertEquals(post.excerpt, 'Excerptionally fruity cocktails made here.')
          # self.assertEquals(post.created_on, )
@@ -48,16 +50,18 @@ class TestCommentModel(TestCase):
     Test forum/models.py.
     Model tested = class Comment().
     """
+
+
     def test_comment_model(self):
         self.user = User.objects.create_user(
-                username='john',
+                username = 'john',
             )
         self.post = Post.objects.create(
             title = 'Fruity cocktail',
             slug = 'Fruity-cocktail',
             author = self.user,
             # updated_on = 
-            content = 'I do believe that the fruitest cocktail on earth is served with a shot of prosecco on the side. Do you know its name?',
+            content = 'Some cocktails come with a shot',
             featured_image = 'image',
             excerpt ='Excerptionally fruity cocktails made here.',
             # created_on=str('2023, 6, 26, 20, 50, 33, 204371, tzinfo=Z'),
@@ -81,7 +85,3 @@ class TestCommentModel(TestCase):
         # def test_field_in_model_metaclass(self):
         #     item = Comment()
         #     self.assertEqual(item.Meta.ordering, ('created_on'))
-
-
-
-

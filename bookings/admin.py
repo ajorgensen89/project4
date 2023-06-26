@@ -10,4 +10,4 @@ class Simple(admin.ModelAdmin):
 
 
     def approve_bookings(self, request, queryset):
-        queryset.update(approve=True)
+        queryset.update(approve = True)
