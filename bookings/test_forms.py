@@ -3,8 +3,11 @@ from .forms import BookingForm, ReservationForm
 
 class TestBookingForm(TestCase):
     """
-    Test BookingForm model. Check form is valid. 
-    Check field required status are the same.
+    Test BookingForm in bookings/forms.py.
+    Model = class Item().
+    Check all form objects in list. 
+    Give objects 'Field Required' Status.
+    Check metadata fields are being stored.
     """
     def test_item_name_is_required(self):
         form = BookingForm({'name': ''})
@@ -34,7 +37,7 @@ class TestBookingForm(TestCase):
         form = BookingForm({'people': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('people', form.errors.keys())
-        self.assertEqual(form.errors['people'][0], 'This field is required.')    
+        self.assertEqual(form.errors['people'][0], 'This field is required.')
 
     def test_field_in_form_metaclass(self):
         form = BookingForm()
@@ -43,8 +46,10 @@ class TestBookingForm(TestCase):
 
 class TestReservationForm(TestCase):
     """
-    Test Reservation model. Check field inputs are the same.
+    Test ReservationForm in bookings/forms.py.
+    Model = class Reservation().
+    Check metadata fields are being stored.
     """
-    def test_field_are_in_form_metaclass(self):
+    def test_field_in_form_metaclass(self):
         form = ReservationForm()
         self.assertEqual(form.Meta.fields, ('reservation',))          
