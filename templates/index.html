@@ -30,10 +30,11 @@
                                 <!--If statement - when an 'Image' is attached from the 'admin' panel to a Forum Post. 
                                     Post different pictures for different occasions-->
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
+                                <img alt="if cloudinary image can not be reached, see this image" class="card-img-top"
                                     src="https://res.cloudinary.com/dtsaa4qbs/image/upload/v1684934786/cld-sample-2.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img alt="image from cloudinary" class="card-img-top"
+                                    src=" {{ post.featured_image.url }}">
                                 {% endif %}
 
                             </div>
@@ -43,16 +44,18 @@
                                     <!--Gets and shows information of Forum Post from Admin-->
                                     <h5 class="card-title author-text">Author: {{ post.author }}</h5>
                                     <p class="card-text"><a href="{% url 'post_detail' post.slug %}"
-                                            class="hover-orange-class">
-                                            <h2 class="card-title card-header">{{ post.title }}</h2>
-                                            <p class="card-text">{{ post.excerpt }}</p>
-                                        </a>
-                                        <hr>
-                                    <p class="card-text"><small class="text-muted">
-                                            <p class="card-text text-muted h6">{{ post.created_on}} <i
+                                            class="hover-orange-class"></a>
+                                    <h2 class="card-title card-header">{{ post.title }}</h2>
+                                    <p class="card-text">{{ post.excerpt }}</p>
+                                    </p>
+                                    <hr>
+                                    <div class="card-text">
+                                        <small class="text-muted">
+                                            <p class="card-text text-muted h6">{{ post.created_on}}<i
                                                     class="btn-like far fa-heart"></i>
                                                 {{ post.number_of_likes }}</p>
-                                        </small></p>
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
