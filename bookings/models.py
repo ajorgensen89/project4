@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-import random 
 from django import forms
 from django.contrib.auth.models import User
 
@@ -73,4 +72,4 @@ class Reservation(models.Model):
 
 
     def __str__(self):
-        return f"Reservation: {self.name}"
+        return f"Reservation: {self.reservation}"
