@@ -6,5 +6,5 @@ class TestPostList(TestCase):
     """
     Test PostList in forum/views.py.
     Model = class post().
-    
     """
+    
