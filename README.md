@@ -1,4 +1,11 @@
 # Cocktail Bar
+# BEANFEAST
+# Fullstack Project - 4.
+This project is based on a website with a booking system in a fictional setting. It has been created to portait a website where a user can create a booking at a cocktail bar named **Beanfeast** and then view, delete and cancel any bookings made.
+The user registers to the site first before being able to carry out a booking.
+Once registered they have access to the booking system and can also comment on a Forum created to inform user's of new Events, new cocktails or changes to the cocktail bar from the management site. The Discussion Board created for the website can be used to create discussions about certain topics in the Forum's, aswell as being able to 'like or unlike' a 'Forum Post' or 'Forum Comment'.
+The frontend of the website should encourage users to visit the website and booking, visit the cocktail bar itself, created discussions, offer ease of use and fictional contact information for any other queries.
+The management system has an Administraion page for backend user's of the site, such as management or staff can access the bookings via Bookings Item page, approve bookings and comments, and create Event pages via the Forum Posting page. Comments can be made and seen to be approved here via the Forum Comment page.
 <br>
 <hr>
 
@@ -25,11 +32,18 @@
 <br>
 
 # User Experience
+## Responsive Design.
+[Ai I responsive?](https://ui.dev/amiresponsive) was used to check its look on a number of different devices and responsiveness. The text should be instructive but not too long, that viewing becomes difficult on mobile devices.<br>
+![Responsive Desgin]()<br>
+
+<hr>
 
 ## User Stories
-User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website. User Stories were created on [Github](https://github.com) as 'Issues' to work on. They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.
+User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website. User Stories were created on [Github](https://github.com) respository as a Project which could have 'Issues' added to work on. They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.
 Creation and progress of User Stories in Issues on [Github](https://github.com) example. <br>
 ![Issues US](media/readme-images/IssuesUS.png)<br>
+Projects can be created from the tabs menu. Along side Issues which can be attached the the repositories Project.<br>
+![Project](media/readme-images/RepoPI.png)
 <br>
 
 ## Migrations
@@ -45,11 +59,7 @@ As models are created they have to be migrated to the Database. New models or ev
 
 <hr>
 
-## Responsive Design.
-[Ai I responsive?](https://ui.dev/amiresponsive) was used to check its look on a number of different devices and responsiveness. The text should be instructive but not too long, that viewing becomes difficult on mobile devices.<br>
-![Responsive Desgin](images/readme-images/AiIResp.png)<br>
 
-<hr>
 
 [Back to the top](#cocktail-bar)
 
@@ -61,7 +71,9 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 **Time** - Select a time in the format HH-MM-SS.<br>
 **Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
 **View bookings.** - once approved. The user will be able to view their booking<br>
-**No Bookings** - Message created when user has no bookings![No bookings](media/readme-images/NoBookings.png)<br>
+**No Bookings** - No Bookings.<br>
+![No bookings](media/readme-images/NoBookings.png)
+
 **Edit current bookings.** - The user can edit their bookings and again, have to wait for approval for the booking to be viewed and accepted by 'admin' side.<br>
 **Cancel or Delete a booking.** - Bookings can be fully removed. It a user cancels a booking, the booking will be removed from the 'admin' side also.<br>
 **Register** - The user need to register to the site before being able make a booking.<br>
@@ -80,6 +92,10 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 [Back to the top](#cocktail-bar)<br>
 
 <hr>
+
+# Future Features
+This project could benefit from a number of diffferent features in the future.
+
 
 # Deployment
 To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.

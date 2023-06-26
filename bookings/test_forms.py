@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import BookingForm, ReservationForm
 
+
 class TestBookingForm(TestCase):
     """
     Test BookingForm in bookings/forms.py.
@@ -9,6 +10,8 @@ class TestBookingForm(TestCase):
     Give objects 'Field Required' Status.
     Check metadata fields are being stored.
     """
+    # (self) is TestDjango
+    
     def test_item_name_is_required(self):
         form = BookingForm({'name': ''})
         self.assertFalse(form.is_valid())

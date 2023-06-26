@@ -12,13 +12,13 @@ from django.contrib.auth.models import User
 created_on = False
 STATUSS = ((0, "Draft"), (1, "Published"))
 TIME_SLOTS = [
-    ('3PM', '3PM'),
-    ('4PM', '4PM'),
     ('5PM', '5PM'),
     ('6PM', '6PM'),
     ('7PM', '7PM'),
     ('8PM', '8PM'),
     ('9PM', '9PM'),
+    ('10PM', '10PM'),
+    ('11PM', '11PM'),
 ]
 TABLES = [
     ('A', 'A'),
@@ -35,7 +35,7 @@ class Item(models.Model):
     email = models.EmailField()
     date = models.DateField()
     time = models.CharField(
-    max_length = 8, choices = TIME_SLOTS, default = '3PM')
+    max_length = 8, choices = TIME_SLOTS, default = '5PM')
     people = models.PositiveIntegerField(default = 1, validators = [
     MinValueValidator(1), MaxValueValidator(10)])
     booked = models.BooleanField(
@@ -49,7 +49,9 @@ class Item(models.Model):
 
 
     def __str__(self):
+        
         return str(self.name)
+        #self.name.username
 
 # To create an order.
     class Meta:
