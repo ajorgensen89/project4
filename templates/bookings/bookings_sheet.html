@@ -17,14 +17,13 @@
     <p class="approve">
         Your booking is Approved. For <span class="text-warning">|</span><strong>{{ item.date }}
             at {{ item.time }}</strong>
-        for <strong>{{ item.people }}<span class="text-warning">|</span></strong> booked by {{ item.name }} using {{
-        item.email }}.
+        for <strong>{{ item.people }}<span class="text-warning">|</span></strong> booked by {{ item.name }}.
     </p>
     <p>
         <a href="/edit/{{ item.id }}">
             <button class="btn btn-lg btn-outline-dark">Edit</button></a>
         <a href="/cancel/{{ item.id }}">
-            <button type="button" class="btn btn-lg btn-outline-dark" onclick="confirmCancellation()">Cancel
+            <button type="button" class="btn btn-lg btn-outline-dark">Cancel
                 Reservation</button></a>
     </p>
     {% else %}

@@ -59,14 +59,21 @@ Issues can be added to todo list, in progress list or done list. They can also b
 
 Labels can be created or used default labels to organise the Issues relating to the Project Board.<br>
 ![Labels Use](media/readme-images/USDoneandNotdone.png)<br>
+<br>
 
+## Colours
 
-### Business logic.
+## Typography
+The fonts were used from [Google Fonts](https://fonts.google.com/) and are install by  link in the Head of the page.<br>
+Bebas Neue - I like the large capital block type use of this font with contrast well with the funky more 'fruity' floaty font type of the Yellowtail. <br>
+Oswald - This was a good business standard text to use and very readable, like the Bebas Neue.<br>
+Yellowtail - This 'fruitier' messy style i thought, suited a Cocktail Bar style for the text.<br>
+<br>
 
-
+## Icons
+Icons are created by [Font Awesome](https://fontawesome.com/) and used in this project. They are used to portait social links, a pulsing 'Heart' icon on the Bookings page and a different 'Heart' icon again for the like status. Also, a speech bubble is used for the 'Total number of comments' icon.
 <hr>
-
-
+<br>
 
 [Back to the top](#cocktail-bar)
 
@@ -74,10 +81,21 @@ Labels can be created or used default labels to organise the Issues relating to 
 
 # Features.
 This projects **Features**, for a potentail cocktail bar called **Beanfeast** includes:
+**Navigation Bar** - Contains Logo, a little excerpt and navigation links.<br>
+![Nav Bar](media/readme-images/FeaturesNav.png)<br>
+**Welcome page** - Welcome to Beanfeast message and link to Forum's and upcoming Events and News.<br>
+**Bookings page** - For Booking Form view.<br>
+**Register and Login Page** - User can login in or register in not done so already.<br>
+**Log Out Page** - Once logged in, a 'Sign out' page will be avaliable.<br>
+**View Bookings page** - on 'VIEW NOW' page.<br>
+**Booking Form** - send a booking request to Admin for approval via a form requesting, name, email, date, time, number of people and a radio button to tick for 'HAPPY TO AWAIT APPROVAL'.<br>
+![booking Form](media/readme-images/BookingForm.png)<br>
 **Date** - Select a date in the format YYYY-MM-DD.<br>
 **Time** - Select a time in the format HH-MM-SS.<br>
 **Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
-**View bookings.** - once approved. The user will be able to view their booking<br>
+**View bookings.** - once approved. The user will be able to view their bookings, once logged in, from the website on the 'VIEW NOW' page. They will be able to edit and cancel bookings from here. All forms have a background-image of a cocktail.<br>
+![View Booking example](media/readme-images/FeaturesApproved.png)
+
 **No Bookings** - No Bookings.<br>
 ![No bookings](media/readme-images/NoBookings.png)
 
@@ -88,7 +106,9 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 **Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
 **Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
 **Likes** - 'Likes' can be clicked and are represented as a 'heart icon' for people, again, who are registered can 'like' a comment or Event posting. A user can choose to 'unlike' a post too by re-clicking the 'heart icon'.<br>
-
+**Images** - Different images can be displayed for each different Forum Post created. An image is also displayed in the forms background.<br>
+**Footer** - Has social links, opening times and days, a fictioncal contact number and address.<br>
+![Footer](media/readme-images/FeaturesFooter.png)<br>
 
 **Alert Banners** - As the user interacts with the webpage, such as registering, creating a booking, editing a booking or cancelling one, 'Alert Banners' through 'Message Tags in Django' are created as prompts.<br>
 
@@ -107,23 +127,6 @@ These had to be written into settings.py and have a for loop created for them to
 [Back to the top](#cocktail-bar)<br>
 
 <hr>
-
-# Future Features
-This project could benefit from a number of diffferent features in the future.<br>
-
-The Agile Tool, for this instance, was Github Project Boards, can label Issues and User Stories that have not been completed and would offer a good starting ground for future development and features for this project, Beanfeast site.<br>
-Template of Not Done labelled Issue.
-![Template of Not done](media/readme-images/USAdminNotDone.png)<br>
-
-Not Done labelled items can be filtero out on the Project Board.
-![Filter Not Done](media/readme-images/USFilterNotDone.png)
-
-<br>
-
-[Back to the top](#cocktail-bar)
-
-<hr>
-
 
 # Deployment
 To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
@@ -170,37 +173,41 @@ This project has implemented [Django](https://www.djangoproject.com/), a [Python
 [Messages Tags.](https://django.readthedocs.io/en/stable/ref/contrib/messages.html)<br> to create Alert banners for particular user actions.<br>
 [Administration](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/) for Admin Interface Model.<br>
 [Testing](https://docs.djangoproject.com/en/4.2/topics/testing/) built in while building website when creating a [Django](https://www.djangoproject.com/) Project.<br>
-[Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as aDjango application to created authentication, account management and registration.<br>
+[Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as a Django application to created authentication, account management and registration.<br>
 
 ## Font Awesome
-[Font Awesome](https://fontawesome.com) Used for font text. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.
+[Font Awesome](https://fontawesome.com) Used for font text. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.<br>
 
 ## Bootstrap
-[Bootstrap](https://getbootstrap.com/) was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning. Here are a few links to different areas of the Bootstrap wesbite that was used within this website.
-Here's some examples of Bootstrap that were used:
+[Bootstrap](https://getbootstrap.com/) was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning.<br>
+Here are a few links to different areas of the Bootstrap wesbite that was used within this website.<br>
+Here's some examples of Bootstrap that were used:<br>
 [CSS grid](https://getbootstrap.com/docs/4.0/layout/grid/) with [Bootstrap](https://getbootstrap.com/)<br>
 [CSS colours](https://getbootstrap.com/docs/4.0/utilities/colors/) with [Bootstrap](https://getbootstrap.com/)<br>
+[CSS colouring](https://www.bitdegree.org/learn/bootstrap-colors)<br>
+[Bootstrap Icons](https://www.bootstrapcdn.com/bootstrapicons/)<br>
+[Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/)<br>
+[Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons)<br>
+[Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/)<br>
+<br>
 
 ## Crispy Forms
-[Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.
+[Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.<br>
 
 ## Summernote
-[Summernote](https://summernote.org/getting-started/) has been imbedded into [Django](https://www.djangoproject.com/) to improve the layout for administraion input.
-
-[CSS colouring](https://www.bitdegree.org/learn/bootstrap-colors)
-[Bootstrap Icons](https://www.bootstrapcdn.com/bootstrapicons/)
-[Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/)
-[Bootstrap Buttons](https://getbootstrap.com/docs/4.0/components/buttons)
-[Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/)
+[Summernote](https://summernote.org/getting-started/) has been imbedded into [Django](https://www.djangoproject.com/) to improve the layout for administraion input.<br>
+<br>
 
 ## Python Tutor.
-[Python PEP8 checker](https://www.pythonchecker.com/). Helps to test, run and visualize parts of code to pass PEP8 requirements.
+[Python PEP8 checker](https://www.pythonchecker.com/). Helps to test, run and visualize parts of code to pass PEP8 requirements.<br>
+<br>
 
 ## Heroku.
-[Heroku](https://dashboard.heroku.com/) is a cloud based platform used to deploy the application on.
+[Heroku](https://dashboard.heroku.com/) is a cloud based platform used to deploy the application on.<br>
+<br>
 
 ## Github.
-[Github](https://github.com/) was used to edit and build the website using  code.
+[Github](https://github.com/) was used to edit and build the website using  code.<br>
 
 <br>
 
@@ -211,7 +218,7 @@ Here's some examples of Bootstrap that were used:
 
 # Other Installed Libaries.
 
-## Requirements.
+## Requirements.txt file
 A file was created within the project to hold all the necessary input for these installed libaries to function - **requirements.txt**.<br>
 ![Requirements.txt file](media/readme-images/RequirementsFile.png)<br>
 
@@ -253,6 +260,12 @@ CLI input - **pip install django-summernote**
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) is used to build reusable layouts out of components, can editor HTML without the HTML content in the template.<br>
 
 CLI input - **pip install django-crispy-forms**
+<br>
+
+## Django Alluth
+[Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) is used to create pages to register on, sign in and sign out and help support authernication flow on the website.<br>
+
+CLI input - **pip3 install django-allauth**
 <br>
 
 ### MIGRATE CHANGES
@@ -311,9 +324,6 @@ Example of **For loop** in jinja templating highlighted in **green box**.<br>
 Example of **empty** in jinja templating highlighted in **brown box**. This show HTML is nothing is rendered to the page.<br>
 ![If/else example](/media/readme-images/Jinja.png)<br>
 
-
-
-
 <hr>
 [Back to the top](#cocktail-bar)
 <hr>
@@ -332,6 +342,33 @@ Ran the website with no significant issues.<br>
 <hr>
 
 See [Testing](testing.md) file for full use of technologies used to test this wesbite.<br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+
+# Future Features and business logic.
+This project could benefit from a number of diffferent features in the future. Due to time and skill constraints, some could not be implemented. Some future features are just fresh ideas that the website could benefit from in a real world situation.<br>
+<br>
+Email's could be sent to the user to confirm whether they received a booking with the cocktail bar, rather then having to log in to check if it has been approved from the website 'VIEW NOW' page.<br>
+Different emails could be changed or registered with the account.<br>
+<br>
+Bookings could be displayed in sections to show the user awaiting approval, approved and not approved status.<br>
+In a real world situation, a Cocktail Bar would have a limited number of tables and could only post certain tables at each hour, on each day. This could be greatly improved so the Admin not not have to reject so many booking requests, as they probably would with this website.<br>
+For this porject, tables can be booked up to a max of 10 people with no minimum. Anybody welcome! This could mean sitting 5 groups of 2 at a table of 10 to fill up the cocktail bar. Hoping for adaptable users!<br>
+In the future different table sizes could be created to suit different groups of people.<br>
+Over booking and double booking tables would be important to avoid. The Admin or management for this project can just reject the bookings, but in the future a better approach can be developed on top on what has been created.<br>
+<br>
+I would have liked to offer the users a separate Gallery and Menu pages so they could see the Cocktails avaliable and see what Beanfeast the Cocktail Bar itself looked like before arriving. This would have greatly increase User Experience to this site.
+<br>
+The Agile Tool, for this instance, was Github Project Boards, can label Issues and User Stories that have not been completed and would offer a good starting ground for future development and features for this project, Beanfeast site.<br>
+Template of Not Done labelled Issue.<br>
+![Template of Not done](media/readme-images/USAdminNotDone.png)<br>
+
+'Not Done' labelled items can be filtered out on the Project Board.<br>
+![Filter Not Done](media/readme-images/USFilterNotDone.png)<br>
+
+<br>
 
 [Back to the top](#cocktail-bar)
 

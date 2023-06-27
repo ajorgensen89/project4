@@ -22,7 +22,6 @@
                 <!--Padding away from top of page and button below.-->
                 <div class="py-2">
                     <!--Card created to hold information from the 'Forum Posts' postings in 'Administraion'.-->
-
                     <div class="card mb-3">
                         <div class="row no-gutters">
                             <div class="col-lg-1 col-md-1 col-xs-1"></div>
@@ -38,7 +37,7 @@
                                 {% endif %}
 
                             </div>
-                            <div class="col-lg-1 col-md-1 col-xs-1" ></div>
+                            <div class="col-lg-1 col-md-1 col-xs-1"></div>
                             <div class="col-lg-6 col-md-5 col-xs-4">
                                 <div class="card-body">
                                     <!--Gets and shows information of Forum Post from Admin-->
@@ -55,51 +54,51 @@
                                         <small class="text-muted">
                                             <p class="card-text text-muted h6">{{ post.created_on}}<i
                                                     class="btn-like far fa-heart"></i>
-                                                {{ post.number_of_likes }}</p>
-                                        </small>
+                                                    {{ post.number_of_likes }}</p>
+                                                </small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+        
+        
+        
+                            <!-- <div class="card">
+                                <div class="card-body">
+                                    <p class="author-text"></p>
+                                    <a href="{% url 'post_detail' post.slug %}" class="hover-orange-class">
+                                        <h2 class="card-title card-header">{{ post.title }}</h2>
+                                        <p class="card-text">{{ post.excerpt }}</p>
+                                    </a>
+                                    <hr>
+        
+                                </div>
+                            </div> -->
+                            <!-- {% if forloop.counter|divisibleby:3 %} -->
                         </div>
+        
+                        <!-- {% endif %}
+                            {% endfor %} -->
+        
                     </div>
-
-
-
-                    <!-- <div class="card">
-                        <div class="card-body">
-                            <p class="author-text"></p>
-                            <a href="{% url 'post_detail' post.slug %}" class="hover-orange-class">
-                                <h2 class="card-title card-header">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr>
-
-                        </div>
-                    </div> -->
-                    <!-- {% if forloop.counter|divisibleby:3 %} -->
                 </div>
-
-                <!-- {% endif %}
-                    {% endfor %} -->
-
             </div>
+            <!--Pagination set to one per page. Set up within If statement.-->
+            {% if is_paginated %}
+            <!--Each 'Event' created within the 'Forum Posts' on Admin, can be viewed on separate pages. One Forum Post per page.-->
+            <nav aria-label="page navigation" class="mb-3">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <!--To toggle between events if more than one.-->
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-dark">&laquo; PREV </a></li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-dark"> NEXT &raquo;</a></li>
+        
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
         </div>
-    </div>
-    <!--Pagination set to one per page. Set up within If statement.-->
-    {% if is_paginated %}
-    <!--Each 'Event' created within the 'Forum Posts' on Admin, can be viewed on separate pages. One Forum Post per page.-->
-    <nav aria-label="page navigation" class="mb-3">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <!--To toggle between events if more than one.-->
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-dark">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-dark"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-{%endblock%}
+        {%endblock%}

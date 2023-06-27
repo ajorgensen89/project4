@@ -6,7 +6,7 @@
 <head>
     <title>BeanFeast</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!--FONT STYLES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,11 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Login</a>
                     </li>
+                    {% if user.is_superuser %}
+                    <li class="list-inline-item">
+                        <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Admin</a>
+                    </li>
+                    {% endif %}
 
                     {% endif %}
                 </ul>
@@ -96,7 +101,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="content-div">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -115,6 +120,12 @@
                 <a href="https://www.youtube.com/?gl=GB&hl=en-GB" target="_blank"><i
                         class="fab fa-youtube-square"></i></a>
             </span>
+            <span class="text-warning">|</span>
+            <span class="padding-span">OPENING TIMES: 5PM-1AM, Monday - Friday.</span>
+            <span class="text-warning">|</span>
+            <span>CONTACT US: 07163 748 924.</span>
+            <span class="text-warning">|</span>
+            <span>FIND US: 21 Jump Street, Lemon Square, Reading. RG0 0FU</span>
         </p>
     </footer>
     <!--Time out set for 'Message Tags' so they disappear after the stated time-->
@@ -124,16 +135,6 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 3000);
-
-        function confirmCancellation() {
-            let cancellation = confirm("Are you sure you want to cancel your reservation?");
-            if (cancellation == true) {
-                return true;
-            } else {
-
-            }        
-                close();
-        }
 
     </script>
 </body>
