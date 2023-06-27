@@ -1,10 +1,12 @@
 # Testing.
 
+
 ## HTML
 
 [W3C Validator](https://validator.w3.org/) was used to test [HTML](https://www.w3schools.com/html) code to enure if passed certain criteria.
 
 <hr>
+
 
 ## CSS
 
@@ -16,6 +18,7 @@ Validated CSS shows all my CSS within the static/css/style.css file.<br>
 ![CSS](media/readme-images/ValidatedCSS.png)<br>
 <br>
 <hr>
+
 
 ## Python
 
@@ -32,6 +35,7 @@ Image of the template error with the spacing as suggested by Pylint [Python Chec
 
 <hr>
 
+
 ## PEP 8 linter
 
 [PEP8 CI](https://pep8ci.herokuapp.com/) with Code Institute to check [Python](https://www.python.org) code.<br>
@@ -39,6 +43,7 @@ PEP8 Packages can be installed in the coding environment. This image below shows
 'Problems' tag remains with - no issues. Which definately was not the case. Other linter options are avaliable.<br>
 ![PEP8 error](media/readme-images/PEP8%26FLAKE8Check.png)
 <br>
+
 
 ### Bookings App pylint checks.
 
@@ -77,6 +82,7 @@ PEP8 Packages can be installed in the coding environment. This image below shows
 ![Views](/media/readme-images/PYForumViews.png)<br>
 <hr>
 
+
 ## Test pylint for Bookings and Forum App.
 
 To run the [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) TestCase, the Database needs changing.
@@ -96,6 +102,7 @@ Passing tests example below.<br>
 ![Test Pass](media/readme-images/TestPass.png)<br>
 Failing tests example below.<br>
 ![Test Failing](media/readme-images/TestFail.png)<br>
+
 
 ## Run tests from [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) with TestCase.
 

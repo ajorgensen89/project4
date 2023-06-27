@@ -25,6 +25,8 @@ The management system has an Administraion page for backend user's of the site, 
 ## Table of Contents.
 
 * [User Experience](#user-experience)
+* [Admin Experience](#admin-experience)
+* [Admin Login](#)
 * [Flow Chart](#flow-chart)
 	- [Creative writing](#creative-writing)
 * [Features](#features)
@@ -105,11 +107,57 @@ The installed applications should be added to **INSTALLED_APPS in settings.py**.
 
 <br>
 
+In Beanfeast project, within the directory, a url path has to be added to `url.py` and imported from Django:<br>
+![URL path](media/readme-images/URLandImport.png)<br>
+
+Verify that Admin has be installed but migrating additions. See [migrations](#migrations) for more details on migrating.<br>
+
+Create a **superuser** to use the administraion page. Not avaliable to just anybody!<br>
+
+CLI input **python3 manage.py createsuperuser**.<br>
+Follow the instructions to enter:<br>
+USERNAME:<br>
+EMAIL:(NOT NEEDED)<br>
+PASSWORD:<br>
+<br>
+Login panel, if it is working looks like the below image:<br>
+
+![Log in](media/readme-images/DjangoAdminLogin.png)<br>
+
+The models being used now need registered with the Admin panel.<br>
+Register is and connect it to a class, inside the `admin.py` file for the App.<br>
+Make sure django.contrib imports admin.<br>
+![Admin to class](media/readme-images/DjangoAdminRegister.png)<br>
+
+Or simpley register it, inside the `admin.py` file for the App.<br>
+![Admin alone](media/readme-images/DjangoAdminReg.png)<br>
+
+Once the models are registered, they can be accessed via Django Admin.<br>
+
+To access the admin site the following context should be used:<br>
+`http://your-server-ip:8000/admin`<br>
+The `username` created for the purpose of this website is:
+The `password` created for the purpose of this website is:
 
 
+## MVC framework.
 
+The **MVC framework** needs to be followed to ensure models can be used, viewed and controlled.<br>
 
+A 'model' is created within a class, in `models.py`.<br>
+The 'model' is to create the ability to check reservations and approve them.<br>
+![MVC model](media/readme-images/MVCModel.png)<br>
+
+That model is placed into a class to create a 'view', in `views.py`.<br>
+It gets all the objects from the reservation 'model', applys any requirements and sets a request for rendering HTML to a 'view'.<br>
+![MVC view](media/readme-images/MVCView.png)<br>
+
+When the 'view' is modelled, it creates a 'controller'(or user) accessible feature, as in this example.<br>
+The staff or management can receive the booking and approve or delete it.<br>
+![MVC controller](media/readme-images/MVCController.png)<br>
+<br>
 <hr>
+
 
 # Features.
 
@@ -280,42 +328,53 @@ To run [Django](https://www.djangoproject.com/) on, for [Heroku](https://dashboa
 CLI input - **pip3 install 'django<4' gunicorn**.<br>
 
 
-### POSTGRESQL LIBARY - ELEPHANTSQL
+### POSTGRESQL LIBARY - ELEPHANTSQL.
+
+[ElephantSql](https://www.elephantsql.com/) hosted the Database for storing data to be used within a cloud.
 
 CLI input - pip3 install dj_database_url==0.5.0 psycopg2.<br>
 
 
-### CLOUDINARY CLOUD STORAGE
+### CLOUDINARY CLOUD STORAGE.
+
+This was used to store images for use within the project. Other files can be hosted here too.<br>
 
 CLI input - **pip3 install dj3-cloudinary-storage**.<br>
 
 
-### REQUIRED FILE > redirect to requirement.txt to store the files when installation is successfull
+### REQUIRED FILE.
+
+Redirect to requirement.txt to store the files when installation is successfull.
 
 CLI input - **pip3 freeze --local > requirements.txt**.<br>
 
 
-### NEW DJANGO PROJECT 
-
-CLI input - **django-admin startproject beanfeast .** (dot(.) = create project in current directory)<br>
+### NEW DJANGO PROJECT.
 
 Creates new manage.py file and a directory called 'beanfeast'.<br>
 
+CLI input - **django-admin startproject beanfeast .** (dot(.) = create project in current directory)<br>
 
-### CREATE FORUM AND BOOKINGS APP (NEW APP)
+
+
+### CREATE FORUM AND BOOKINGS APP (NEW APP).
+
+Creates a new application within the project with separate files for manpulating.
 
 CLI input - **python3 manage.py startapp forum** (add to settings.py file. INSTALLED_APPS).<br>
 CLI input - **python3 manage.py startapp bookings** (add to settings.py file. INSTALLED_APPS).<br>
 
 
-### DJNAGO SUMMERNOTE
+### DJNAGO SUMMERNOTE.
+
 [Summernote](https://summernote.org/getting-started/) uses the Open Source libraries jQuery and Bootstrap.
 
 CLI input - **pip install django-summernote**
 <br>
 
 
-### DJANGO CRISPY FORMS
+### DJANGO CRISPY FORMS.
+
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) is used to build reusable layouts out of components, can editor HTML without the HTML content in the template.<br>
 
 CLI input - **pip install django-crispy-forms**
@@ -323,6 +382,7 @@ CLI input - **pip install django-crispy-forms**
 
 
 ## Django Alluth
+
 [Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) is used to create pages to register on, sign in and sign out and help support authernication flow on the website.<br>
 
 CLI input - **pip3 install django-allauth**
@@ -331,13 +391,15 @@ CLI input - **pip3 install django-allauth**
 
 ### MIGRATE CHANGES
 
-CLI input - **python3 manage.py migrate** (To migrate to the Database for each new App or change to App.<br>
+To migrate to the Database for each new App or change to App.<br>
+
+CLI input - **python3 manage.py migrate** <br>
 
 
 ### RUN SERVER 
 
 CLI input -- **python3 manage.py runserver**<br>
-(IF URL NOT ALLOWED - ADD TO ALLOWED_HOSTS in settings.py).<br>
+(IF URL NOT ALLOWED - ADD URL TO ALLOWED_HOSTS in settings.py).<br>
 
 
 ### NON-COMMITED FILE
