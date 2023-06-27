@@ -191,10 +191,10 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 1. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
 
-2. [Youtuber](https://www.youtube.com/watch?v=2CXY_AKNdfk) for tips while using messages from [Django](https://www.djangoproject.com/).
+2. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
 
-3. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
-
+3. []()
+<br>
 [Back to the top](#cocktail-bar)
 
 <hr>

@@ -2,6 +2,10 @@
 body {
     position: relative;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fae5a0;
 }
 
 p,
@@ -67,7 +71,6 @@ ul {
 
 /*Card image.*/
 .card-img-top {
-    width: 60%;
     height: 400px;
 }
 
@@ -81,7 +84,8 @@ form {
     margin-left: auto;
     margin-right: auto;
     background-image: url("https://res.cloudinary.com/dtsaa4qbs/image/upload/v1687515744/sour2_uzil8n.jpg");
-
+    padding: 50px 0 50px 0;
+    margin:100px 0 100px 0 ;
 }
 
 
@@ -89,12 +93,11 @@ form {
 .form-smaller {
     width: 250px;
     height: 100px;
-
 }
 
 .form-large {
     height: 550px;
-    width: 400px;
+    width: 400px;    
 }
 
 input,
@@ -155,9 +158,13 @@ input {
 }
 
 footer {
-    bottom: 0;
-    height: 50px;
+    position: absolute;
+    border-top: solid 1px;
     width: 100%;
+    height: 50px;
+    border: 50px 0 50px 0;
+    text-align: left;
+
 }
 
 @media screen and (max-width: 540px) {
@@ -170,8 +177,11 @@ footer {
 @media screen and (max-width: 368px) {
     .card {
         margin: 0 10px 0 10px;
+        width: fit-content;
     }
-
+    .card-img-bottom {
+        height: 300px;
+    }
 }
 
 @media screen and (min-width: 1000px) {

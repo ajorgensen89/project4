@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body>
 
     <!-- Navigation -->
 
@@ -96,14 +96,14 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg">
+    <div>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-    </main>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 orange-footer">
+    <footer class="orange-footer">
         <p><span class="text-left text-black">Visit BeanFeast</span><span class="text-warning">|</span>
             <!--In a full used website, 
                 these links would be a particular homepage of a business using this page, 
@@ -125,11 +125,15 @@
             alert.close();
         }, 3000);
 
-        function cancelConfirm() {
-            if (!confirm("Delete?")) {
-                return 'get_bookings_sheet';
-            }
-        };
+        function confirmCancellation() {
+            let cancellation = confirm("Are you sure you want to cancel your reservation?");
+            if (cancellation == true) {
+                return true;
+            } else {
+
+            }        
+                close();
+        }
 
     </script>
 </body>

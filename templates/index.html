@@ -25,8 +25,8 @@
 
                     <div class="card mb-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-1 col-md-1"></div>
-                            <div class="col-lg-4 col-md-5">
+                            <div class="col-lg-1 col-md-1 col-xs-1"></div>
+                            <div class="col-lg-4 col-md-5 col-xs-6">
                                 <!--If statement - when an 'Image' is attached from the 'admin' panel to a Forum Post. 
                                     Post different pictures for different occasions-->
                                 {% if "placeholder" in post.featured_image.url %}
@@ -38,15 +38,17 @@
                                 {% endif %}
 
                             </div>
-                            <div class="col-lg-1 col-md-1"></div>
-                            <div class="col-lg-6 col-md-5">
+                            <div class="col-lg-1 col-md-1 col-xs-1" ></div>
+                            <div class="col-lg-6 col-md-5 col-xs-4">
                                 <div class="card-body">
                                     <!--Gets and shows information of Forum Post from Admin-->
                                     <h5 class="card-title author-text">Author: {{ post.author }}</h5>
-                                    <p class="card-text"><a href="{% url 'post_detail' post.slug %}"
-                                            class="hover-orange-class"></a>
-                                    <h2 class="card-title card-header">{{ post.title }}</h2>
+                                    <p class="card-text">
+                                        <a href="{% url 'post_detail' post.slug %}" class="hover-orange-class">
+                                            <h2 class="card-title card-header">{{ post.title }}</h2>
+                                        </a>
                                     <p class="card-text">{{ post.excerpt }}</p>
+
                                     </p>
                                     <hr>
                                     <div class="card-text">
@@ -86,7 +88,7 @@
     <!--Pagination set to one per page. Set up within If statement.-->
     {% if is_paginated %}
     <!--Each 'Event' created within the 'Forum Posts' on Admin, can be viewed on separate pages. One Forum Post per page.-->
-    <nav aria-label="page navigation">
+    <nav aria-label="page navigation" class="mb-3">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <!--To toggle between events if more than one.-->

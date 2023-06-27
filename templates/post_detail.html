@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="">
+<div>
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6">
@@ -27,7 +27,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3 left top">
             <div class="card-body">
                 <!-- Use of the '|' safe filter inside template when posting content-->
                 <p class="card-text">{{ post.content | safe }}</p>
@@ -75,7 +75,7 @@
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-md-5 card text-white bg-black">
             <h3>Discussion Board:</h3>
             <div class="card-body">
@@ -114,7 +114,7 @@
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post" style="margin-top: 1.3em;"
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <!--Center buttons on form area-->

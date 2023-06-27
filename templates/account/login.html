@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8  mt-2 offset-md-2">
             <h3>{% trans "Sign In" %}</h3>
             <!--Welcome message. Link to create an account.-->
             <p>{% blocktrans %}Welcome back to the BEAN|FEAST. <br>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-md-8 offset-md-4">
         <form class="login" method="POST" action="{% url 'account_login' %}">
             <!--Token for protection on form submission-->
             {% csrf_token %}
