@@ -1,19 +1,24 @@
 # Cocktail Bar
+
 # BEANFEAST
+
 # Fullstack Project - 4.
-This project is based on a website with a booking system in a fictional setting. It has been created to portait a website where a user can create a booking at a cocktail bar named **Beanfeast** and then view, delete and cancel any bookings made.
-The user registers to the site first before being able to carry out a booking.
-Once registered they have access to the booking system and can also comment on a Forum created to inform user's of new Events, new cocktails or changes to the cocktail bar from the management site. The Discussion Board created for the website can be used to create discussions about certain topics in the Forum's, aswell as being able to 'like or unlike' a 'Forum Post' or 'Forum Comment'.
-The frontend of the website should encourage users to visit the website and booking, visit the cocktail bar itself, created discussions, offer ease of use and fictional contact information for any other queries.
-The management system has an Administraion page for backend user's of the site, such as management or staff can access the bookings via Bookings Item page, approve bookings and comments, and create Event pages via the Forum Posting page. Comments can be made and seen to be approved here via the Forum Comment page.
+
+This project is based on a website with a booking system in a fictional setting. It has been created to portait a website where a user can create a booking at a cocktail bar named **Beanfeast** and then view, delete and cancel any bookings made.<br>
+The user registers to the site first before being able to carry out a booking.<br>
+Once registered they have access to the booking system and can also comment on a Forum created to inform user's of new Events, new cocktails or changes to the cocktail bar from the management site. The Discussion Board created for the website can be used to create discussions about certain topics in the Forum's, aswell as being able to 'like or unlike' a 'Forum Post' or 'Forum Comment'.<br>
+The frontend of the website should encourage users to visit the website and booking, visit the cocktail bar itself, created discussions, offer ease of use and fictional contact information for any other queries.<br>
+The management system has an Administraion page for backend user's of the site, so management or staff can access the bookings via Bookings Item page on Django Admin, approve bookings and comments, and create Event pages via the Forum Posting page. Comments can be made and seen here in the Django Admin to be approved here via the Forum Comment page.
 <br>
 <hr>
 
 [Deployable Link to Project site.]()<br>
+
 <hr>
 <br>
 
 ![Responsive Desgin]()<br>
+
 <br>
 
 
@@ -32,13 +37,16 @@ The management system has an Administraion page for backend user's of the site, 
 <br>
 
 # User Experience
+
 ## Responsive Design.
+
 [Ai I responsive?](https://ui.dev/amiresponsive) was used to check its look on a number of different devices and responsiveness. The text should be instructive but not too long, that viewing becomes difficult on mobile devices.<br>
 ![Responsive Desgin]()<br>
 
 <hr>
 
 ## User Stories
+
 User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website.<br>
 User Stories were created on [Github](https://github.com) respository as a Project which could have 'Issues' added to work on.<br>
 They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.<br>
@@ -49,6 +57,7 @@ Projects can be created from the tabs menu. Along side Issues which can be attac
 <br>
 
 ## Agile
+
 The Agile Tool used to develope this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to develop steps of ToDo list, In Progress list or Done status. These Issues can carry 'User Stories' and can be created into separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
 
 Filled in Template for Issues.<br>
@@ -63,14 +72,21 @@ Labels can be created or used default labels to organise the Issues relating to 
 
 ## Colours
 
+Colour Scheme for the website is based on a very tasty cocktail - Amaretto Sour. With light and deep orangey colours, an egg white topping and a red cherry on top.<br>
+Black is always got for an outline or to ensure writing stands out.<br>
+![Colours](media/readme-images/Colours.png)<br>
+
+
 ## Typography
+
 The fonts were used from [Google Fonts](https://fonts.google.com/) and are install by  link in the Head of the page.<br>
 Bebas Neue - I like the large capital block type use of this font with contrast well with the funky more 'fruity' floaty font type of the Yellowtail. <br>
 Oswald - This was a good business standard text to use and very readable, like the Bebas Neue.<br>
-Yellowtail - This 'fruitier' messy style i thought, suited a Cocktail Bar style for the text.<br>
+Yellowtail - This 'fruitier' messy style i thought, suited a Cocktail Bar style, for the text.<br>
 <br>
 
 ## Icons
+
 Icons are created by [Font Awesome](https://fontawesome.com/) and used in this project. They are used to portait social links, a pulsing 'Heart' icon on the Bookings page and a different 'Heart' icon again for the like status. Also, a speech bubble is used for the 'Total number of comments' icon.
 <hr>
 <br>
@@ -79,7 +95,24 @@ Icons are created by [Font Awesome](https://fontawesome.com/) and used in this p
 
 <hr>
 
+# Admin Experience.
+
+Django was used to create an Administraion panel Interface that has information from both the 'Bookings' App and 'Forum' App, directed to it for staff and management to receive and manipulate. See [Other Installed Libaries](#other-installed-libaries) for more information on creating and starting new projects and applications with Django.
+<br>
+The installed applications should be added to **INSTALLED_APPS in settings.py**. See example below.<br>
+
+![Installed apps](media/readme-images/InApp.png)<br>
+
+<br>
+
+
+
+
+
+<hr>
+
 # Features.
+
 This projects **Features**, for a potentail cocktail bar called **Beanfeast** includes:
 **Navigation Bar** - Contains Logo, a little excerpt and navigation links.<br>
 ![Nav Bar](media/readme-images/FeaturesNav.png)<br>
@@ -110,7 +143,10 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 **Footer** - Has social links, opening times and days, a fictioncal contact number and address.<br>
 ![Footer](media/readme-images/FeaturesFooter.png)<br>
 
-**Alert Banners** - As the user interacts with the webpage, such as registering, creating a booking, editing a booking or cancelling one, 'Alert Banners' through 'Message Tags in Django' are created as prompts.<br>
+**Alert Banners** - As the user interacts with the webpage, such as registering, creating a booking, editing a booking or cancelling one, 'Alert Banners' through 'Message Tags in Django' are created as prompts.
+<br>
+
+**JavaScript** - Used to set time out for alert banners. Created with Code Institute walkthrough projects.
 
 Input into settings.py
 ![Setting Message Tags](media/readme-images/MessageTags.png)<br>
@@ -129,6 +165,7 @@ These had to be written into settings.py and have a for loop created for them to
 <hr>
 
 # Deployment
+
 To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
 Follow the steps for deployment method.<br>
 1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
@@ -152,6 +189,7 @@ Now add buildpacks. _Click_ buildpack to choose. It this instance, two, python a
 <hr>
 
 ## Clone website.
+
 To clone the project. I _clicked_ **code** in the respository file. In the dropdown menu, **copy** the link.<br>
 Here, on the image below,  the locations are highlighted in **pink**.<br>
 ![clone](images/readme-images/clone.png)<br>
@@ -162,12 +200,16 @@ Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ 
 
 <hr>
 
-# Technologies Used
-This content includes the variety of Technologies used in creating this website to make it function and to improve the development, aesthetics, functionality and compatability.<br>
-# Installing Django
+# Technologies Used.
 
-## [Django](https://www.djangoproject.com/)
-This project has implemented [Django](https://www.djangoproject.com/), a [Python](https://www.python.org/) web framework. [Django](https://www.djangoproject.com/) has been used it different ways to help build this site.
+This content includes the variety of Technologies used in creating this website to make it function and to improve the development, aesthetics, functionality and compatability.<br>
+<br>
+
+# Installing Django.
+
+## Django
+
+This project has implemented [Django](https://www.djangoproject.com/), a [Python](https://www.python.org/) web framework. [Django](https://www.djangoproject.com/) has been used it different ways to help build this site.<br>
 
 [Django](https://www.djangoproject.com/) frameworks and API's used are as followed:
 [Messages Tags.](https://django.readthedocs.io/en/stable/ref/contrib/messages.html)<br> to create Alert banners for particular user actions.<br>
@@ -176,9 +218,11 @@ This project has implemented [Django](https://www.djangoproject.com/), a [Python
 [Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as a Django application to created authentication, account management and registration.<br>
 
 ## Font Awesome
+
 [Font Awesome](https://fontawesome.com) Used for font text. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.<br>
 
 ## Bootstrap
+
 [Bootstrap](https://getbootstrap.com/) was downloaded into the coding workspace by a [Bootstrap CDN](https://www.bootstrapcdn.com/) to be used throughout the website for inbuilt solutions and methods for helping the layout and design of this website including, style, colour, formatting and poistioning.<br>
 Here are a few links to different areas of the Bootstrap wesbite that was used within this website.<br>
 Here's some examples of Bootstrap that were used:<br>
@@ -192,21 +236,26 @@ Here's some examples of Bootstrap that were used:<br>
 <br>
 
 ## Crispy Forms
+
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.<br>
 
 ## Summernote
+
 [Summernote](https://summernote.org/getting-started/) has been imbedded into [Django](https://www.djangoproject.com/) to improve the layout for administraion input.<br>
 <br>
 
 ## Python Tutor.
+
 [Python PEP8 checker](https://www.pythonchecker.com/). Helps to test, run and visualize parts of code to pass PEP8 requirements.<br>
 <br>
 
 ## Heroku.
+
 [Heroku](https://dashboard.heroku.com/) is a cloud based platform used to deploy the application on.<br>
 <br>
 
 ## Github.
+
 [Github](https://github.com/) was used to edit and build the website using  code.<br>
 
 <br>
@@ -218,26 +267,33 @@ Here's some examples of Bootstrap that were used:<br>
 
 # Other Installed Libaries.
 
-## Requirements.txt file
+## Requirements.txt file.
+
 A file was created within the project to hold all the necessary input for these installed libaries to function - **requirements.txt**.<br>
 ![Requirements.txt file](media/readme-images/RequirementsFile.png)<br>
 
+
 ### SERVER GUNICORN
+
 To run [Django](https://www.djangoproject.com/) on, for [Heroku](https://dashboard.heroku.com/) devlopment.
 
 CLI input - **pip3 install 'django<4' gunicorn**.<br>
+
 
 ### POSTGRESQL LIBARY - ELEPHANTSQL
 
 CLI input - pip3 install dj_database_url==0.5.0 psycopg2.<br>
 
+
 ### CLOUDINARY CLOUD STORAGE
 
 CLI input - **pip3 install dj3-cloudinary-storage**.<br>
 
+
 ### REQUIRED FILE > redirect to requirement.txt to store the files when installation is successfull
 
 CLI input - **pip3 freeze --local > requirements.txt**.<br>
+
 
 ### NEW DJANGO PROJECT 
 
@@ -245,10 +301,12 @@ CLI input - **django-admin startproject beanfeast .** (dot(.) = create project i
 
 Creates new manage.py file and a directory called 'beanfeast'.<br>
 
+
 ### CREATE FORUM AND BOOKINGS APP (NEW APP)
 
 CLI input - **python3 manage.py startapp forum** (add to settings.py file. INSTALLED_APPS).<br>
 CLI input - **python3 manage.py startapp bookings** (add to settings.py file. INSTALLED_APPS).<br>
+
 
 ### DJNAGO SUMMERNOTE
 [Summernote](https://summernote.org/getting-started/) uses the Open Source libraries jQuery and Bootstrap.
@@ -256,11 +314,13 @@ CLI input - **python3 manage.py startapp bookings** (add to settings.py file. IN
 CLI input - **pip install django-summernote**
 <br>
 
+
 ### DJANGO CRISPY FORMS
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) is used to build reusable layouts out of components, can editor HTML without the HTML content in the template.<br>
 
 CLI input - **pip install django-crispy-forms**
 <br>
+
 
 ## Django Alluth
 [Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) is used to create pages to register on, sign in and sign out and help support authernication flow on the website.<br>
@@ -268,16 +328,20 @@ CLI input - **pip install django-crispy-forms**
 CLI input - **pip3 install django-allauth**
 <br>
 
+
 ### MIGRATE CHANGES
 
 CLI input - **python3 manage.py migrate** (To migrate to the Database for each new App or change to App.<br>
+
 
 ### RUN SERVER 
 
 CLI input -- **python3 manage.py runserver**<br>
 (IF URL NOT ALLOWED - ADD TO ALLOWED_HOSTS in settings.py).<br>
 
+
 ### NON-COMMITED FILE
+
 A file called **env.py** should be created to hold environments for safely developing new websites.<br>
 It should be entered into the .gitignore file to avoid being commited.<br>
 This does involve saving a snippet of it incase the coding environment is closed and returned to at a later date, and a new environment is created. **The env.py is not saved**.<br>
@@ -285,52 +349,76 @@ This does involve saving a snippet of it incase the coding environment is closed
 <hr>
 import os<br>
 <br>
-os.environ["DATABASE_URL"]="postgres://bhmjznxq:ITITqbyVtRT4T9kr2mrh0dkiEg3oCZRT@rogue.db.elephantsql.com/bhmjznxq"<br>
-os.environ["SECRET_KEY"]="aj_^secret@key_is_this"<br>
-os.environ["CLOUDINARY_URL"] ="cloudinary://526811634986951:vRc66sG5CkpCnHRqaN33bLo_4-0@dtsaa4qbs"<br>
+os.environ["DATABASE_URL"]="postgres-URL-here"<br>
+os.environ["SECRET_KEY"]="ooh-super-secret"<br>
+os.environ["CLOUDINARY_URL"] ="cloudinary-URL-here"<br>
 <br>
 
 [Back to the top](#cocktail-bar)
 
 <hr>
+
 <br>
 
-## Migrations
-As models are created they have to be migrated to the Database. New models or even edited or changed models.
+## Migrations.
+
+As models are created they have to be migrated to the Database. New models or even edited or changed models.<br>
 CLI input:<br>
+
+
 #### Check which migrations are to be made.
+
 **python3 manage.py makemigrations --dry-run**<br>  
+
+
 #### To make the migrations shown.
+
 **python3 manage.py makemigrations**<br>
+
+
 #### To show any migrations that need to be done in a list, for indentification.
+
 **python3 manage.py showmigrations**<br>
 
 ![Show migrations](media/readme-images/MigrateShow.png)<br>
 
+
 #### To complete the migration.
+
 **python3 manage.py migrate**<br>
+
 ![Migration example](media/readme-images/migrate.png)<br>
 
 [Back to the top](#cocktail-bar)
 
 <hr>
+
 <br>
 
-## Jinja
+
+## Jinja.
+
 [Jinja](https://jinja.palletsprojects.com) Python template engine was used within this project in input blocks of code. IF/ELSE statements can also be created depending on what template or [HTML](https://en.wikipedia.org/wiki/HTML) needs rendering to the view.<br>
 Example of **Block content** in jinja templating highlighted in **yellow box**<br>
 Example of **If/Else** in jinja templating highlighted in **purple box**<br>
 Example of **For loop** in jinja templating highlighted in **green box**.<br>
 Example of **empty** in jinja templating highlighted in **brown box**. This show HTML is nothing is rendered to the page.<br>
+
 ![If/else example](/media/readme-images/Jinja.png)<br>
 
 <hr>
+
 [Back to the top](#cocktail-bar)
-<hr>
-<br>
+
 <hr>
 
+<br>
+
+<hr>
+
+
 # Browser combatability.
+
 Checked the websites combatability with the following browers:
 1. Apple Safari.
 2. Google Chrome.
@@ -347,7 +435,9 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 <hr>
 
+
 # Future Features and business logic.
+
 This project could benefit from a number of diffferent features in the future. Due to time and skill constraints, some could not be implemented. Some future features are just fresh ideas that the website could benefit from in a real world situation.<br>
 <br>
 Email's could be sent to the user to confirm whether they received a booking with the cocktail bar, rather then having to log in to check if it has been approved from the website 'VIEW NOW' page.<br>
@@ -363,9 +453,11 @@ I would have liked to offer the users a separate Gallery and Menu pages so they 
 <br>
 The Agile Tool, for this instance, was Github Project Boards, can label Issues and User Stories that have not been completed and would offer a good starting ground for future development and features for this project, Beanfeast site.<br>
 Template of Not Done labelled Issue.<br>
+
 ![Template of Not done](media/readme-images/USAdminNotDone.png)<br>
 
 'Not Done' labelled items can be filtered out on the Project Board.<br>
+
 ![Filter Not Done](media/readme-images/USFilterNotDone.png)<br>
 
 <br>
@@ -373,6 +465,7 @@ Template of Not Done labelled Issue.<br>
 [Back to the top](#cocktail-bar)
 
 <hr>
+
 
 # Credits.
 
@@ -391,6 +484,7 @@ It also helped with the creation of 'Message Tags'.<br>
 [Back to the top](#cocktail-bar)
 
 <hr>
+
 
 # Awknowledgements.
 To the **Tutor Support** team for [Code Institute](https://codeinstitute.net/) for continued support and assitance.<br>

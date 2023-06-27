@@ -1,17 +1,24 @@
 # Testing.
 
 ## HTML
+
 [W3C Validator](https://validator.w3.org/) was used to test [HTML](https://www.w3schools.com/html) code to enure if passed certain criteria.
 
 <hr>
 
 ## CSS
+
 [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) used to check the [CSS](https://www.w3schools.com/Css) code to enure it passes certain criteria for a well functioning website.<br>
 [Bootstrap CSS](https://getbootstrap.com/) was also used to create elements of [CSS](https://www.w3schools.com/Css).
-
+All my CSS created within static/css/style.css can be navigated to and viewed under validated CSS<br>
+![Validated CSS Nav](media/readme-images/ValidatedCSSTitle.png)<br>
+Validated CSS shows all my CSS within the static/css/style.css file.<br>
+![CSS](media/readme-images/ValidatedCSS.png)<br>
+<br>
 <hr>
 
 ## Python
+
 [Python Checker](https://www.pythonchecker.com/) help check code syntax and to keep to [PEP8](https://pep8.org) standards.<br>
 ![Pylint100%](media/readme-images/pylint100.png)<br>
 Line of code too long for [PEP8](https://pep8.org) standards.<br>
@@ -26,6 +33,7 @@ Image of the template error with the spacing as suggested by Pylint [Python Chec
 <hr>
 
 ## PEP 8 linter
+
 [PEP8 CI](https://pep8ci.herokuapp.com/) with Code Institute to check [Python](https://www.python.org) code.<br>
 PEP8 Packages can be installed in the coding environment. This image below shows the Linter not working as it should on the coding environemtn during this project.<br>
 'Problems' tag remains with - no issues. Which definately was not the case. Other linter options are avaliable.<br>
@@ -71,7 +79,15 @@ PEP8 Packages can be installed in the coding environment. This image below shows
 
 ## Test pylint for Bookings and Forum App.
 
+To run the [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) TestCase, the Database needs changing.
+For normal code developement, use Database:<br>
+![Normal DB](media/readme-images/RunDB.png)<br>
+When tesing with Django TestCase, use Database:<br>
+![Testing DB used](media/readme-images/RunDBTest.png)<br>
+
+
 ## Test in Django - TestCase
+
 [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) has a built-in testing framework that can be used for tests to validate if code is working as expected using **TestCase**.<br>
 Tests can be ran by entering 'python filename.py test' in CLI on cloud coding development environment. For this project the CLI input was 'python manage.py test' and the coding environment was [Gitpod](https://www.gitpod.io).<br>
 Test CLI.<br>
@@ -82,8 +98,17 @@ Failing tests example below.<br>
 ![Test Failing](media/readme-images/TestFail.png)<br>
 
 ## Run tests from [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) with TestCase.
+
 To run these tests, the Database Engine environment had to be changed from [ElephantSQL](https://www.elephantsql.com) environment to [SQlite3](https://sqlite.org).<br>
 ![Database Switch](media/readme-images/DBswitchTest.png)
+<br>
+
+<hr>
 
 [Back to the top](#testing)
+
+<hr>
+
+[Back to README.md](README.md)
+
 <hr>
