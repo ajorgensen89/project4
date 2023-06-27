@@ -3,10 +3,13 @@
 ## HTML
 [W3C Validator](https://validator.w3.org/) was used to test [HTML](https://www.w3schools.com/html) code to enure if passed certain criteria.
 
+<hr>
 
 ## CSS
 [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) used to check the [CSS](https://www.w3schools.com/Css) code to enure it passes certain criteria for a well functioning website.<br>
+[Bootstrap CSS](https://getbootstrap.com/) was also used to create elements of [CSS](https://www.w3schools.com/Css).
 
+<hr>
 
 ## Python
 [Python Checker](https://www.pythonchecker.com/) help check code syntax and to keep to [PEP8](https://pep8.org) standards.<br>
@@ -20,7 +23,7 @@ This error below said that the '/' needed whitespace around the code, but it mad
 Image of the template error with the spacing as suggested by Pylint [Python Checker](https://www.pythonchecker.com/).<br>
 ![Template error](media/readme-images/TemplateError.png)
 
-
+<hr>
 
 ## PEP 8 linter
 [PEP8 CI](https://pep8ci.herokuapp.com/) with Code Institute to check [Python](https://www.python.org) code.<br>
@@ -66,10 +69,10 @@ PEP8 Packages can be installed in the coding environment. This image below shows
 ![Views](/media/readme-images/PYForumViews.png)<br>
 <hr>
 
-### Test pylint for Bookings and Forum App.
+## Test pylint for Bookings and Forum App.
 
-## Tests
-[Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) can be used for tests to validate if code is working as expected.<br>
+## Test in Django - TestCase
+[Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) has a built-in testing framework that can be used for tests to validate if code is working as expected using **TestCase**.<br>
 Tests can be ran by entering 'python filename.py test' in CLI on cloud coding development environment. For this project the CLI input was 'python manage.py test' and the coding environment was [Gitpod](https://www.gitpod.io).<br>
 Test CLI.<br>
 ![Test CLI entry](media/readme-images/TestCLI.png)<br>
@@ -78,7 +81,7 @@ Passing tests example below.<br>
 Failing tests example below.<br>
 ![Test Failing](media/readme-images/TestFail.png)<br>
 
-### Run tests from [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/).
+## Run tests from [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) with TestCase.
 To run these tests, the Database Engine environment had to be changed from [ElephantSQL](https://www.elephantsql.com) environment to [SQlite3](https://sqlite.org).<br>
 ![Database Switch](media/readme-images/DBswitchTest.png)
 

@@ -21,7 +21,7 @@ The management system has an Administraion page for backend user's of the site, 
 
 * [User Experience](#user-experience)
 * [Flow Chart](#flow-chart)
-	- [Lucid Chart](#lucid-chart)
+	- [Creative writing](#creative-writing)
 * [Features](#features)
 * [Testing](testing.md)
 * [Clone Website](#clone-website)
@@ -39,20 +39,27 @@ The management system has an Administraion page for backend user's of the site, 
 <hr>
 
 ## User Stories
-User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website. User Stories were created on [Github](https://github.com) respository as a Project which could have 'Issues' added to work on. They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.
-Creation and progress of User Stories in Issues on [Github](https://github.com) example. <br>
+User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website.<br>
+User Stories were created on [Github](https://github.com) respository as a Project which could have 'Issues' added to work on.<br>
+They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.<br>
+Creation and progress of User Stories in Issues on [Github](https://github.com) example using a Kanban Board for viewing User Story image below.<br>
 ![Issues US](media/readme-images/IssuesUS.png)<br>
 Projects can be created from the tabs menu. Along side Issues which can be attached the the repositories Project.<br>
 ![Project](media/readme-images/RepoPI.png)
 <br>
 
-## Migrations
-As models are created they have to be migrated to the Database. New models or even edited or changed models.
-![Migration example](media/readme-images/migrate.png)
+## Agile
+The Agile Tool used to develope this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to develop steps of ToDo list, In Progress list or Done status. These Issues can carry 'User Stories' and can be created into separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
 
-## Jinja
-[Jinja](https://jinja.palletsprojects.com) Python template engine was used within this project in input blocks of code. IF/ELSE statements can also be created depending on what template or [HTML](https://en.wikipedia.org/wiki/HTML) needs rendering to the view.
-<hr>
+Filled in Template for Issues.<br>
+![User Story Template](media/readme-images//USFull.png)<br>
+
+Issues can be added to todo list, in progress list or done list. They can also be added to a Repository(Project 4).<br>
+![Added to project Todo List](media/readme-images/USConnect.png)<br>
+
+Labels can be created or used default labels to organise the Issues relating to the Project Board.<br>
+![Labels Use](media/readme-images/USDoneandNotdone.png)<br>
+
 
 ### Business logic.
 
@@ -84,6 +91,14 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 
 
 **Alert Banners** - As the user interacts with the webpage, such as registering, creating a booking, editing a booking or cancelling one, 'Alert Banners' through 'Message Tags in Django' are created as prompts.<br>
+
+Input into settings.py
+![Setting Message Tags](media/readme-images/MessageTags.png)<br>
+
+Input into HTML in [Jinja](https://jinja.palletsprojects.com) For Loop.<br>
+![HTML message tags](media/readme-images/MessageTagsForLoop.png)<br>
+
+These had to be written into settings.py and have a for loop created for them to loop 'message' and then the 'tag'. Such as 'message.success'.<br>
 **Csrf Token** - Included in forms for protection of user information in form submissions.<br>
 ![CSRF](media/readme-images/csrf.png)<br>
 
@@ -94,27 +109,42 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 <hr>
 
 # Future Features
-This project could benefit from a number of diffferent features in the future.
+This project could benefit from a number of diffferent features in the future.<br>
+
+The Agile Tool, for this instance, was Github Project Boards, can label Issues and User Stories that have not been completed and would offer a good starting ground for future development and features for this project, Beanfeast site.<br>
+Template of Not Done labelled Issue.
+![Template of Not done](media/readme-images/USAdminNotDone.png)<br>
+
+Not Done labelled items can be filtero out on the Project Board.
+![Filter Not Done](media/readme-images/USFilterNotDone.png)
+
+<br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
 
 
 # Deployment
 To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
 Follow the steps for deployment method.<br>
 1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
-![Pic 1](images/readme-images/Heroku.png)<br>
+![Pic 1]()<br>
 
 2. Add an application name. Follow the rules of what you can enter. Select a region, and _click_ **Create App**.<br>
-![Pic 2](images/readme-images/Heroku2.jpeg)<br>
+![Pic 2]()<br>
 3. Next stage will be a few changes on this page below. First, click into **Settings**.
-![Pic 3](images/readme-images/Heroku3.png.jpeg)<br>
+![Pic 3]()<br>
 4. Once in **Settings**, Config Vars need adding. Change the _KEY and VALUE_ headings. In this case to _PORT and 8000_. Other files such as _creds.json_ file would be added here.<br>
 Now add buildpacks. _Click_ buildpack to choose. It this instance, two, python and nodejs where added. They can be rearranged and deleted if needed here.<br>
 **Important - python needs to be on top**. <br>
-![Pic 4](images/readme-images/Heroku4.png.jpeg)<br>
+![Pic 4]()<br>
 5. Now _click_ into **Deploy**. This wesbite was connected to **Github**. Which can be selected at the top. The **orange line**, shows the location to connect your repository from **Github** to **Heroku**. _Enter_ the name of the repository you need and connect. This pictures shows the repository already connected via **Github**. _Scroll_ to the bottom of the page to deploy. Select **main branch** and _click_ **Deploy Branch**.<br>
-![Pic 5](images/readme-images/Heroku5.png.jpeg)<br>
+![Pic 5]()<br>
 6. The website may show as _building_ for a while. Once it has completed, it should look like the images below, with a **view** link. _Click_ here to view your website.<br>
-![pic 6](images/readme-images/Heroku6.png)
+![pic 6]()<br>
+
+[Back to the top](#cocktail-bar)
 
 <hr>
 
@@ -129,7 +159,9 @@ Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ 
 
 <hr>
 
-# Technologies
+# Technologies Used
+This content includes the variety of Technologies used in creating this website to make it function and to improve the development, aesthetics, functionality and compatability.<br>
+# Installing Django
 
 ## [Django](https://www.djangoproject.com/)
 This project has implemented [Django](https://www.djangoproject.com/), a [Python](https://www.python.org/) web framework. [Django](https://www.djangoproject.com/) has been used it different ways to help build this site.
@@ -170,7 +202,125 @@ Here's some examples of Bootstrap that were used:
 ## Github.
 [Github](https://github.com/) was used to edit and build the website using  code.
 
-# Broswer combatability.
+<br>
+
+[Back to the top](#cocktail-bar)
+
+<br>
+<hr>
+
+# Other Installed Libaries.
+
+## Requirements.
+A file was created within the project to hold all the necessary input for these installed libaries to function - **requirements.txt**.<br>
+![Requirements.txt file](media/readme-images/RequirementsFile.png)<br>
+
+### SERVER GUNICORN
+To run [Django](https://www.djangoproject.com/) on, for [Heroku](https://dashboard.heroku.com/) devlopment.
+
+CLI input - **pip3 install 'django<4' gunicorn**.<br>
+
+### POSTGRESQL LIBARY - ELEPHANTSQL
+
+CLI input - pip3 install dj_database_url==0.5.0 psycopg2.<br>
+
+### CLOUDINARY CLOUD STORAGE
+
+CLI input - **pip3 install dj3-cloudinary-storage**.<br>
+
+### REQUIRED FILE > redirect to requirement.txt to store the files when installation is successfull
+
+CLI input - **pip3 freeze --local > requirements.txt**.<br>
+
+### NEW DJANGO PROJECT 
+
+CLI input - **django-admin startproject beanfeast .** (dot(.) = create project in current directory)<br>
+
+Creates new manage.py file and a directory called 'beanfeast'.<br>
+
+### CREATE FORUM AND BOOKINGS APP (NEW APP)
+
+CLI input - **python3 manage.py startapp forum** (add to settings.py file. INSTALLED_APPS).<br>
+CLI input - **python3 manage.py startapp bookings** (add to settings.py file. INSTALLED_APPS).<br>
+
+### DJNAGO SUMMERNOTE
+[Summernote](https://summernote.org/getting-started/) uses the Open Source libraries jQuery and Bootstrap.
+
+CLI input - **pip install django-summernote**
+<br>
+
+### DJANGO CRISPY FORMS
+[Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) is used to build reusable layouts out of components, can editor HTML without the HTML content in the template.<br>
+
+CLI input - **pip install django-crispy-forms**
+<br>
+
+### MIGRATE CHANGES
+
+CLI input - **python3 manage.py migrate** (To migrate to the Database for each new App or change to App.<br>
+
+### RUN SERVER 
+
+CLI input -- **python3 manage.py runserver**<br>
+(IF URL NOT ALLOWED - ADD TO ALLOWED_HOSTS in settings.py).<br>
+
+### NON-COMMITED FILE
+A file called **env.py** should be created to hold environments for safely developing new websites.<br>
+It should be entered into the .gitignore file to avoid being commited.<br>
+This does involve saving a snippet of it incase the coding environment is closed and returned to at a later date, and a new environment is created. **The env.py is not saved**.<br>
+![Env.py file](media/readme-images/Env.png)
+<hr>
+import os<br>
+<br>
+os.environ["DATABASE_URL"]="postgres://bhmjznxq:ITITqbyVtRT4T9kr2mrh0dkiEg3oCZRT@rogue.db.elephantsql.com/bhmjznxq"<br>
+os.environ["SECRET_KEY"]="aj_^secret@key_is_this"<br>
+os.environ["CLOUDINARY_URL"] ="cloudinary://526811634986951:vRc66sG5CkpCnHRqaN33bLo_4-0@dtsaa4qbs"<br>
+<br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+<br>
+
+## Migrations
+As models are created they have to be migrated to the Database. New models or even edited or changed models.
+CLI input:<br>
+#### Check which migrations are to be made.
+**python3 manage.py makemigrations --dry-run**<br>  
+#### To make the migrations shown.
+**python3 manage.py makemigrations**<br>
+#### To show any migrations that need to be done in a list, for indentification.
+**python3 manage.py showmigrations**<br>
+
+![Show migrations](media/readme-images/MigrateShow.png)<br>
+
+#### To complete the migration.
+**python3 manage.py migrate**<br>
+![Migration example](media/readme-images/migrate.png)<br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+<br>
+
+## Jinja
+[Jinja](https://jinja.palletsprojects.com) Python template engine was used within this project in input blocks of code. IF/ELSE statements can also be created depending on what template or [HTML](https://en.wikipedia.org/wiki/HTML) needs rendering to the view.<br>
+Example of **Block content** in jinja templating highlighted in **yellow box**<br>
+Example of **If/Else** in jinja templating highlighted in **purple box**<br>
+Example of **For loop** in jinja templating highlighted in **green box**.<br>
+Example of **empty** in jinja templating highlighted in **brown box**. This show HTML is nothing is rendered to the page.<br>
+![If/else example](/media/readme-images/Jinja.png)<br>
+
+
+
+
+<hr>
+[Back to the top](#cocktail-bar)
+<hr>
+<br>
+<hr>
+
+# Browser combatability.
 Checked the websites combatability with the following browers:
 1. Apple Safari.
 2. Google Chrome.
@@ -189,12 +339,18 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 # Credits.
 
-1. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework. This helped when creating my 'Forum' App. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
+1. [Code Institute](https://codeinstitute.net/) for providing examples of [Django](https://www.djangoproject.com/) projects through [Code Institute](https://codeinstitute.net/) Coursework to grasp the concept of building projects using databases, multiple libaries, API's, frameworks, Bootstrap, Django and Django Built-in benefits such as testing. This helped when creating my 'Booking App' and 'Forum' App and applying migrations to database of installed items. It also helped with the use of [Bootstrap CSS](https://getbootstrap.com/docs/4.1/layout/grid/) use. <br>
+It also helped with the creation of 'Message Tags'.<br>
 
 2. [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django). for help with authenticating user using [Django](https://www.djangoproject.com/) methods.<br>
 
-3. []()
+3. [Django Documents](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) for testing using TestCase.
+
+4. [Django Documents](https://docs.djangoproject.com/en/4.2/topics/testing/advanced/) Testing tips and hints.
 <br>
+
+5. [Bloomreach](https://documentation.bloomreach.com/engagement/docs/jinja-syntax) for checking Jinja methods.
+
 [Back to the top](#cocktail-bar)
 
 <hr>

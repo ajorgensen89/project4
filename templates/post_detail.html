@@ -37,7 +37,7 @@
                         <strong class="col">
                             <!-- Ability to post likes on comments if user is authenticated. Meaning, registered or logged in.-->
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            <form class="d-inline like-form" action="{% url 'post_like' post.slug %}" method="POST">
                                 <!--On all forms for user protection-->
                                 {% csrf_token %}
                                 {% if liked %}

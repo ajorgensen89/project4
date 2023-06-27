@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
         <h1 class="display-4"><span class="beanfeast">Bean</span><span class="text-warning">|</span><span><strong
@@ -13,38 +12,25 @@
     </div>
 </div>
 <div class="text-center container-fluid">
-
     {% for item in items %}
-
     {% if item.approve %}
-
     <p class="approve">
         Your booking is Approved. For <span class="text-warning">|</span><strong>{{ item.date }}
             at {{ item.time }}</strong>
-        for <strong>{{ item.people }}<span class="text-warning">|</span></strong> booked by {{ item.name }} using {{ item.email }}.
+        for <strong>{{ item.people }}<span class="text-warning">|</span></strong> booked by {{ item.name }} using {{
+        item.email }}.
     </p>
-
-
     <p>
-
         <a href="/edit/{{ item.id }}">
             <button class="btn btn-lg btn-outline-dark">Edit</button></a>
-
-
-
         <a href="/cancel/{{ item.id }}">
-            <button type="button" class="btn btn-lg btn-outline-dark" onclick="confirmCancellation()">Cancel Reservation</button></a>
-
+            <button type="button" class="btn btn-lg btn-outline-dark" onclick="confirmCancellation()">Cancel
+                Reservation</button></a>
     </p>
     {% else %}
-
     {% endif %}
-
     {% empty %}
-
-
     <p class="text-danger font-italic beanfeast">You have no bookings with us yet...</p>
-
     {% endfor %}
 </div>
 {%endblock%}

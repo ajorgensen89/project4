@@ -100,6 +100,10 @@ form {
     width: 400px;    
 }
 
+.like-form {
+    background-image: none;
+}
+
 input,
 label {
     padding: 10px 0 0 20px;
