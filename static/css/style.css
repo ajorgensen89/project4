@@ -170,6 +170,7 @@ input {
 }
 
 footer {
+    font-size: 20px;
     border-top: solid 1px;
     width: 100%;
     height: 100px;
@@ -205,6 +206,9 @@ footer {
         width: 320px;
         height: 550px;
     }
+    footer {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 368px) {
@@ -222,5 +226,13 @@ footer {
 
     .card-img-bottom {
         height: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 280px) {
+    footer {
+        font-size: 10px;
+        height: 60px;
     }
 }
