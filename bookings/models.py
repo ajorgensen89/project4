@@ -78,7 +78,7 @@ class Reservation(models.Model):
 class WelcomeModel(models.Model):
     """
     """
-    message = 'message to the welcome page'
+    message = 'A message'
 
     def __str__(self):
         return f" Welcome {self.message}"
