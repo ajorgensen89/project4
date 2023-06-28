@@ -59,44 +59,26 @@ Projects can be created from the tabs menu. Along side Issues which can be attac
 ![Project](media/readme-images/RepoPI.png)
 <br>
 
-## Agile
+The user experience offers features such as:
+<ul>
+<li>Registering to the website.</li>
+<li>Sign out and Sign out options.</li>
+<li>The home page offers information on upcoming events straight away. This is paginated to offer one Event/New item per page.</li>
+<li>On click of the Forum Title, the next page offers full information on that Event or New snippet.</li>
+<li>On click of the Forum Title, the next page offers a Discussion Board.</li>
+<li>When logged in or registered, user's can comment of Forum Posts.</li>
+<li>When logged in or registered, user's can delete their comment on the Forum Posts.</li>
+<li>When logged in or registered, user's like or unlike Forum Posts.</li>
+<li>User's can see how many likes and comments a Forum Post has.</li>
+<li>Users can make booking, edit bookings and cancel them too.</li>
+<li>Users can view these bookings on a separate page once it is approved</li>
+<li>User receives <em>pop up</em> messages to inform them of their actions.</li>
+<li>Users can view social links. (For fictional state, all social links are connected to a homepage for that said socail site)</li>
+<li>Users can see the opening times and days in the footer. (Fictional times and days)</li>
+<li>Users can see the <em>last orders</em> call too.(Fictional last orders)</li>
+<li>Users can see an address and contact information.(Fictional address and contact information)</li>
+</ul>
 
-The Agile Tool used to develop this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to make a todo list, in progress list or done list. These Issues can carry 'User Stories', to create separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
-
-Filled in Template for Issues.<br>
-![User Story Template](media/readme-images//USFull.png)<br>
-
-Issues can be added to todo list, in progress list or done list. They can also be added to a Repository(Project 4).<br>
-![Added to project Todo List](media/readme-images/USConnect.png)<br>
-
-Labels can be created or use default labels to organise the Issues relating to the Project Board.<br>
-![Labels Use](media/readme-images/USDoneandNotdone.png)<br>
-<br>
-
-## Colours
-
-Colour Scheme for the website is based on a very tasty cocktail - Amaretto Sour. With light and deep orangey colours, an egg white topping and a red cherry on top.<br>
-Black is always got for an outline or to ensure writing stands out.<br>
-![Colours](media/readme-images/Colours.png)<br>
-
-
-## Typography
-
-The fonts were used from [Google Fonts](https://fonts.google.com/) and are install by  link in the Head of the page.<br>
-Bebas Neue - I like the large capital block type use of this font with contrast well with the funky more 'fruity' floaty font type of the Yellowtail. <br>
-Oswald - This was a good business standard text to use and very readable, like the Bebas Neue.<br>
-Yellowtail - This 'fruitier' messy style i thought, suited a Cocktail Bar style, for the text.<br>
-<br>
-
-## Icons
-
-Icons are created by [Font Awesome](https://fontawesome.com/) and used in this project. They are used to portait social links, a pulsing 'Heart' icon on the Bookings page and a different 'Heart' icon again for the like status. Also, a speech bubble is used for the 'Total number of comments' icon.
-<hr>
-<br>
-
-[Back to the top](#cocktail-bar)
-
-<hr>
 
 # Admin Experience.
 
@@ -145,7 +127,7 @@ To access the admin site the following context should be used:<br>
 The `username` created for the purpose of this website is:
 The `password` created for the purpose of this website is:
 
-Tha administraion page offers features such as:
+The administraion experience offers features such as:
 <ul>
 <li>View forum in draft or published stage.</li>
 <li>View bookings or forum posts by whether they have been approved or not.<br>
@@ -153,16 +135,36 @@ Tha administraion page offers features such as:
 ![AproveYN](media/readme-images/ApproveYN.png)</li>
 
 <li>Add Forum posts and Forum comments from Admin.</li>
-<li>Approve or delete a booking.
-
-</li>
-
+<li>Can add images to the Forum post itself.</li>
+<li>Approve or delete a booking.</li>
 <li>Approve or delete comments.</li>
 <li>Events/News that have been created in Forum can be removed. They are viewed one per page.<br>
 Improves user focus on one Forum post.</li>
 </ul>
+<br>
 
-## MVC framework.
+[Back to the top](#cocktail-bar)
+
+<hr>
+
+# Agile
+
+The Agile Tool used to develop this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to make a todo list, in progress list or done list. These Issues can carry 'User Stories', to create separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
+
+Filled in Template for Issues.<br>
+![User Story Template](media/readme-images//USFull.png)<br>
+
+Issues can be added to todo list, in progress list or done list. They can also be added to a Repository(Project 4).<br>
+![Added to project Todo List](media/readme-images/USConnect.png)<br>
+
+Labels can be created or use default labels to organise the Issues relating to the Project Board.<br>
+![Labels Use](media/readme-images/USDoneandNotdone.png)<br>
+<br>
+
+[Back to the top](#cocktail-bar)
+<hr>
+
+# MVC framework.
 
 The **MVC framework** needs to be followed to ensure models can be used, viewed and controlled.<br>
 
@@ -178,6 +180,35 @@ When the 'view' is modelled, it creates a 'controller' accessible feature to upd
 The staff or management can receive the booking and approve or delete it.<br>
 ![MVC controller](media/readme-images/MVCController.png)<br>
 <br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+
+# Design
+
+## Colours
+
+Colour Scheme for the website is based on a very tasty cocktail - Amaretto Sour. With light and deep orangey colours, an egg white topping and a red cherry on top.<br>
+Black is always got for an outline or to ensure writing stands out.<br>
+![Colours](media/readme-images/Colours.png)<br>
+
+
+## Typography
+
+The fonts were used from [Google Fonts](https://fonts.google.com/) and are install by  link in the Head of the page.<br>
+Bebas Neue - I like the large capital block type use of this font with contrast well with the funky more 'fruity' floaty font type of the Yellowtail. <br>
+Oswald - This was a good business standard text to use and very readable, like the Bebas Neue.<br>
+Yellowtail - This 'fruitier' messy style i thought, suited a Cocktail Bar style, for the text.<br>
+<br>
+
+## Icons
+
+Icons are created by [Font Awesome](https://fontawesome.com/) and used in this project. They are used to portait social links, a pulsing 'Heart' icon on the Bookings page and a different 'Heart' icon again for the like status. Also, a speech bubble is used for the 'Total number of comments' icon.
+<br>
+
+[Back to the top](#cocktail-bar)
+
 <hr>
 
 

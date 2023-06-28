@@ -13,9 +13,9 @@
 [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) used to check the [CSS](https://www.w3schools.com/Css) code to enure it passes certain criteria for a well functioning website.<br>
 [Bootstrap CSS](https://getbootstrap.com/) was also used to create elements of [CSS](https://www.w3schools.com/Css).
 All my CSS created within static/css/style.css can be navigated to and viewed under validated CSS<br>
-![Validated CSS Nav](media/readme-images/ValidatedCSSTitle.png)<br>
+![Validated CSS Nav](media/testing-images/ValidatedCSSTitle.png)<br>
 Validated CSS shows all my CSS within the static/css/style.css file.<br>
-![CSS](media/readme-images/ValidatedCSS.png)<br>
+![CSS](media/testing-images/ValidatedCSS.png)<br>
 <br>
 <hr>
 
