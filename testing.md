@@ -100,9 +100,9 @@ Tests can be ran by entering 'python filename.py test' in CLI on cloud coding de
 **Test CLI.**<br>
 ![Test CLI entry](media/testing-images/TestCLI.png)<br>
 **Passing tests example below.**<br>
-![Test Pass](media/readme-images/TestPass.png)<br>
+![Test Pass](media/testing-images/TestPass.png)<br>
 **Failing tests example below.**<br>
-![Test Failing](media/readme-images/TestFail.png)<br>
+![Test Failing](media/testing-images/TestFail.png)<br>
 
 
 ## Run tests from [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) with TestCase.
