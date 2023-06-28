@@ -131,7 +131,7 @@ Make sure django.contrib imports admin.<br>
 
 View in Django Admin once registered, below.<br>
 BOOKINGS = Application name.<br>
-Items = Model for booking items.
+Items = Model for booking items.<br>
 ![Model in Admin](media/readme-images/ModelinAdmin.png)<br>
 
 Or simpley register it, inside the `admin.py` file for the App.<br>
@@ -144,6 +144,18 @@ To access the admin site the following context should be used:<br>
 The `username` created for the purpose of this website is:
 The `password` created for the purpose of this website is:
 
+Tha administraion page offers features such as:
+<ul>
+<li>View forum in draft or published stage.</li>
+<li>View bookings or forum posts by whether they have been approved or not.</li>
+<li>Add Forum posts and Forum comments from Admin.</li>
+<li>Approve or delete a booking.
+
+![AprroveYN]()</li>
+
+<li>Approve or delete comments and Events/News that have been created in Forum.</li>
+<li></li>
+</ul>
 
 ## MVC framework.
 
@@ -507,18 +519,26 @@ See [Testing](testing.md) file for full use of technologies used to test this we
 
 This project could benefit from a number of diffferent features in the future. Due to time and skill constraints, some could not be implemented. Some future features are just fresh ideas that the website could benefit from in a real world situation.<br>
 <br>
-Email's could be sent to the user to confirm whether they received a booking with the cocktail bar, rather then having to log in to check if it has been approved from the website 'VIEW NOW' page.<br>
-Different emails could be changed or registered with the account.<br>
+Confirmation of booking with the cocktail bar, rather then having to log in to check if it has been approved from the website 'VIEW NOW' page.<br>
 <br>
+When a booking is 'rejected', the user view for the user will display the **You have no bookings with us yet...** message. This could be confirmed better, even via email.<br>
+<br>
+Implementing a choice of date, by supplying a widget or different input format, possibly from Django.forms.Form.<br>
 Bookings could be displayed in sections to show the user awaiting approval, approved and not approved status.<br>
-In a real world situation, a Cocktail Bar would have a limited number of tables and could only post certain tables at each hour, on each day. This could be greatly improved so the Admin not not have to reject so many booking requests, as they probably would with this website.<br>
-For this porject, tables can be booked up to a max of 10 people with no minimum. Anybody welcome! This could mean sitting 5 groups of 2 at a table of 10 to fill up the cocktail bar. Hoping for adaptable users!<br>
-In the future different table sizes could be created to suit different groups of people.<br>
-Over booking and double booking tables would be important to avoid. The Admin or management for this project can just reject the bookings, but in the future a better approach can be developed on top on what has been created.<br>
 <br>
-I would have liked to offer the users a separate Gallery and Menu pages so they could see the Cocktails avaliable and see what Beanfeast the Cocktail Bar itself looked like before arriving. This would have greatly increase User Experience to this site.
+In a real world situation, a Cocktail Bar would have a limited number of tables each hour, on each day. This could be greatly improved so Admin would not have to reject so many booking requests, as they probably would with this website.<br>
+<br>
+For this project, tables fit a max of 10 people with no minimum. Anybody welcome!<br>
+This could mean sitting 5 groups of 2 at a table of 10 to fill up the cocktail bar.<br>
+Hoping for adaptable users!<br>
+In the future different table sizes could be created to suit different groups of people.<br>
+Over booking and double booking tables would be important to avoid. The Admin or management for this project can just reject the bookings, but in the future a better approach can be developed.<br>
+<br>
+
+I would have liked to offer the users a separate Gallery and Menu pages so they could see the Cocktails avaliable and see what Beanfeast the Cocktail Bar itself looked like before arriving. This would have greatly increase User Experience to this site.<br>
 <br>
 The Agile Tool, for this instance, was Github Project Boards, can label Issues and User Stories that have not been completed and would offer a good starting ground for future development and features for this project, Beanfeast site.<br>
+
 Template of Not Done labelled Issue.<br>
 
 ![Template of Not done](media/readme-images/USAdminNotDone.png)<br>

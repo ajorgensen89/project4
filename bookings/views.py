@@ -38,7 +38,7 @@ def create_a_booking(request):
             # and prefill field on 'name' in form.
             form.instance.name = request.user
             # Success Message Tags.
-            messages.success(request, "success")
+            messages.success(request, "Your booking is being processed. Await approval.")
             # Save information in form.
             form.save()
             # Redirect to get_bookings_sheet render request page.

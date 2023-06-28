@@ -18,10 +18,10 @@ ul {
 
 /*Button*/
 .btn {
-    padding-top: 10px;
+    width: 50%;
+    margin-top: 20px;
 
 }
-
 
 /*Head Logo*/
 .beanfeast {
@@ -77,16 +77,22 @@ ul {
 /*Forms.*/
 form {
     border-radius: 10px;
-    width: 320px;
-    height: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    height: 95%;
+    /*display: block;*/
     background-image: url("https://res.cloudinary.com/dtsaa4qbs/image/upload/v1687515744/sour2_uzil8n.jpg");
-    padding: 50px 0 50px 0;
-    margin:100px 0 100px 0 ;
+    padding-left: 20px;
+    margin:50px 0 50px 10px;
+    text-align: center;
 }
 
+.comment-body {
+    height: 80%;
+}
+
+.comment-body-button {
+    margin: 0 0 50px 60px;
+}
 
 /*Form - adjusted 'form' above.*/
 /* .form-smaller {
@@ -96,12 +102,12 @@ form {
     margin:100px 0 100px 0 ;
 } */
 
-.form-large {
+/* .form-large {
     height: 550px;
     width: 400px;
     padding: 50px 0 50px 0;
-    margin:100px 0 100px 0 ;
-}
+    margin:100px 0 100px 100px ;
+} */
 
 .like-form {
     background-image: none;
@@ -109,8 +115,7 @@ form {
 
 input,
 label {
-    padding: 10px 0 0 20px;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 input {

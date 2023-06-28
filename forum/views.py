@@ -86,21 +86,7 @@ class PostDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-
-
-def delete_comment(request, comment_id):
-    
-    comment = get_object_or_404(Comment, id = comment_id)
-
-    comment.delete()
-
-    messages.error(request, "Comment deleted.")
-
-    # Render on requested page.    
-
-    # Redirect back to the previous page. The same 'Discussion and Leave Comment page'.
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-    
+  
 
 class PostLike(View):
     """
@@ -124,5 +110,15 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args = [slug]))
 
 
+def delete_comment(request, comment_id):
     
+    comment = get_object_or_404(Comment, id = comment_id)
 
+    comment.delete()
+
+    messages.error(request, "Comment deleted.")
+
+    # Render on requested page.    
+
+    # Redirect back to the previous page. The same 'Discussion and Leave Comment page'.
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

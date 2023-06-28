@@ -32,11 +32,11 @@
                                 {% csrf_token %}
                                 {% if liked %}
                                 <!--Nice Red heart if liked-->
-                                <p><button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                <p><button type="submit" name="forumpost_id" value="{{post.slug}}" class="btn-like"><i
                                             class="fas fa-heart"></i></button>
                                     {% else %}
                                     <!--Grey heart for now, if no likes.-->
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    <button type="submit" name="forumpost_id" value="{{post.slug}}" class="btn-like"><i
                                             class="far fa-heart"></i></button>
                                 </p>
                                 {% endif %}
@@ -87,7 +87,7 @@
                             <!--Delete comment-->
                             {% if user.is_authenticated %}
                             <a href="{% url 'delete_comment' comment.id %}">
-                                <button type="button" class="btn btn-lg btn-outline-light">X</button></a>
+                                <button type="button" class="btn btn-outline-light">X</button></a>
                             {% endif %}
                         </span>
                     </div>
@@ -107,16 +107,17 @@
                     Your comment is awaiting approval
                 </div>
                 {% else %}
+                <p>You need to register to leave a comment!</p>
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
 
-                <form class="form-smaller" method="post"
+                <form class="comment-body" method="post"
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <!--Center buttons on form area-->
-                    <button style="width: 200px; margin: 30px 0 0 40px;" type="submit"
-                        class="btn btn-lg btn-outline-dark">Submit</button>
+                    <button type="submit"
+                        class="comment-body-button btn btn-outline-dark">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}

@@ -16,21 +16,20 @@
                     Don't miss out...
                     <br>
                     <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s; --fa-beat-scale: 2.0;"></i>
-                    <br>Reserve your table now.
-                    <small class="small-text">Last table booked at 11PM.</small><br>
-                    <small class="small-text">Last orders at 12AM.</small>
+                    <br>Reserve your table now.<br>
+                <small class="small-text">Last table booked at 11PM.</small><br>
+                <small class="small-text">Last orders at 12AM.</small>
                 </p>
             </div>
             <div class="col-md-8 my-5">
-                <form class="form-large" method="POST" , action="">
+                <form method="POST" , action="">
                     <!--Token for protection on form submission-->
                     {% csrf_token %}
                     <!--Booking form.-->
                     {{ form.as_p }}
                     <div>
                         <p>
-                            <button style="width: 200px; margin: 0 0 0 80px;" type="submit"
-                                class="btn btn-lg btn-outline-dark">Click to Continue</button>
+                            <button type="submit" class="btn btn-lg btn-outline-dark">Click to Continue</button>
                         </p>
                     </div>
 
