@@ -57,7 +57,7 @@ def create_a_booking(request):
 
 
 def edit_booking(request, booking_id):
-    # Create instance
+    # Create instance or get error 404.
     item = get_object_or_404(Item, id = booking_id)
     # Change form with method = 'POST'.
     if request.method == 'POST':
@@ -84,11 +84,12 @@ def edit_booking(request, booking_id):
 
     return render(request, 'bookings/edit_bookings.html', sheet)    
 
+
 #Cancel your booking and it removed from 'Administraion' page.
 
 
 def cancel_booking(request, booking_id):
-    # Create Instance
+    # Create Instance or get error 404.
     item = get_object_or_404(Item, id = booking_id)
     # Delete said item.
     item.delete()

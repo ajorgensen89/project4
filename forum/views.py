@@ -23,11 +23,16 @@ class PostDetail(View):
 
 
     def get(self, request, slug, *args, **kwargs):
+        # Get posts with status = 1 for published.
         queryset = Post.objects.filter(status = 1)
+        # Get object slug or error 404.
         post = get_object_or_404(queryset, slug = slug)
+        # Get comment related to that post.
         comments = post.comments.filter(
         approved = True).order_by("-created_on")
+        # Set defaut until user interaction
         liked = False
+        # Change like of each forum post if boolean value in True.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True
 
@@ -45,11 +50,16 @@ class PostDetail(View):
 
 
     def post(self, request, slug, *args, **kwargs):
+        # Get post with status = 1 for published.
         queryset = Post.objects.filter(status = 1)
+        # Get object slug or error 404.
         post = get_object_or_404(queryset, slug = slug)
+        # Get comment related to that post.
         comments = post.comments.filter(
         approved = True).order_by("-created_on")
+        # Set default until user interaction.
         liked = False
+        # Change like of each forum post if boolean value in True.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True
 
@@ -62,8 +72,8 @@ class PostDetail(View):
             comment.post = post
             comment.save()
         else:
-            comment_form = CommentForm()    
-
+            comment_form = CommentForm()
+        # Render on requested page.    
         return render(
             request,
             "post_detail.html",
@@ -75,6 +85,32 @@ class PostDetail(View):
                 "comment_form": CommentForm(),
             },
         )
+
+
+    # def delete_comment(request, comment_id):
+    #     # Get post with status = 1 for published.
+    #     queryset = Post.objects.filter(status = 1)
+    #     # Get post with status = 1 for published.
+    #     post = get_object_or_404(queryset, slug = slug)
+    #     # Get comment related to that post.
+    #     comments = post.comments.filter(
+    #     approved = True).order_by("-created_on")
+    #     # Delete said comment.
+    #     post.delete()
+    #     # Message Tags
+    #     messages.error(request, "Your comment has been removed!")
+    #     # Render on requested page.
+    #     return render(
+    #         request,
+    #         "post_detail.html",
+    #         {
+    #             "post": post,
+    #             "comments": comments,
+    #             "commented": True,
+    #             "liked": liked,
+    #             "comment_form": CommentForm(),
+    #         }
+    #     )
 
 
 class PostLike(View):

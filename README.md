@@ -152,7 +152,7 @@ That model is placed into a class to create a 'view', in `views.py`.<br>
 It gets all the objects from the reservation 'model', applys any requirements and sets a request for rendering HTML to a 'view'.<br>
 ![MVC view](media/readme-images/MVCView.png)<br>
 
-When the 'view' is modelled, it creates a 'controller'(or user) accessible feature, as in this example.<br>
+When the 'view' is modelled, it creates a 'controller' accessible feature to update the model, as in this example.<br>
 The staff or management can receive the booking and approve or delete it.<br>
 ![MVC controller](media/readme-images/MVCController.png)<br>
 <br>

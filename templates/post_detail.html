@@ -1,21 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
-<div>
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6">
-
-
-            </div>
-        </div>
-    </div>
-</div>
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
         <h1 class="display-4"><span class="beanfeast">Bean</span><span class="text-warning">|</span><span><strong
                     class="beanfeast">Feast</strong></span></h1>
-        <p class="lead beanfeast"><!-- Post title -->
+        <p class="beanfeast"><!-- Post title -->
         <h1>{{ post.title }}
         </h1>
         </p>
@@ -25,16 +15,16 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container text-center">
     <div class="row">
-        <div class="col card mb-4  mt-3 left top">
+        <div class="col card mb-4 mt-3">
             <div class="card-body">
                 <!-- Use of the '|' safe filter inside template when posting content-->
                 <p class="card-text">{{ post.content | safe }}</p>
                 <div class="row">
 
                     <div class="col">
-                        <strong class="col">
+                        <strong>
                             <!-- Ability to post likes on comments if user is authenticated. Meaning, registered or logged in.-->
                             {% if user.is_authenticated %}
                             <form class="d-inline like-form" action="{% url 'post_like' post.slug %}" method="POST">
@@ -52,13 +42,13 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary col-1"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <!--Total number of likes.-->
-                            <span class="text-secondary col-1">{{ post.number_of_likes }}</span>
+                            <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
                     </div>
-                    <span class="col-1">
+                    <span>
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Total Comment. -->
@@ -70,13 +60,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-md-5 card text-white bg-black">
+    <div class="row mx-auto">
+        <div class="col-md-5 col-sm-4 card text-white bg-black">
             <h3>Discussion Board:</h3>
             <div class="card-body">
                 <!-- Loop inside the tags to iterate through each comment in comments -->
@@ -98,12 +83,20 @@
                             <!-- Comment body goes before the | -->
                             {{ comment.body | linebreaks }}
                         </span>
+                        <!-- <span>
+                            <a href="/delete/{{ comment.id }}">
+                                <button type="button" class="btn btn-lg btn-outline-dark">X</button></a>
+                        </span> -->
                     </div>
                 </div>
+                {% empty %}
+                <p>No comments yet, be the first to start chatting!</p>
                 {% endfor %}
+
             </div>
         </div>
-        <div class="col-md-5 card text-black bg-white">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="pb-5 col-md-5 col-sm-7 card text-black bg-white">
             <div class="card-body">
                 <!-- If user has been authenticated, the comment with have a message 'awaiting approval' until approved by admin -->
                 {% if commented %}
@@ -114,11 +107,12 @@
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;"
+
+                <form class="form-smaller" method="post"
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <!--Center buttons on form area-->
-                    <button style="width: 200px; margin: 30px 0 0 60px;" type="submit"
+                    <button style="width: 200px; margin: 30px 0 0 40px;" type="submit"
                         class="btn btn-lg btn-outline-dark">Submit</button>
                 </form>
                 {% endif %}
