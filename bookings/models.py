@@ -73,3 +73,12 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"Reservation: {self.reservation}"
+
+
+class WelcomeModel(models.Model):
+    """
+    """
+    message = 'message to the welcome page'
+
+    def __str__(self):
+        return f" Welcome {self.message}"

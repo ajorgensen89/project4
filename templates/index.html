@@ -92,10 +92,10 @@
                 <ul class="pagination justify-content-center">
                     {% if page_obj.has_previous %}
                     <!--To toggle between events if more than one.-->
-                    <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-dark">&laquo; PREV </a></li>
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="pag-btn btn btn-outline-dark">&laquo; PREV </a></li>
                     {% endif %}
                     {% if page_obj.has_next %}
-                    <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-dark"> NEXT &raquo;</a></li>
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="pag-btn btn btn-outline-dark"> NEXT &raquo;</a></li>
         
                     {% endif %}
                 </ul>

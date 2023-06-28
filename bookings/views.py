@@ -8,6 +8,14 @@ from django.contrib import messages
 
 
 # View to get and show your booking / reservation details.
+def welcome(request):
+
+    message = WelcomeModel.objects.all()
+
+    sheet = {
+        'message': message,
+    }
+    return render(request, 'templates/welcome.html', sheet)
 
 
 def get_bookings_sheet(request):

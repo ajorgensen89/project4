@@ -15,6 +15,7 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 1
 
+
 class PostDetail(View):
     """
     Get and Post details from comment model. 

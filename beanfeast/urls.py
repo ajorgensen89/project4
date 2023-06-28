@@ -30,4 +30,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('forum.urls'), name = ('forum_urls')),
     path('accounts/', include('allauth.urls')),
+    path('welcome/', views.welcome, name = 'welcome'),
 ]

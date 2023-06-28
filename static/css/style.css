@@ -1,5 +1,5 @@
 /*General body CSS*/
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-color: #fae5a0;
@@ -23,6 +23,11 @@ ul {
 
 }
 
+.pag-btn {
+    padding: 20px 40px 20px 20px;
+}
+
+
 /*Head Logo*/
 .beanfeast {
     font-family: 'Bebas Neue', sans-serif;
@@ -31,6 +36,14 @@ ul {
     color: #4A4A4F;
     padding: 0 5px 0 5px;
 }
+.welcome-beanfeast {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #4A4A4F;
+    padding: 0 5px 0 5px;
+}
+
 
 
 /*Text*/
