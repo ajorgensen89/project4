@@ -222,23 +222,28 @@ Icons are created by [Font Awesome](https://fontawesome.com/) and used in this p
 # Features.
 
 This projects **Features**, for a potentail cocktail bar called **Beanfeast** includes:
+<br>
 
 **Navigation Bar** - Contains Logo, a little excerpt and navigation links. User can login, register, sign out and navigate back to home page.<br>
 Home page has access to the Forums.<br>
 
 ![Nav Bar](media/readme-images/FeaturesNav.png)<br>
-
-When viewed on a smaller device, the Nav Bar shrinks.<br>
+<br>
+**When viewed on a smaller device, the Nav Bar shrinks.**<br>
 ![Small Nav](media/readme-images/NavSmall.png)<br>
 
 **Welcome page** - Welcome to Beanfeast message and link to Forum's upcoming Events and News.<br>
 
-![HOME]()
-
+![HOME](media/readme-images/Fhome.png)
+<br>
+<br>
 **Bookings page** - For Booking Form view.<br>
-
+<br>
 **Register and Login Page** - User can login in or register in not done so already.<br>
 
+![Login](media/readme-images/Login.png)
+<br>
+<br>
 **Log Out Page** - Once logged in, a 'Sign out' page will be avaliable.<br>
 
 **View Bookings page** - on 'VIEW NOW' page.<br>
@@ -255,33 +260,40 @@ When viewed on a smaller device, the Nav Bar shrinks.<br>
 
 **View bookings.** - once approved. The user will be able to view their bookings, once logged in, from the website on the 'VIEW NOW' page. They will be able to edit and cancel bookings from here. All forms have a background-image of a cocktail.<br>
 ![View Booking example](media/readme-images/FeaturesApproved.png)
-
+<br>
+<br>
 **No Bookings** - No Bookings.<br>
 ![No bookings](media/readme-images/NoBookings.png)
-
+<br>
+<br>
 **Edit current bookings.** - The user can edit their bookings and again, have to wait for approval for the booking to be viewed and accepted by 'admin' side.<br>
 
 **Cancel or Delete a booking.** - Bookings can be fully removed. It a user cancels a booking, the booking will be removed from the 'admin' side also.<br>
 
 **Register** - The user need to register to the site before being able make a booking.<br>
-
+<br>
+<br>
 **Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
 
 **Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
 
-**Delete Comments** - A user can delete a comment they have posted if they are signed in.<br>
+![Forum Page](media/readme-images/Forum.png)
 
-If user is not signed in, comments can not be deleted.<br>
+**Delete Comments** - A user can delete a comment they have posted if they are signed in.<br>
+<br>
+
+**If user is not signed in, comments can not be deleted.**<br>
 
 ![Can not delete](media/readme-images/DeleteCommentNotAuth.png)
 
+<br>
 
-If user is signed in, comments can be deleted.<br>
+**If user is signed in, comments can be deleted.**<br>
 
 ![Can delete](media/readme-images/DeleteCommentAuth.png)
-
-
-User needs to be authenticated via [Jinja](https://jinja.palletsprojects.com) IF statment<br>
+<br>
+<br>
+**User needs to be authenticated via** [Jinja](https://jinja.palletsprojects.com) IF statement.<br>
 
 ![User Auth](media/readme-images/DeleteCommentHtml.png)
 
@@ -290,6 +302,7 @@ User needs to be authenticated via [Jinja](https://jinja.palletsprojects.com) IF
 ![Heart Icon](media/readme-images/HeartIcon.png)
 
 **Images** - Different images can be displayed for each different Forum Post created. An image is also displayed in the forms background.<br>
+<br>
 **Footer** - Has social links, opening times and days, a fictioncal contact number and address.<br>
 ![Footer](media/readme-images/FeaturesFooter.png)<br>
 
@@ -302,10 +315,11 @@ Input into settings.py
 ![Setting Message Tags](media/readme-images/MessageTags.png)<br>
 
 These had to be written into settings.py and have a for loop created for them to loop 'message' and then the 'tag'. Such as 'message.success'.<br>
+<br>
 **Csrf Token** - Included in forms for protection of user information in form submissions.<br>
 ![CSRF](media/readme-images/csrf.png)<br>
 
-Input into HTML in [Jinja](https://jinja.palletsprojects.com) For Loop.<br>
+**Input into HTML in [Jinja](https://jinja.palletsprojects.com) For Loop.**<br>
 ![HTML message tags](media/readme-images/MessageTagsForLoop.png)<br>
 
 <hr>
@@ -326,8 +340,9 @@ Follow the steps for deployment method:<br>
 3. Next stage will be a few changes on this page below. First, click into **Settings**.
 ![Pic 3](media/readme-images/Heroku3.3.png.jpeg)<br>
 4. Once in **Settings**, Config Vars need altering. Remove <em>DISABLE_COLLECTSTAIC</em> on deployment.<br>
-
 ![Pic 4](media/readme-images/HerokuConfig.png)<br>
+**ALSO**<br>
+<em>DEBUG</em> in settings.py need to be set to <em>FALSE</em> for deployment.<br>
 5. Now _click_ into **Deploy**. This wesbite was connected to **Github**. Which can be selected at the top. The **orange line**, shows the location to connect your repository from **Github** to **Heroku**. _Enter_ the name of the repository you need and connect. This pictures shows the repository already connected via **Github**. _Scroll_ to the bottom of the page to deploy. Select **main branch** and _click_ **Deploy Branch**.<br>
 ![Pic 5](media/readme-images/Heroku5.5.png.jpeg)<br>
 6. The website may show as _building_ for a while. Once it has completed, it should look like the images below, with a **view** link. _Click_ here to view your website.<br>
@@ -341,9 +356,9 @@ Follow the steps for deployment method:<br>
 
 To clone the project. I _clicked_ **code** in the respository file. In the dropdown menu, **copy** the link.<br>
 Here, on the image below,  the locations are highlighted in **pink**.<br>
-![clone](images/readme-images/clone.png)<br>
+![clone](media/readme-images/cloneFS.png)<br>
 Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ **git clone** followed by your copied **URL link**. Hit enter.
-![git clone for git bash](images/readme-images/clone2.png)<br>
+![git clone for git bash](media/readme-images/cloneFS2.png)<br>
 
 [Back to the top](#cocktail-bar)<br>
 
@@ -365,10 +380,8 @@ This project has implemented [Django](https://www.djangoproject.com/), a [Python
 [Administration](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/) for Admin Interface Model.<br>
 [Testing](https://docs.djangoproject.com/en/4.2/topics/testing/) built in while building website when creating a [Django](https://www.djangoproject.com/) Project.<br>
 [Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as a Django application to created authentication, account management and registration.<br>
-
-## Font Awesome
-
-[Font Awesome](https://fontawesome.com) Used for font text. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.<br>
+<br>
+<br>
 
 ## Bootstrap
 
@@ -406,6 +419,11 @@ Here's some examples of Bootstrap that were used:<br>
 ## Github.
 
 [Github](https://github.com/) was used to edit and build the website using  code.<br>
+<br>
+
+## Font Awesome
+
+[Font Awesome](https://fontawesome.com) Used for icons. Used direct through the [Font Awesome](https://fontawesome.com) website or via a [Bootstrap CDN](https://www.bootstrapcdn.com/) link.<br>
 
 <br>
 
@@ -421,33 +439,32 @@ Here's some examples of Bootstrap that were used:<br>
 A file was created within the project to hold all the necessary input for these installed libaries to function - **requirements.txt**.<br>
 ![Requirements.txt file](media/readme-images/RequirementsFile.png)<br>
 
+### REQUIRED FILE.
 
+Redirect to requirement.txt to store the files when installation is successfull.
+
+CLI input - **pip3 freeze --local > requirements.txt**.<br>
+<br>
 ### SERVER GUNICORN
 
 To run [Django](https://www.djangoproject.com/) on, for [Heroku](https://dashboard.heroku.com/) devlopment.
 
 CLI input - **pip3 install 'django<4' gunicorn**.<br>
-
+<br>
 
 ### POSTGRESQL LIBARY - ELEPHANTSQL.
 
 [ElephantSql](https://www.elephantsql.com/) hosted the Database for storing data to be used within a cloud.
 
 CLI input - pip3 install dj_database_url==0.5.0 psycopg2.<br>
-
+<br>
 
 ### CLOUDINARY CLOUD STORAGE.
 
 This was used to store images for use within the project. Other files can be hosted here too.<br>
 
 CLI input - **pip3 install dj3-cloudinary-storage**.<br>
-
-
-### REQUIRED FILE.
-
-Redirect to requirement.txt to store the files when installation is successfull.
-
-CLI input - **pip3 freeze --local > requirements.txt**.<br>
+<br>
 
 
 ### NEW DJANGO PROJECT.
@@ -455,7 +472,7 @@ CLI input - **pip3 freeze --local > requirements.txt**.<br>
 Creates new manage.py file and a directory called 'beanfeast'.<br>
 
 CLI input - **django-admin startproject beanfeast .** (dot(.) = create project in current directory)<br>
-
+<br>
 
 
 ### CREATE FORUM AND BOOKINGS APP (NEW APP).
@@ -464,7 +481,7 @@ Creates a new application within the project with separate files for manpulating
 
 CLI input - **python3 manage.py startapp forum** (add to settings.py file. INSTALLED_APPS).<br>
 CLI input - **python3 manage.py startapp bookings** (add to settings.py file. INSTALLED_APPS).<br>
-
+<br>
 
 ### DJNAGO SUMMERNOTE.
 
@@ -472,7 +489,7 @@ CLI input - **python3 manage.py startapp bookings** (add to settings.py file. IN
 
 CLI input - **pip install django-summernote**
 <br>
-
+<br>
 
 ### DJANGO CRISPY FORMS.
 
@@ -480,7 +497,7 @@ CLI input - **pip install django-summernote**
 
 CLI input - **pip install django-crispy-forms**
 <br>
-
+<br>
 
 ## Django Alluth
 
@@ -488,20 +505,20 @@ CLI input - **pip install django-crispy-forms**
 
 CLI input - **pip3 install django-allauth**
 <br>
-
+<br>
 
 ### MIGRATE CHANGES
 
 To migrate to the Database for each new App or change to App.<br>
 
 CLI input - **python3 manage.py migrate** <br>
-
+<br>
 
 ### RUN SERVER 
 
 CLI input -- **python3 manage.py runserver**<br>
 (IF URL NOT ALLOWED - ADD URL TO ALLOWED_HOSTS in settings.py).<br>
-
+<br>
 
 ### NON-COMMITED FILE
 
@@ -510,6 +527,9 @@ It should be entered into the .gitignore file to avoid being commited.<br>
 This does involve saving a snippet of it incase the coding environment is closed and returned to at a later date, and a new environment is created. **The env.py is not saved**.<br>
 ![Env.py file](media/readme-images/Env.png)
 <hr>
+
+**Snippet**<br>
+
 import os<br>
 <br>
 os.environ["DATABASE_URL"]="postgres-URL-here"<br>
@@ -532,20 +552,20 @@ CLI input:<br>
 #### Check which migrations are to be made.
 
 **python3 manage.py makemigrations --dry-run**<br>  
-
+<br>
 
 #### To make the migrations shown.
 
 **python3 manage.py makemigrations**<br>
-
+<br>
 
 #### To show any migrations that need to be done in a list, for indentification.
 
 **python3 manage.py showmigrations**<br>
+<br>
 
 ![Show migrations](media/readme-images/MigrateShow.png)<br>
-
-
+<br>
 #### To complete the migration.
 
 **python3 manage.py migrate**<br>
