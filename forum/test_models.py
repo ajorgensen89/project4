@@ -70,7 +70,7 @@ class TestCommentModel(TestCase):
             # likes = True,
         )
         comments = Comment.objects.create(
-            post = self.post,
+            comment = self.post,
             # made_on='2023-01-01',
             name = 'john',
             body = 'Wine has body and legs.',

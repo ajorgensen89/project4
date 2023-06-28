@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
+from django.contrib import messages
 
 
 class PostList(generic.ListView):
@@ -32,7 +33,7 @@ class PostDetail(View):
         approved = True).order_by("-created_on")
         # Set defaut until user interaction
         liked = False
-        # Change like of each forum post if boolean value in True.
+        # Change 'like' of each forum post if boolean value to True if exists.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True
 
@@ -59,7 +60,7 @@ class PostDetail(View):
         approved = True).order_by("-created_on")
         # Set default until user interaction.
         liked = False
-        # Change like of each forum post if boolean value in True.
+        # Change 'like' of each forum post if boolean value to True if exists.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True
 
@@ -87,31 +88,19 @@ class PostDetail(View):
         )
 
 
-    # def delete_comment(request, comment_id):
-    #     # Get post with status = 1 for published.
-    #     queryset = Post.objects.filter(status = 1)
-    #     # Get post with status = 1 for published.
-    #     post = get_object_or_404(queryset, slug = slug)
-    #     # Get comment related to that post.
-    #     comments = post.comments.filter(
-    #     approved = True).order_by("-created_on")
-    #     # Delete said comment.
-    #     post.delete()
-    #     # Message Tags
-    #     messages.error(request, "Your comment has been removed!")
-    #     # Render on requested page.
-    #     return render(
-    #         request,
-    #         "post_detail.html",
-    #         {
-    #             "post": post,
-    #             "comments": comments,
-    #             "commented": True,
-    #             "liked": liked,
-    #             "comment_form": CommentForm(),
-    #         }
-    #     )
+def delete_comment(request, comment_id):
+    
+    comment = get_object_or_404(Comment, id = comment_id)
 
+    comment.delete()
+
+    messages.error(request, "Comment deleted.")
+
+    # Render on requested page.    
+
+    # Redirect back to the previous page. The same 'Discussion and Leave Comment page'.
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    
 
 class PostLike(View):
     """
@@ -121,11 +110,19 @@ class PostLike(View):
 
 
     def post(self, request, slug):
+        # Get class Post or 404 error.
         post = get_object_or_404(Post, slug = slug)
-
+        
+        # Filter post by id and if it exists, either, remove or add the like. 
+        # Display by red heart if added and grey heart outline if not.
         if post.likes.filter(id = request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
+        # Reverse response after action above.
         return HttpResponseRedirect(reverse('post_detail', args = [slug]))
+
+
+    
+

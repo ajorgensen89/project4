@@ -124,10 +124,15 @@ Login panel, if it is working looks like the below image:<br>
 
 ![Log in](media/readme-images/DjangoAdminLogin.png)<br>
 
-The models being used now need registered with the Admin panel.<br>
+The models being used now need to be registered with the Admin panel.<br>
 Register is and connect it to a class, inside the `admin.py` file for the App.<br>
 Make sure django.contrib imports admin.<br>
 ![Admin to class](media/readme-images/DjangoAdminRegister.png)<br>
+
+View in Django Admin once registered, below.<br>
+BOOKINGS = Application name.<br>
+Items = Model for booking items.
+![Model in Admin](media/readme-images/ModelinAdmin.png)<br>
 
 Or simpley register it, inside the `admin.py` file for the App.<br>
 ![Admin alone](media/readme-images/DjangoAdminReg.png)<br>

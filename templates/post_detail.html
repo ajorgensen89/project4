@@ -61,7 +61,7 @@
         </div>
     </div>
     <div class="row mx-auto">
-        <div class="col-md-5 col-sm-4 card text-white bg-black">
+        <div class="mb-4 mt-3 col-lg-5 col-md-5 col-sm-4 card text-white bg-black">
             <h3>Discussion Board:</h3>
             <div class="card-body">
                 <!-- Loop inside the tags to iterate through each comment in comments -->
@@ -83,10 +83,11 @@
                             <!-- Comment body goes before the | -->
                             {{ comment.body | linebreaks }}
                         </span>
-                        <!-- <span>
-                            <a href="/delete/{{ comment.id }}">
-                                <button type="button" class="btn btn-lg btn-outline-dark">X</button></a>
-                        </span> -->
+                        <span>
+                            <!--Delete comment-->
+                            <a href="{% url 'delete_comment' comment.id %}">
+                                <button type="button" class="btn btn-lg btn-outline-light">X</button></a>
+                        </span>
                     </div>
                 </div>
                 {% empty %}
@@ -95,8 +96,8 @@
 
             </div>
         </div>
-        <div class="col-md-2 col-sm-1"></div>
-        <div class="pb-5 col-md-5 col-sm-7 card text-black bg-white">
+        <div class="col-lg-2 col-md-2 col-sm-1"></div>
+        <div class="pb-5 col-lg-5 col-md-5 col-sm-7 card text-black bg-white">
             <div class="card-body">
                 <!-- If user has been authenticated, the comment with have a message 'awaiting approval' until approved by admin -->
                 {% if commented %}

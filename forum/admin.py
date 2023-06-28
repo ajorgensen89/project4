@@ -25,7 +25,7 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
 
-    #action to approved comments. (more than one if needed)
+    #action to approved comments.
     actions = ['approved_comments']
 
 
