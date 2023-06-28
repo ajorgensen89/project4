@@ -85,8 +85,10 @@
                         </span>
                         <span>
                             <!--Delete comment-->
+                            {% if user.is_authenticated %}
                             <a href="{% url 'delete_comment' comment.id %}">
                                 <button type="button" class="btn btn-lg btn-outline-light">X</button></a>
+                            {% endif %}
                         </span>
                     </div>
                 </div>
