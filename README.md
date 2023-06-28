@@ -166,15 +166,22 @@ Labels can be created or use default labels to organise the Issues relating to t
 
 # MVC framework.
 
-The **MVC framework** needs to be followed to ensure models can be used, viewed and controlled.<br>
+The **MVC framework** needs to be followed to ensure models can be used, viewed and controlled to implement software constructs using three main components. <em>Model, View</em> and <em>Controller.</em><br>
+
+
+## Model
 
 A 'model' is created within a class, in `models.py`.<br>
 The 'model' is to create the ability to check reservations and approve them.<br>
 ![MVC model](media/readme-images/MVCModel.png)<br>
 
+## View
+
 That model is placed into a class to create a 'view', in `views.py`.<br>
 It gets all the objects from the reservation 'model', applys any requirements and sets a request for rendering HTML to a 'view'.<br>
 ![MVC view](media/readme-images/MVCView.png)<br>
+
+## Controller
 
 When the 'view' is modelled, it creates a 'controller' accessible feature to update the model, as in this example.<br>
 The staff or management can receive the booking and approve or delete it.<br>
@@ -215,18 +222,37 @@ Icons are created by [Font Awesome](https://fontawesome.com/) and used in this p
 # Features.
 
 This projects **Features**, for a potentail cocktail bar called **Beanfeast** includes:
-**Navigation Bar** - Contains Logo, a little excerpt and navigation links.<br>
+
+**Navigation Bar** - Contains Logo, a little excerpt and navigation links. User can login, register, sign out and navigate back to home page.<br>
+Home page has access to the Forums.<br>
+
 ![Nav Bar](media/readme-images/FeaturesNav.png)<br>
-**Welcome page** - Welcome to Beanfeast message and link to Forum's and upcoming Events and News.<br>
+
+When viewed on a smaller device, the Nav Bar shrinks.<br>
+![Small Nav](media/readme-images/NavSmall.png)<br>
+
+**Welcome page** - Welcome to Beanfeast message and link to Forum's upcoming Events and News.<br>
+
+![HOME]()
+
 **Bookings page** - For Booking Form view.<br>
+
 **Register and Login Page** - User can login in or register in not done so already.<br>
+
 **Log Out Page** - Once logged in, a 'Sign out' page will be avaliable.<br>
+
 **View Bookings page** - on 'VIEW NOW' page.<br>
+
 **Booking Form** - send a booking request to Admin for approval via a form requesting, name, email, date, time, number of people and a radio button to tick for 'HAPPY TO AWAIT APPROVAL'.<br>
+
 ![booking Form](media/readme-images/BookingForm.png)<br>
+
 **Date** - Select a date in the format YYYY-MM-DD.<br>
+
 **Time** - Select a time in the format HH-MM-SS.<br>
+
 **Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
+
 **View bookings.** - once approved. The user will be able to view their bookings, once logged in, from the website on the 'VIEW NOW' page. They will be able to edit and cancel bookings from here. All forms have a background-image of a cocktail.<br>
 ![View Booking example](media/readme-images/FeaturesApproved.png)
 
@@ -234,13 +260,16 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 ![No bookings](media/readme-images/NoBookings.png)
 
 **Edit current bookings.** - The user can edit their bookings and again, have to wait for approval for the booking to be viewed and accepted by 'admin' side.<br>
+
 **Cancel or Delete a booking.** - Bookings can be fully removed. It a user cancels a booking, the booking will be removed from the 'admin' side also.<br>
+
 **Register** - The user need to register to the site before being able make a booking.<br>
 
 **Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
-**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
-**Delete Comments** - A user can delete a comment they have posted if they are signed in.<br>
 
+**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
+
+**Delete Comments** - A user can delete a comment they have posted if they are signed in.<br>
 
 If user is not signed in, comments can not be deleted.<br>
 
