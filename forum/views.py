@@ -100,7 +100,7 @@ class PostLike(View):
         post = get_object_or_404(Post, slug = slug)
         
         # Filter post by id and if it exists, either, remove or add the like. 
-        # Display by red heart if added and grey heart outline if not.
+        # Display by red heart if added and heart outline if not.
         if post.likes.filter(id = request.user.id).exists():
             post.likes.remove(request.user)
         else:

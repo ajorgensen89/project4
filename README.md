@@ -47,11 +47,12 @@ The management system has an Administraion page for backend user's of the site, 
 
 <hr>
 
+
 ## User Stories
 
 User Stories were created to build the website from particular needs and requirements for this type of 'booking style' website.<br>
 User Stories were created on [Github](https://github.com) respository as a Project which could have 'Issues' added to work on.<br>
-They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out, they could be adapted.<br>
+They could be added to a ToDo list, In Progress list or Done status. User stories could be followed and changed. If time ran out for project progression, they could be adapted.<br>
 Creation and progress of User Stories in Issues on [Github](https://github.com) example using a Kanban Board for viewing User Story image below.<br>
 ![Issues US](media/readme-images/IssuesUS.png)<br>
 Projects can be created from the tabs menu. Along side Issues which can be attached the the repositories Project.<br>
@@ -60,7 +61,7 @@ Projects can be created from the tabs menu. Along side Issues which can be attac
 
 ## Agile
 
-The Agile Tool used to develope this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to develop steps of ToDo list, In Progress list or Done status. These Issues can carry 'User Stories' and can be created into separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
+The Agile Tool used to develop this project was on Github's Project Board. A Project can be added to a repository, and then Issues can be built up from here to make a todo list, in progress list or done list. These Issues can carry 'User Stories', to create separate categories such as importment, could do, done or not done. User Stories can be broken down into many more catergories. Templates for Issues can be edited and created to suit certain needs, such as 'User Stories' for this project.<br>
 
 Filled in Template for Issues.<br>
 ![User Story Template](media/readme-images//USFull.png)<br>
@@ -68,7 +69,7 @@ Filled in Template for Issues.<br>
 Issues can be added to todo list, in progress list or done list. They can also be added to a Repository(Project 4).<br>
 ![Added to project Todo List](media/readme-images/USConnect.png)<br>
 
-Labels can be created or used default labels to organise the Issues relating to the Project Board.<br>
+Labels can be created or use default labels to organise the Issues relating to the Project Board.<br>
 ![Labels Use](media/readme-images/USDoneandNotdone.png)<br>
 <br>
 
@@ -147,14 +148,18 @@ The `password` created for the purpose of this website is:
 Tha administraion page offers features such as:
 <ul>
 <li>View forum in draft or published stage.</li>
-<li>View bookings or forum posts by whether they have been approved or not.</li>
+<li>View bookings or forum posts by whether they have been approved or not.<br>
+
+![AproveYN](media/readme-images/ApproveYN.png)</li>
+
 <li>Add Forum posts and Forum comments from Admin.</li>
 <li>Approve or delete a booking.
 
-![AprroveYN]()</li>
+</li>
 
-<li>Approve or delete comments and Events/News that have been created in Forum.</li>
-<li></li>
+<li>Approve or delete comments.</li>
+<li>Events/News that have been created in Forum can be removed. They are viewed one per page.<br>
+Improves user focus on one Forum post.</li>
 </ul>
 
 ## MVC framework.
@@ -203,7 +208,27 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 
 **Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
 **Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
+**Delete Comments** - A user can delete a comment they have posted if they are signed in.<br>
+
+
+If user is not signed in, comments can not be deleted.<br>
+
+![Can not delete](media/readme-images/DeleteCommentNotAuth.png)
+
+
+If user is signed in, comments can be deleted.<br>
+
+![Can delete](media/readme-images/DeleteCommentAuth.png)
+
+
+User needs to be authenticated via [Jinja](https://jinja.palletsprojects.com) IF statment<br>
+
+![User Auth](media/readme-images/DeleteCommentHtml.png)
+
+
 **Likes** - 'Likes' can be clicked and are represented as a 'heart icon' for people, again, who are registered can 'like' a comment or Event posting. A user can choose to 'unlike' a post too by re-clicking the 'heart icon'.<br>
+![Heart Icon](media/readme-images/HeartIcon.png)
+
 **Images** - Different images can be displayed for each different Forum Post created. An image is also displayed in the forms background.<br>
 **Footer** - Has social links, opening times and days, a fictioncal contact number and address.<br>
 ![Footer](media/readme-images/FeaturesFooter.png)<br>
@@ -216,12 +241,12 @@ This projects **Features**, for a potentail cocktail bar called **Beanfeast** in
 Input into settings.py
 ![Setting Message Tags](media/readme-images/MessageTags.png)<br>
 
-Input into HTML in [Jinja](https://jinja.palletsprojects.com) For Loop.<br>
-![HTML message tags](media/readme-images/MessageTagsForLoop.png)<br>
-
 These had to be written into settings.py and have a for loop created for them to loop 'message' and then the 'tag'. Such as 'message.success'.<br>
 **Csrf Token** - Included in forms for protection of user information in form submissions.<br>
 ![CSRF](media/readme-images/csrf.png)<br>
+
+Input into HTML in [Jinja](https://jinja.palletsprojects.com) For Loop.<br>
+![HTML message tags](media/readme-images/MessageTagsForLoop.png)<br>
 
 <hr>
 
@@ -231,23 +256,22 @@ These had to be written into settings.py and have a for loop created for them to
 
 # Deployment
 
-To deploy for a Full Stack website, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
-Follow the steps for deployment method.<br>
+To deploy this Full Stack project, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
+Follow the steps for deployment method:<br>
 1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
-![Pic 1]()<br>
+![Pic 1](media/readme-images/Heroku.png)<br>
 
 2. Add an application name. Follow the rules of what you can enter. Select a region, and _click_ **Create App**.<br>
-![Pic 2]()<br>
+![Pic 2](media/readme-images/Heroku2.jpeg)<br>
 3. Next stage will be a few changes on this page below. First, click into **Settings**.
-![Pic 3]()<br>
-4. Once in **Settings**, Config Vars need adding. Change the _KEY and VALUE_ headings. In this case to _PORT and 8000_. Other files such as _creds.json_ file would be added here.<br>
-Now add buildpacks. _Click_ buildpack to choose. It this instance, two, python and nodejs where added. They can be rearranged and deleted if needed here.<br>
-**Important - python needs to be on top**. <br>
-![Pic 4]()<br>
+![Pic 3](media/readme-images/Heroku3.3.png.jpeg)<br>
+4. Once in **Settings**, Config Vars need altering. Remove <em>DISABLE_COLLECTSTAIC</em> on deployment.<br>
+
+![Pic 4](media/readme-images/HerokuConfig.png)<br>
 5. Now _click_ into **Deploy**. This wesbite was connected to **Github**. Which can be selected at the top. The **orange line**, shows the location to connect your repository from **Github** to **Heroku**. _Enter_ the name of the repository you need and connect. This pictures shows the repository already connected via **Github**. _Scroll_ to the bottom of the page to deploy. Select **main branch** and _click_ **Deploy Branch**.<br>
-![Pic 5]()<br>
+![Pic 5](media/readme-images/Heroku5.5.png.jpeg)<br>
 6. The website may show as _building_ for a while. Once it has completed, it should look like the images below, with a **view** link. _Click_ here to view your website.<br>
-![pic 6]()<br>
+![pic 6](media/readme-images/Heroku6.png)<br>
 
 [Back to the top](#cocktail-bar)
 
@@ -566,7 +590,9 @@ It also helped with the creation of 'Message Tags'.<br>
 4. [Django Documents](https://docs.djangoproject.com/en/4.2/topics/testing/advanced/) Testing tips and hints.
 <br>
 
-5. [Bloomreach](https://documentation.bloomreach.com/engagement/docs/jinja-syntax) for checking Jinja methods.
+5. [Python Testing Documents](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual) for testing tips.
+
+6. [Bloomreach](https://documentation.bloomreach.com/engagement/docs/jinja-syntax) for checking Jinja methods.
 
 [Back to the top](#cocktail-bar)
 
@@ -576,7 +602,7 @@ It also helped with the creation of 'Message Tags'.<br>
 # Awknowledgements.
 To the **Tutor Support** team for [Code Institute](https://codeinstitute.net/) for continued support and assitance.<br>
 To mentor **Precious Ijege** for continued support and patience while taking part in the course provided by [Code Institute](https://codeinstitute.net/) for a Diploma in Full Stack Software Development.<br>
-To the Love Sandwiches 'Example project' for Python code supplied by Anna Greaves, Content Developer for [Code Institute](https://codeinstitute.net/).<br>
+To the Walkthrough projects of both <em>'Hello Django'</em> and <em>'I think therefore I blog'</em> mini projects supplied by [Code Institute](https://codeinstitute.net/) Coursework.<br>
 
 <hr>
 
