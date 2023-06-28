@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from .models import Item, Reservation
+from .models import Item, Reservation, WelcomeModel
 from .forms import BookingForm
 from .admin import Simple
 from django.contrib.auth.models import User
@@ -15,7 +15,7 @@ def welcome(request):
     sheet = {
         'message': message,
     }
-    return render(request, 'templates/welcome.html', sheet)
+    return render(request, 'welcome.html', sheet)
 
 
 def get_bookings_sheet(request):

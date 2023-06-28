@@ -10,8 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cocktail bar named Beanfeast">
-    <meta name="keywords"
-        content="Cocktail, Bar, Beanfeast, drinks">
+    <meta name="keywords" content="Cocktail, Bar, Beanfeast, drinks">
     <meta name="author" content="Ava Jorgensen">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!--FONT STYLES-->
@@ -47,11 +46,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="me-auto mb-2 mb-lg-0 list-inline">
-                    <li class="list-inline-item ">
+
+                    <li class="list-inline-item">
                         <!--This could essentially be removed if the 'BEANFEAST' logo was used as a navigation link.
                             Not obvious, so left in 'home' link-->
-                        <a class="hover-orange-class active beanfeast" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
+                        <a class="hover-orange-class beanfeast" href="{% url 'welcome' %}">Home</a>
                     </li>
                     <!--Once user has registered, these navigation links will show. Can now book a table.-->
                     {% if user.is_authenticated %}
@@ -67,6 +66,11 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class beanfeast" href="{% url 'get_bookings_sheet' %}">View!</a>
                     </li>
+                    <li class="list-inline-item ">
+                        <!--Forum Home page to view Event, more information and comments-->
+                        <a class="hover-orange-class active beanfeast" aria-current="page"
+                            href="{% url 'home' %}">Going's on!</a>
+                    </li>
                     <!--Until user registers or logins in, only these navigation links will show.-->
                     {% else %}
                     <!--Register before booking-->
@@ -77,12 +81,9 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Login</a>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="hover-orange-class beanfeast" href="{% url 'welcome' %}">TEST</a>
-                    </li>
                     {% if user.is_superuser %}
                     <li class="list-inline-item">
-                        <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Admin</a>
+                        <a class="hover-orange-class beanfeast" href="{% url '' %}">Admin</a>
                     </li>
                     {% endif %}
 
@@ -140,7 +141,7 @@
     <!--Time out set for 'Message Tags' so they disappear after the stated time-->
     <!--Javascript function created with Code Institue walkthrough projects-->
     <script>
-        
+
         setTimeout(function () {
             let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
