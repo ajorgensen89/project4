@@ -182,11 +182,12 @@ It gets all the objects from the reservation 'model', applys any requirements an
 ![MVC view](media/readme-images/MVCView.png)<br>
 
 URL Patterns are created with class and function names from the models.<br>
+![]()
 
 ## Controller
 
-When the 'view' is modelled, it creates a 'controller' accessible feature to update the model, as in this example.<br>
-The staff or management can receive the booking and approve or delete it.<br>
+When the 'view' is modelled, 'controller' accessible features can update the model.<br>
+For this example the staff or management can receive the booking and approve or delete it.<br>
 ![MVC controller](media/readme-images/MVCController.png)<br>
 <br>
 
@@ -232,6 +233,7 @@ Home page has access to the Forums.<br>
 ![Nav Bar](media/readme-images/FeaturesNav.png)<br>
 <br>
 **When viewed on a smaller device, the Nav Bar shrinks.**<br>
+
 ![Small Nav](media/readme-images/NavSmall.png)<br>
 
 **Welcome page** - Welcome to Beanfeast message and link to Forum's upcoming Events and News.<br>
@@ -330,41 +332,6 @@ These had to be written into settings.py and have a for loop created for them to
 
 <hr>
 
-# Deployment
-
-To deploy this Full Stack project, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
-Follow the steps for deployment method:<br>
-1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
-![Pic 1](media/readme-images/Heroku.png)<br>
-
-2. Add an application name. Follow the rules of what you can enter. Select a region, and _click_ **Create App**.<br>
-![Pic 2](media/readme-images/Heroku2.jpeg)<br>
-3. Next stage will be a few changes on this page below. First, click into **Settings**.
-![Pic 3](media/readme-images/Heroku3.3.png.jpeg)<br>
-4. Once in **Settings**, Config Vars need altering. Remove <em>DISABLE_COLLECTSTAIC</em> on deployment.<br>
-![Pic 4](media/readme-images/HerokuConfig.png)<br>
-**ALSO**<br>
-<em>DEBUG</em> in settings.py need to be set to <em>FALSE</em> for deployment.<br>
-5. Now _click_ into **Deploy**. This wesbite was connected to **Github**. Which can be selected at the top. The **orange line**, shows the location to connect your repository from **Github** to **Heroku**. _Enter_ the name of the repository you need and connect. This pictures shows the repository already connected via **Github**. _Scroll_ to the bottom of the page to deploy. Select **main branch** and _click_ **Deploy Branch**.<br>
-![Pic 5](media/readme-images/Heroku5.5.png.jpeg)<br>
-6. The website may show as _building_ for a while. Once it has completed, it should look like the images below, with a **view** link. _Click_ here to view your website.<br>
-![pic 6](media/readme-images/Heroku6.png)<br>
-
-[Back to the top](#cocktail-bar)
-
-<hr>
-
-## Clone website.
-
-To clone the project. I _clicked_ **code** in the respository file. In the dropdown menu, **copy** the link.<br>
-Here, on the image below,  the locations are highlighted in **pink**.<br>
-![clone](media/readme-images/cloneFS.png)<br>
-Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ **git clone** followed by your copied **URL link**. Hit enter.
-![git clone for git bash](media/readme-images/cloneFS2.png)<br>
-
-[Back to the top](#cocktail-bar)<br>
-
-<hr>
 
 # Technologies Used.
 
@@ -380,10 +347,11 @@ This project has implemented [Django](https://www.djangoproject.com/), a [Python
 [Django](https://www.djangoproject.com/) frameworks and API's used are as followed:
 [Messages Tags.](https://django.readthedocs.io/en/stable/ref/contrib/messages.html)<br> to create Alert banners for particular user actions.<br>
 [Administration](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/) for Admin Interface Model.<br>
-[Testing](https://docs.djangoproject.com/en/4.2/topics/testing/) built in while building website when creating a [Django](https://www.djangoproject.com/) Project.<br>
+[Testing](https://docs.djangoproject.com/en/4.2/topics/testing/) TestCase built in for testing website when creating a [Django](https://www.djangoproject.com/) Project.<br>
 [Allauth](https://django-allauth.readthedocs.io/en/latest/) was used as a Django application to created authentication, account management and registration.<br>
 <br>
 <br>
+
 
 ## Bootstrap
 
@@ -402,6 +370,7 @@ Here's some examples of Bootstrap that were used:<br>
 ## Crispy Forms
 
 [Django Crispy Form Template](https://pypi.org/project/django-crispy-forms/) used to render HTML.<br>
+<br>
 
 ## Summernote
 
@@ -438,7 +407,7 @@ Here's some examples of Bootstrap that were used:<br>
 
 ## Requirements.txt file.
 
-A file was created within the project to hold all the necessary input for these installed libaries to function - **requirements.txt**.<br>
+A file was created within the project to hold all the necessary input for these installed libaries in the project - **requirements.txt**.<br>
 ![Requirements.txt file](media/readme-images/RequirementsFile.png)<br>
 
 ### REQUIRED FILE.
@@ -601,26 +570,6 @@ Example of **empty** in jinja templating highlighted in **brown box**. This show
 
 <hr>
 
-
-# Browser combatability.
-
-Checked the websites combatability with the following browers:
-1. Apple Safari.
-2. Google Chrome.
-3. Opera Browser.
-4. Microsoft Edge.<br>
-
-Ran the website with no significant issues.<br>
-
-<hr>
-
-See [Testing](testing.md) file for full use of technologies used to test this wesbite.<br>
-
-[Back to the top](#cocktail-bar)
-
-<hr>
-
-
 # Future Features and business logic.
 
 This project could benefit from a number of diffferent features in the future. Due to time and skill constraints, some could not be implemented. Some future features are just fresh ideas that the website could benefit from in a real world situation.<br>
@@ -654,6 +603,75 @@ Template of Not Done labelled Issue.<br>
 ![Filter Not Done](media/readme-images/USFilterNotDone.png)<br>
 
 <br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+
+
+# Deployment
+
+To deploy this Full Stack project, [Heroku](https://dashboard.heroku.com/), a cloud based platform was used.
+Follow the steps for deployment method:<br>
+1. If needed, sign in and register to Heroku website first. _Click_ on **New** in the top right corner to create a new application. <br>
+![Pic 1](media/readme-images/Heroku.png)<br>
+
+2. Add an application name. Follow the rules of what you can enter. Select a region, and _click_ **Create App**.<br>
+![Pic 2](media/readme-images/Heroku2.jpeg)<br>
+3. Next stage will be a few changes on this page below. First, click into **Settings**.
+![Pic 3](media/readme-images/Heroku3.3.png.jpeg)<br>
+4. Once in **Settings**, Config Vars need altering. Remove <em>DISABLE_COLLECTSTAIC</em> on deployment.<br>
+![Pic 4](media/readme-images/HerokuConfig.png)<br>
+**ALSO**<br>
+<em>DEBUG</em> in settings.py need to be set to <em>FALSE</em> for deployment.<br>
+
+5. Now _click_ into **Deploy**. This wesbite was connected to **Github**. Which can be selected at the top. The **orange line**, shows the location to connect your repository from **Github** to **Heroku**. _Enter_ the name of the repository you need and connect. This pictures shows the repository already connected via **Github**. _Scroll_ to the bottom of the page to deploy. Select **main branch** and _click_ **Deploy Branch**.<br>
+![Pic 5](media/readme-images/Heroku5.5.png.jpeg)<br>
+
+6. The website may show as _building_ for a while. Once it has completed, it should look like the images below, with a **view** link. _Click_ here to view your website.<br>
+![pic 6](media/readme-images/Heroku6.png)<br>
+
+Additionally needed files for Heroku use:
+<ul>
+<li>Requirements.txt for local deploymemt in the project. <br>
+See: 
+
+[Other Installed Libaries](#other-installed-libaries) </li>
+
+<li>Profile. (Capital **P** needed.)</li>
+</ul>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+
+
+## Clone website.
+
+To clone the project. I _clicked_ **code** in the respository file. In the dropdown menu, **copy** the link.<br>
+Here, on the image below,  the locations are highlighted in **pink**.<br>
+![clone](media/readme-images/cloneFS.png)<br>
+Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ **git clone** followed by your copied **URL link**. Hit enter.
+![git clone for git bash](media/readme-images/cloneFS2.png)<br>
+
+[Back to the top](#cocktail-bar)<br>
+
+<hr>
+
+
+# Browser combatability.
+
+Checked the websites combatability with the following browers:
+1. Apple Safari.
+2. Google Chrome.
+3. Opera Browser.
+4. Microsoft Edge.<br>
+
+Ran the website with no significant issues.<br>
+
+<hr>
+
+See [Testing](testing.md) file for full use of technologies used to test this wesbite.<br>
 
 [Back to the top](#cocktail-bar)
 

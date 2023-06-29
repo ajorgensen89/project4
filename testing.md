@@ -112,7 +112,18 @@ To run these tests, the Database Engine environment had to be changed from [Elep
 <br>
 
 <hr>
+<br>
 
+
+## Coverage.
+
+Coverage can be installed and ran to see that percentage of tests covering a website.
+![Coverage](media/testing-images/Coverage.png)
+
+Coverage commands to install and run a report.
+![Coverage CLI](media/testing-images/CoverageCLI.png)
+
+<br>
 [Back to the top](#testing)
 
 <hr>

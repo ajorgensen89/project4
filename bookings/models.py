@@ -79,6 +79,7 @@ class WelcomeModel(models.Model):
     """
     """
     message = 'A message'
+    # featured_image = CloudinaryField('image', default = 'placeholder')
 
     def __str__(self):
         return f" Welcome {self.message}"

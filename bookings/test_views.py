@@ -24,6 +24,7 @@ class TestUser(TestCase):
         # Delete after test.
         self.user.delete()    
 
+
     def test_get_bookings_sheet(self):
         response = self.client.get('/view')
         self.assertEqual(response.status_code, 301)
