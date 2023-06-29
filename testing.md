@@ -121,7 +121,22 @@ Coverage can be installed and ran to see that percentage of tests covering a web
 ![Coverage](media/testing-images/Coverage.png)
 
 Coverage commands to install and run a report.
-![Coverage CLI](media/testing-images/CoverageCLI.png)
+![Coverage CLI](media/testing-images/CoverageCLI.png)<br>
+<br>
+
+
+# Browser combatability.
+
+Checked the websites combatability with the following browers:
+1. Apple Safari.
+2. Google Chrome.
+3. Opera Browser.
+4. Microsoft Edge.<br>
+
+Ran the website with no significant issues.<br>
+
+<hr>
+
 
 <br>
 [Back to the top](#testing)

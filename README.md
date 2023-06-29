@@ -648,6 +648,8 @@ See:
 
 ## Clone website.
 
+All installing and requirements for this project have to be completed correctly before a Clong of the website can be created. <br>
+
 To clone the project. I _clicked_ **code** in the respository file. In the dropdown menu, **copy** the link.<br>
 Here, on the image below,  the locations are highlighted in **pink**.<br>
 ![clone](media/readme-images/cloneFS.png)<br>
@@ -658,18 +660,6 @@ Once cloned, **open** an IDE such as **GitBash**, to clone your wesbite. _Type_ 
 
 <hr>
 
-
-# Browser combatability.
-
-Checked the websites combatability with the following browers:
-1. Apple Safari.
-2. Google Chrome.
-3. Opera Browser.
-4. Microsoft Edge.<br>
-
-Ran the website with no significant issues.<br>
-
-<hr>
 
 See [Testing](testing.md) file for full use of technologies used to test this wesbite.<br>
 
