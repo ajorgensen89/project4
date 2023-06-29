@@ -1,14 +1,25 @@
 # Testing.
 
+## 404 page.
 
-## HTML
+A user friendly 404 page was created for this website to encourage a better experience for the user.
+A snippet can be created in 'NotePad'. Then it was placed into the directory.<br>
+
+![404 snippet](media/testing-images/404html.png)
+
+Visual look of custom 404 page.<br>
+
+![404 page](media/testing-images/404pic.png)
+
+
+## HTML.
 
 [W3C Validator](https://validator.w3.org/) was used to test [HTML](https://www.w3schools.com/html) code to enure if passed certain criteria.
 
 <hr>
 
 
-## CSS
+## CSS.
 
 [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) used to check the [CSS](https://www.w3schools.com/Css) code to enure it passes certain criteria for a well functioning website.<br>
 [Bootstrap CSS](https://getbootstrap.com/) was also used to create elements of [CSS](https://www.w3schools.com/Css).
@@ -20,7 +31,7 @@ Validated CSS shows all my CSS within the static/css/style.css file.<br>
 <hr>
 
 
-## Python
+## Python.
 
 [Python Checker](https://www.pythonchecker.com/) help check code syntax and to keep to [PEP8](https://pep8.org) standards.<br>
 ![Pylint100%](media/testing-images/pylint100.png)<br>
@@ -36,7 +47,7 @@ Image of the template error with the spacing as suggested by Pylint [Python Chec
 <hr>
 
 
-## PEP 8 linter
+## PEP 8 linter.
 
 [PEP8 CI](https://pep8ci.herokuapp.com/) with Code Institute to check [Python](https://www.python.org) code.<br>
 <br>
@@ -93,7 +104,7 @@ To run the [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/test
 ![Testing DB used](media/testing-images/RunDBTest.png)<br>
 
 
-## Test in Django - TestCase
+## Test in Django - TestCase.
 
 [Django Test Suite](https://docs.djangoproject.com/en/4.2/topics/testing/) has a built-in testing framework that can be used for tests to validate if code is working as expected using **TestCase**.<br>
 Tests can be ran by entering 'python filename.py test' in CLI on cloud coding development environment. For this project the CLI input was 'python manage.py test' and the coding environment was [Gitpod](https://www.gitpod.io).<br>
