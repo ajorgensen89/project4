@@ -44,7 +44,9 @@ ul {
     padding: 0 5px 0 5px;
 }
 
-
+.bottom-padding {
+    padding-bottom: 300px;
+}
 
 /*Text*/
 .text-funky {
