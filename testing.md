@@ -4,12 +4,13 @@
 
 A user friendly 404 page was created for this website to encourage a better experience for the user.
 A snippet can be created in 'NotePad'. Then it was placed into the directory.<br>
+I followed this to create a 500 page error to handle internal errors in a user friendly way.<br>
 
-![404 snippet](media/testing-images/404html.png)
+![404/500 snippet](media/testing-images/404500html.png)
 
 Visual look of custom 404 page.<br>
 
-![404 page](media/testing-images/404pic.png)
+![404/500 page](media/testing-images/404pic.png)
 
 
 ## HTML.
