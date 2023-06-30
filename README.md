@@ -80,6 +80,11 @@ The user experience offers features such as:
 
 # Admin Experience.
 
+A Forum Post needs adding by Admin to the website for the Forum link to be viewable for users.<br>
+If no image is added to the post, a back-up image is supplied.<br>
+
+![Back up image](media/readme-images/ImgBkup.png)
+
 Django was used to create an Administraion panel Interface that has information from both the 'Bookings' App and 'Forum' App, directed to it for staff and management to receive and manipulate. See [Other Installed Libaries](#other-installed-libaries) for more information on creating and starting new projects and applications with Django.
 <br>
 The installed applications should be added to **INSTALLED_APPS in settings.py**. See example below.<br>
@@ -144,14 +149,6 @@ Improves user focus on one Forum post.</li>
 </ul>
 <br>
 
-
-# Linking admin page.
-To go to Admin page, click Django Admin link on the Welcome page.
-
-
-[Back to the top](#cocktail-bar)
-
-<hr>
 
 # Agile
 

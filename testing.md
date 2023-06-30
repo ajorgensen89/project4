@@ -5,12 +5,18 @@
 A user friendly 404 page was created for this website to encourage a better experience for the user.
 A snippet can be created in 'NotePad'. Then it was placed into the directory.<br>
 I followed this to create a 500 page error to handle internal errors in a user friendly way.<br>
+<br>
+I was informed the .htaccess file was not needed. Only the .html pages.<br>
 
 ![404/500 snippet](media/testing-images/404500html.png)
 
 Visual look of custom 404 page.<br>
 
 ![404/500 page](media/testing-images/404pic.png)
+
+Snippet from advise to change the method<br>
+
+![404/500](media/testing-images/Convosnippet.png)
 
 
 ## HTML.
@@ -139,11 +145,53 @@ Coverage commands to install and run a report.
 
 # Browser combatability.
 
+## Lighthouse
+
+Tested Lighthouse properties for combatabilty, performance, best practices and accessibility.
+
 Checked the websites combatability with the following browers:
-1. Apple Safari.
-2. Google Chrome.
-3. Opera Browser.
+
+1. Apple Safari.<br>
+
+ISO not compatable to run on device.
+
+2. Google Chrome.<br>
+
+Ran on Google Chrome Broswer for mobile.<br>
+
+![Chrome Mobile](media/testing-images/ChromeLM.png)<br>
+<br>
+
+Ran on Google Chrome Broswer for Decktop.
+
+![Chrome Desktop](media/testing-images/chromeLDT.png)<br>
+<br>
+
+
+3. Opera Browser.<br>
+
+Ran on Opera Broswer for mobile.<br>
+
+![Opera Mobile](media/testing-images/BrowserOM.png)<br>
+<br>
+
+Ran on Opera Broswer for Decktop.
+
+![Opera Desktop](media/testing-images/BrowserODT.png)<br>
+<br>
+
+
 4. Microsoft Edge.<br>
+
+Ran on Microsoft Edge Broswer for mobile.<br>
+
+![Microsoft Edge Mobile](media/testing-images/EdgeLM.png)<br>
+<br>
+
+Ran on Microsoft Edge Broswer for Decktop.
+
+![Microsoft Edge Desktop](media/testing-images/EdgeLDT.png)<br>
+<br>
 
 Ran the website with no significant issues.<br>
 
