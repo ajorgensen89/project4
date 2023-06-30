@@ -79,11 +79,11 @@ class TestBookingModelReservation(TestCase):
     #     res = Reservation()
     #     self.assertEqual(res.Meta.ordering, ('made_on'))      
 
-# class TestWelcomeModel(TestCase):
+class TestWelcomeModel(TestCase):
 
-#     def test_welcome_model(self):
-#         welcome = WelcomeModel.objects.create(
-#             message = 'Welcome page rendered'
-#         )
+    def test_welcome_model(self):
+        welcome = WelcomeModel.objects.create(
+            message = 'Welcome page rendered'
+        )
 
-#         self.assertEqual(welcome.message, 'Welcome page rendered')
+        self.assertEqual(welcome.message, 'Welcome page rendered')

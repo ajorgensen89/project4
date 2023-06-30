@@ -21,14 +21,23 @@ from bookings import views
 
 
 urlpatterns = [
+    # To use Admin.
     path('admin/', admin.site.urls),
+    # To view bookings.
     path('view/', views.get_bookings_sheet, name = 'get_bookings_sheet'),
+    # To create a booking.
     path('book/', views.create_a_booking, name = 'create_a_booking'),
-    # item id links from forms / templates as a parameter
+    # item id links from forms / templates as a parameter.
     path('edit/<booking_id>', views.edit_booking ,name = 'edit_booking'),
+    # Cancel Bookings.
     path('cancel/<booking_id>', views.cancel_booking ,name = 'cancel_booking'),
+    # Use for layout in Django Admin.
     path('summernote/', include('django_summernote.urls')),
-    path('', include('forum.urls'), name = ('forum_urls')),
+    # Path to forum.urls.
+    path('', include('forum.urls'), name = 'forum_urls'),
+    # To use sign in/register/logout.
     path('accounts/', include('allauth.urls')),
+    # Welcome (home) page.
     path('', views.welcome, name = 'welcome'),
+    
 ]

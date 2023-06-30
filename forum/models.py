@@ -14,7 +14,7 @@ class Post(models.Model):
     It can be created and not posted straight way.
     """
     title = models.CharField(max_length = 200, unique = True)
-    slug = models.SlugField(max_length = 200, unique = True)
+    slug = models.SlugField(max_length = 200, blank=True,  null=True, unique=True)
     author = models.ForeignKey(
     User, on_delete = models.CASCADE, related_name = 'forum_posts')
     updated_on = models.DateTimeField(auto_now = True)
@@ -36,7 +36,7 @@ class Post(models.Model):
 
 
     def number_of_likes(self):
-        return self.likes.count()    
+        return self.likes.count()
 
 
 class Comment(models.Model):

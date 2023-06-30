@@ -29,6 +29,7 @@ ul {
 
 
 /*Head Logo*/
+
 .beanfeast {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 30px;
@@ -36,9 +37,10 @@ ul {
     color: #4A4A4F;
     padding: 0 5px 0 5px;
 }
+
 .welcome-beanfeast {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 700;
     color: #4A4A4F;
     padding: 0 5px 0 5px;
@@ -47,6 +49,8 @@ ul {
 .bottom-padding {
     padding-bottom: 300px;
 }
+
+
 
 /*Text*/
 .text-funky {

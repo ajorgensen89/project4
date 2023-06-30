@@ -19,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Yellowtail&display=swap"
-
         rel="stylesheet">
     <!-- BOOTSTRAP CSS AND JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -27,7 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-        
+
     <!--Internal CSS file link-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/f26ba66020.js" crossorigin="anonymous"></script>
@@ -42,7 +41,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <!--Logo and name of the cocktail bar - Beanfeast. Also a navigation to home.-->
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="beanfeast">Bean</span><span
+            <a class="navbar-brand" href="{% url 'post_list' %}"><span class="beanfeast">Bean</span><span
                     class="text-warning">|</span><span><strong class="beanfeast">Feast</strong></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,11 +49,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="me-auto mb-2 mb-lg-0 list-inline">
+                    <li class="list-inline-item">
+                        <!--Home page-->
+                        <a class="hover-orange-class beanfeast" href="{% url 'welcome' %}">Home</a>
+                    </li>
 
                     <li class="list-inline-item">
-                        <!--This could essentially be removed if the 'BEANFEAST' logo was used as a navigation link.
-                            Not obvious, so left in 'home' link-->
-                        <a class="hover-orange-class beanfeast" href="{% url 'welcome' %}">Home</a>
+                        <!--FORUM POSTS NEED TO BE CREATED AND PUBLISHED TO VIEW THIS PAGE.-->
+                        <!--Can create comments and delete them.-->
+                        <a class="hover-orange-class beanfeast" href="{% url 'post_list' %}">Forum</a>
                     </li>
                     <!--Once user has registered, these navigation links will show. Can now book a table.-->
                     {% if user.is_authenticated %}
@@ -70,11 +73,6 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class beanfeast" href="{% url 'get_bookings_sheet' %}">View!</a>
                     </li>
-                    <li class="list-inline-item ">
-                        <!--Forum Home page to view Event, more information and comments-->
-                        <a class="hover-orange-class active beanfeast" aria-current="page"
-                            href="{% url 'home' %}">Going's on!</a>
-                    </li>
                     <!--Until user registers or logins in, only these navigation links will show.-->
                     {% else %}
                     <!--Register before booking-->
@@ -85,12 +83,6 @@
                     <li class="list-inline-item">
                         <a class="hover-orange-class beanfeast" href="{% url 'account_login' %}">Login</a>
                     </li>
-                    {% if user.is_superuser %}
-                    <li class="list-inline-item">
-                        <a class="hover-orange-class beanfeast" href="{% url '' %}">Admin</a>
-                    </li>
-                    {% endif %}
-
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-secondary">
@@ -150,7 +142,7 @@
             let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
             alert.close();
-        }, 3000);
+        }, 3500);
 
     </script>
 </body>

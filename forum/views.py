@@ -8,12 +8,15 @@ from django.contrib import messages
 
 class PostList(generic.ListView):
     """
-    Create a view for Model - Post. Show if status = 1 (published).
+    Create a view for Model - Post. Show them if status = 1 (published).
     """
     model = Post
     queryset = Post.objects.filter(status = 1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 1
+
+    def __str__(self):
+        return self.title
 
 
 class PostDetail(View):
@@ -27,14 +30,14 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         # Get posts with status = 1 for published.
         queryset = Post.objects.filter(status = 1)
-        # Get object slug or error 404.
+        # Get object slug or error 404. If no slug, get 404 page.
         post = get_object_or_404(queryset, slug = slug)
         # Get comment related to that post.
         comments = post.comments.filter(
         approved = True).order_by("-created_on")
         # Set defaut until user interaction
         liked = False
-        # Change 'like' of each forum post if boolean value to True if exists.
+        # If exists, change 'like' of forum post.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True
 
@@ -48,13 +51,13 @@ class PostDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm(),
             },
-        )
+        ) 
 
 
     def post(self, request, slug, *args, **kwargs):
-        # Get post with status = 1 for published.
+        # Get posts with status = 1 for published.
         queryset = Post.objects.filter(status = 1)
-        # Get object slug or error 404.
+        # Get object slug or error 404. If no slug, get 404 page.
         post = get_object_or_404(queryset, slug = slug)
         # Get comment related to that post.
         comments = post.comments.filter(
@@ -121,5 +124,5 @@ def delete_comment(request, comment_id):
 
     # Render on requested page.    
 
-    # Redirect back to the previous page. The same 'Discussion and Leave Comment page'.
+    # Redirect back to page. The same 'Discussion and Leave Comment page'.
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

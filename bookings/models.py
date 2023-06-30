@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django import forms
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # To create a random . Needed??
 #    randomNum = random.randint(1, 10)
@@ -75,11 +76,13 @@ class Reservation(models.Model):
         return f"Reservation: {self.reservation}"
 
 
+
 class WelcomeModel(models.Model):
     """
+    To render welcome.html.
     """
     message = 'A message'
-    # featured_image = CloudinaryField('image', default = 'placeholder')
+    
 
     def __str__(self):
         return f" Welcome {self.message}"

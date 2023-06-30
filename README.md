@@ -26,9 +26,7 @@ The management system has an Administraion page for backend user's of the site, 
 
 * [User Experience](#user-experience)
 * [Admin Experience](#admin-experience)
-* [Admin Login](#)
-* [Flow Chart](#flow-chart)
-	- [Creative writing](#creative-writing)
+* [Lucid Chart](#lucid-chart)
 * [Features](#features)
 * [Testing](testing.md)
 * [Clone Website](#clone-website)
@@ -100,7 +98,7 @@ Create a **superuser** to use the administraion page. Not avaliable to just anyb
 CLI input **python3 manage.py createsuperuser**.<br>
 Follow the instructions to enter:<br>
 USERNAME:<br>
-EMAIL:(NOT NEEDED)<br>
+EMAIL:(NOT NEEDED) <br>
 PASSWORD:<br>
 <br>
 Login panel, if it is working looks like the below image:<br>
@@ -124,8 +122,11 @@ Once the models are registered, they can be accessed via Django Admin.<br>
 
 To access the admin site the following context should be used:<br>
 `http://your-server-ip:8000/admin`<br>
-The `username` created for the purpose of this website is:
-The `password` created for the purpose of this website is:
+
+If Super user is needed. Details below:
+
+The `username` created for the purpose of this website is: unicorn23
+The `password` created for the purpose of this website is: Unicorn15Blue
 
 The administraion experience offers features such as:
 <ul>
@@ -142,6 +143,11 @@ The administraion experience offers features such as:
 Improves user focus on one Forum post.</li>
 </ul>
 <br>
+
+
+# Linking admin page.
+To go to Admin page, click Django Admin link on the Welcome page.
+
 
 [Back to the top](#cocktail-bar)
 
@@ -221,6 +227,20 @@ Icons are created by [Font Awesome](https://fontawesome.com/) and used in this p
 
 <hr>
 
+# Lucid Chart
+
+[Lucid Chart]() was used to put together a wireframe.<br>
+A wireframe was put together to get an idea of what the page layouts might look like and need within them.<br>
+
+![Lucid Chart](media/readme-images/Lucid.png)
+![Lucid Chart](media/readme-images/Lucid2.png)
+
+<br>
+
+[Back to the top](#cocktail-bar)
+
+<hr>
+
 
 # Features.
 
@@ -238,7 +258,7 @@ Home page has access to the Forums.<br>
 
 **Welcome page** - Welcome to Beanfeast message and link to Forum's upcoming Events and News.<br>
 
-![HOME](media/readme-images/Fhome.png)
+![HOME](media/readme-images/Welcome.png)
 <br>
 <br>
 **Bookings page** - For Booking Form view.<br>
@@ -258,9 +278,13 @@ Home page has access to the Forums.<br>
 
 **Date** - Select a date in the format YYYY-MM-DD.<br>
 
-**Time** - Select a time in the format HH-MM-SS.<br>
+![Date](media/readme-images/DateFormat.png)
 
-**Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot.<br>
+**Time** - Select a time in the format HH-MM-SS. 24hr clock<br>
+
+![Time](media/readme-images/TimeFormat.png)
+
+**Create a booking.** - once created the user has to wait for approval from 'admin' before they are viewed and confirmed. This could potentailly help with tables or times being double booked if the 'admin' can confirm it as an avaliable booking slot. A message pops up to say the form was not sent if it is invalid and to try again!<br>
 
 **View bookings.** - once approved. The user will be able to view their bookings, once logged in, from the website on the 'VIEW NOW' page. They will be able to edit and cancel bookings from here. All forms have a background-image of a cocktail.<br>
 ![View Booking example](media/readme-images/FeaturesApproved.png)
@@ -277,9 +301,11 @@ Home page has access to the Forums.<br>
 **Register** - The user need to register to the site before being able make a booking.<br>
 <br>
 <br>
-**Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment.<br>
 
-**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website.<br>
+**Forum Post for Events** - Administraion can post events occuring at the Cocktail Bar. User's registered to the website will be able to comment on these Events. Unregistered user's to the website will be able to see the 'Event' information of the Forum but not be able to comment. **IMPORTANT** - A Forum Post much be present for this page to render at this stage!<br><br>
+![Forum home](media/readme-images/Fhome.png)
+
+**Forum Comments for Event** - Regitered User's will be able to comment on Event posting's. They will be viewed on the website if Administraion has approved it. This offers a discussion board for user's of the website. **IMPORTANT** - A Forum Post much be present for this page to render at this stage!<br>
 
 ![Forum Page](media/readme-images/Forum.png)
 
@@ -601,8 +627,16 @@ Template of Not Done labelled Issue.<br>
 'Not Done' labelled items can be filtered out on the Project Board.<br>
 
 ![Filter Not Done](media/readme-images/USFilterNotDone.png)<br>
-
 <br>
+<br>
+This project website relies on there being a Forum Post present on the page to render correctly. Create a New Forum Post in Django Admin.<br>
+Methods to implement and improve on the slug field were attempted but to no avail due to skill level and time commitments. This would of lessened admin and user issues, if an error or page was created in the place of there being no Forum Posting on the page.<br>
+Heres an example using `get_absolute_url` method, that was attempted but could not render and ran out of time to improve upon.<br>
+
+![Slug field](media/readme-images/slughtml.png)
+
+![Slug field](media/readme-images/slugview.png)
+
 
 [Back to the top](#cocktail-bar)
 
@@ -683,6 +717,8 @@ It also helped with the creation of 'Message Tags'.<br>
 5. [Python Testing Documents](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual) for testing tips.
 
 6. [Bloomreach](https://documentation.bloomreach.com/engagement/docs/jinja-syntax) for checking Jinja methods.
+
+7. [Stack Overflow](https://stackoverflow.com/questions/1022236/linking-to-the-django-admin-site) to help link admin page.
 
 [Back to the top](#cocktail-bar)
 

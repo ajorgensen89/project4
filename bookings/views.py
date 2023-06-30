@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 
+# Welcome page rendering.
 
-# View to get and show your booking / reservation details.
 def welcome(request):
 
     message = WelcomeModel.objects.all()
@@ -16,6 +16,9 @@ def welcome(request):
         'message': message,
     }
     return render(request, 'welcome.html', sheet)
+
+
+# View to get and show your booking / reservation details.
 
 
 def get_bookings_sheet(request):
@@ -50,7 +53,12 @@ def create_a_booking(request):
             # Save information in form.
             form.save()
             # Redirect to get_bookings_sheet render request page.
-            return redirect(reverse('get_bookings_sheet'))    
+            return redirect(reverse('get_bookings_sheet'))
+
+        if not form.is_valid():
+            # If the form is not valid, show the user this message. Then they can try again.
+            messages.error(request, "Oops, try again. Enter valid input. Only upto 10 people.")
+            return redirect(reverse('get_bookings_sheet'))
 
     # Create form from model in BookingForm()
     form = BookingForm()
