@@ -37,6 +37,8 @@ class PostDetail(View):
         approved = True).order_by("-created_on")
         # Set defaut until user interaction
         liked = False
+        if not slug:
+            raise ValidationError
         # If exists, change 'like' of forum post.
         if post.likes.filter(id = self.request.user.id).exists():
             liked = True

@@ -39,6 +39,15 @@ class Post(models.Model):
         return self.likes.count()
 
 
+    def save(self, *args, **kwargs):
+        if not self.slug:  # If slug is not already set
+            self.slug = slugify(self.title)  # Generate slug from title
+            # You can add additional logic here to ensure uniqueness
+            # For example, appending a number to the slug if it's not unique
+
+        super().save(*args, **kwargs)    
+
+
 class Comment(models.Model):
     """
     Model created to show comments on the above 'Forum Posts'. 
