@@ -198,6 +198,15 @@ For this example the staff or management can receive the booking and approve or 
 
 <hr>
 
+# Database Scheme.
+<br>
+An overviwe of some concepts that connects the Booking and Forum Applications to there files, model, views and forms.<br>
+By hand examples from planning stages.<br>
+
+![Booking app](media/readme-images/bookingW.jpg)
+
+![Forum app](media/readme-images/ForumW.jpg)
+
 # Design
 
 ## Colours
